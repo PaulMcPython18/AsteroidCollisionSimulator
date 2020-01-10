@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Asteroid Collision Simulator simulates and displays the destruction of asteroids from the size of a house, to the size of a large city. View the destruction on a beautiful looking interactive map.">
+    <meta name=”viewport” content=”width=device-width, initial-scale=1″>
+    <title>Asteroid Collision Simulator</title>
+    <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<style>
+    #header {
+    width: 100%;
+    background-color: #f2f2f2;
+    height: 30px;
+}
+
+#container {
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f2;
+}
+#first {
+    width: 75%;
+    float: left;
+    height: 100%;
+    background-color: #f2f2f2;
+}
+#second {
+    width: 25%;
+    float: left;
+    height: 100%;
+    background-color: #f2f2f2;
+}
+@media (max-width: 750px) {
+    #second {
+        width: 50%;
+        float: left;
+        height: 100%;
+        background-color: #f2f2f2;
+    }
+    #first {
+        width: 50%;
+        float: left;
+        height: 100%;
+        background-color: #f2f2f2;
+    }
+}
+
+</style>
+<body>
+
+<div id="container" style="">
+    <div id="second" style="margin-top: -1.1%; overflow-y: auto; padding-right: 1em;"><br>
+        {% include '_navbar.html' %}
+        <h1 style="font-size: 22px; font-weight: normal; margin-left: 1em;"> Q&A Questions </h1>
+        <hr>
+        <p style="margin-left: 1em;"> <b>1. </b>How was it made!</p>
+        <p style="margin-left: 1em;">       Asteroid Collision Simulator was created utilizing the tools of the Python Programming Language to make calculations and make several aspects of the website work. The Python Programming Language is a fundamental backbone of this website and was extremely beneficial to the development of the website. The developer(s) of this website have had a great time working on this project and we hope to see more projects and simulations coming soon. Have a great day.</p>
+        <hr>
+        <p style="margin-left: 1em;"> <b>2. </b>Will more updates be made?</p>
+        <p style="margin-left: 1em;"> Updates will release as long as the developer(s) of the project/website are willing and have passion to do so.</p>
+        <hr>
+        <p style="margin-left: 1em;"> <b>2. </b>How accurate is the tool?</p>
+        <p style="margin-left: 1em;">The simulation is a bit off and does may not 100% accurately portray the after effects and damage of a collision. The development team has tried its best in accurately simulating the collision and its damages but users will have to realize that information will not all be 100% correct. However, we believe that the simulation is a great and fun way to study the effects of a catostrophic space rock collision with earth.</p>
+        <hr>
+        <p style="margin-left: 1em;"> <b>Lets go!</b> Click the button below to start! </p>
+        <a href="/" class="btn btn-danger" style="margin-left: 1em;">Lets open the simulator!</a>
+        <hr>
+        <div style="position: absolute; bottom: 5px; left: 5px;">
+
+    </div>
+    </div>
+<!--        <footer style="bottom: 0;"> Asteroid Collision Simulations</footer>-->
+    <div id="first">
+
+            {% include 'map.html' %}
+    </div>
+</div>
+
+<!--<div>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>-->
+<!--<div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>-->
+</body>
+</html>
