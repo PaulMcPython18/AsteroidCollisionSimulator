@@ -1,1 +1,120 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Asteroid Collision Simulator simulates and displays the destruction of asteroids from the size of a house, to the size of a large city. View the destruction on a beautiful looking interactive map.">
+    <meta name=”viewport” content=”width=device-width, initial-scale=1″>
+    <title>Asteroid Collision Simulator</title>
+    <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<style>
+    #header {
+    width: 100%;
+    background-color: #f2f2f2;
+    height: 30px;
+}
+
+#container {
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f2;
+}
+#first {
+    width: 75%;
+    float: left;
+    height: 100%;
+    background-color: #f2f2f2;
+}
+#second {
+    width: 25%;
+    float: left;
+    height: 100%;
+    background-color: #f2f2f2;
+}
+@media (max-width: 760px) {
+    #second {
+        width: 50%;
+        float: left;
+        height: 100%;
+        background-color: #f2f2f2;
+    }
+    #first {
+        width: 50%;
+        float: left;
+        height: 100%;
+        background-color: #f2f2f2;
+    }
+}
+
+</style>
+<body>
+
+<div id="container" style="">
+    <div id="second" style="margin-top: -1.1%; overflow-y: auto;"><br>
+        {% include '_navbar.html' %}
+        <div class="">
+            <h1 style="font-size: 20px; padding-left: 1em; font-weight: normal;"> <strong>Asteroid Collision Simulator </strong></h1>
+            <strong><h2 style="font-size: 15px; padding-left: 1.3em; font-weight: normal; margin-top: 1em;"> Asteroid Map </h2></strong>
+            <a href="/questions" style="font-size: 12px; padding-left: 1.6em; margin-top: 2em;"> Learn More</a>
+            </div>
+        <p style="padding-left: 1em; padding-right: 1em; font-size: 15px; margin-top: 16px;"> Welcome to <b>Asteroid Collision Simulator.</b> Simulate an asteroid collision and view the the damage of the impact. Use the directions below to get started. &darr;</p>
+        <hr>
+                    <p style="color: red; padding-left: 1em;"> {{ message }} </p>
+
+        <p style="font-size: 16px; padding-left: 1em; padding-right: 1em;"> <b> 1.</b> Input the area of collision. (City or Address)</p>
+        <form method='POST' action="/">
+         <div class="form-group" style="padding-left: 1em; padding-right: 1em;">
+<!--    <label for="exampleFormControlInput1">Location/City Name</label>-->
+    <input type="text" class="form-control" id="exampleFormControlInput1" name='city' style="width: 65%;">
+  </div>
+            <p style="font-size: 16px; padding-left: 1em; padding-right: 1em;"> <b> 2.</b> Select a preset diameter of the Asteroid <b>or</b> input your own in meters.</p>
+              <div class="form-group" style="margin-left: 1em; margin-right: 1em; width: 62%;">
+    <label for="exampleFormControlSelect1">Asteroid Size</label>
+        <select class="form-control" id="exampleFormControlSelect1" name="diameter">
+      <option value="22" selected>22m (Length of a large suburban house)</option>
+      <option value="43">43m (Height of a 13 story building)</option>
+        <option value="70">70m (Length of a Jumbojet)</option>
+      <option value="79">79m (Height of a 20 story building)</option>
+        <option value="91">91m (Length of a Football Field)</option>
+        <option value="274">274m (Length of a city downtown)</option>
+      <option value="381">381m (The height of the Empire State Building)</option>
+            <option value="1000">1000m (1 kilometer)</option>
+        <option value="3658m">3658m (The length of an International Airport Runway)</option>
+      <option value="4300">4300m (The side length of a small city/town)</option>
+        <option value="8000">8000m (The side length of 1 large city)</option>
+      <option value="15000">15000m (The side length of 2 large cities)</option>
+    </select>
+                  <p style="margin-top: 1em;"> <b>Or</b> input asteroid diameter in meters.</p>
+  </div>
+            <div class="form-group" style="padding-left: 1em; padding-right: 1em;">
+    <input type="text" class="form-control" id="exampleFormControlInput1" name='otherdiameter' placeholder="Input Asteroid Diameter in Meters" style="width: 65%;">
+
+                <button type="submit" class="btn btn-lg btn-secondary" style="background-color: #ff4d4d; margin-top: 13px;"> View Damage </button>
+                <p style="font-size: 9px; margin-top: 7px; margin-left: 1.2px;"> By viewing, you agree to the <a href="/terms">terms of service</a></p>
+
+                <hr> <p style="font-size: 12px;"> Hover over the colored circles to view the effects of the collision. Fallout and possible Extinction usually occurs from <b>asteroids with a diameter over 1000-2000 meters.</b></p>
+                <p style="font-size: 12px;"> Commonly asked Questions (Q&A): <a href="/questions">Learn More</a>  <b style="font-size: 20px; margin-left: 5px; color: black;"> &larr;</b></p>
+            </div>
+
+        </form>
+<hr>
+<div style="position: absolute; bottom: 5px; left: 5px;">
+
+    </div>
+    </div>
+<!--        <footer style="bottom: 0;"> Asteroid Collision Simulations</footer>-->
+    <div id="first">
+
+            {% include 'map.html' %}
+    </div>
+</div>
+
+<!--<div>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>-->
+<!--<div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>-->
+</body>
+</html>
+
