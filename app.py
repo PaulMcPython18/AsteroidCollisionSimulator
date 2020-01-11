@@ -1,11 +1,7 @@
+# Asteroid Collision Simulator
 # Crater is 20x larger than the impacting object
 import folium
 from flask import Flask, render_template, make_response, request
-# try:
-#     from geopy.geocoders import Nominatim
-#     check_import_geo = True
-# except:
-#     pass
 app = Flask(__name__)
 @app.route('/')
 def index():
@@ -39,16 +35,7 @@ def calculate():
         tooltip = 'Click for more information.'
         print(city)
         try:
-            # print(city)
-            # from geopy.geocoders import Nominatim
-            # geolocator = Nominatim(user_agent="Asteroid Damage Simulation")
-            # print(city)
-            # location = geolocator.geocode(str(city))
-            # print(city)
-            # global lat_lon
-            # lat_lon = [location.latitude, location.longitude]
-            # print(lat_lon)
-            # passed = True
+
             global lat_lon
             import geocoder
             g = geocoder.osm(str(city))
@@ -97,7 +84,7 @@ def map():
             return render_template('index.html', message='* The diameter you inputted contains letters *')
 
         global m
-        passed = None
+
         if int(crater_diameter) > 60000:
             m = folium.Map(location=lat_lon, zoom_start=5)
             folium.Circle(location=lat_lon, radius=crater_diameter * 51,
