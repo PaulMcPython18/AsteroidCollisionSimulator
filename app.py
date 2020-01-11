@@ -1,7 +1,7 @@
 # Asteroid Collision Simulator
 # Crater is 20x larger than the impacting object
 import folium
-from flask import Flask, render_template, make_response, request
+from flask import Flask, render_template, request
 app = Flask(__name__)
 @app.route('/')
 def index():
