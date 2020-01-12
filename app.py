@@ -1,5 +1,4 @@
-# Asteroid Collision Simulator
-# Crater is 20x larger than the impacting object
+
 import folium
 from flask import Flask, render_template, request
 app = Flask(__name__)
@@ -33,14 +32,12 @@ def calculate():
         except:
             return render_template('index.html', message='* Diameter input cannot contain letters or decimals *')
         tooltip = 'Click for more information.'
-        print(city)
         try:
 
             global lat_lon
             import geocoder
             g = geocoder.osm(str(city))
             lat_lon = [g.json['lat'], g.json['lng']]
-            print(lat_lon)
         except:
             return render_template('index.html', message='* The City You Inputted Does Not Exist | Fix: Try waiting and reloading*')
 
@@ -253,7 +250,6 @@ def map():
                           color='grey',
                           fill=True,
                           fill_color='grey', zoom_start=12).add_to(m)
-            print(diameter)
 
             return m.get_root().render(original_dia=diameter)
         else:
@@ -292,7 +288,7 @@ def map():
 
             return m.get_root().render(original_dia=diameter)
     except:
-        return render_template('index.html', message='* An error occured *')
+        return render_template('map.html')
 @app.route('/terms')
 def terms():
     return render_template('termsofservice.html')
