@@ -33,6 +33,7 @@ def calculate():
             return render_template('index.html', message='* Diameter input cannot contain letters or decimals *')
         tooltip = 'Click for more information.'
         print(city)
+        print('----')
         try:
 
             global lat_lon
@@ -76,6 +77,7 @@ def map():
         tooltip = 'Click for more info.'
         diameter = of_diameter
         city = city
+        print(city)
         try:
             crater_diameter = int(diameter) * 21.5
             print(crater_diameter)
