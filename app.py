@@ -32,12 +32,14 @@ def calculate():
         except:
             return render_template('index.html', message='* Diameter input cannot contain letters or decimals *')
         tooltip = 'Click for more information.'
+        print(city)
         try:
 
             global lat_lon
             import geocoder
             g = geocoder.osm(str(city))
             lat_lon = [g.json['lat'], g.json['lng']]
+            print(lat_lon)
         except:
             return render_template('index.html', message='* The City You Inputted Does Not Exist | Fix: Try waiting and reloading*')
 
@@ -286,7 +288,7 @@ def map():
                           fill_color='grey', zoom_start=17).add_to(m)
             print(diameter)
 
-            return m.get_root().render(original_dia=diameter)
+            return m.get_root().render()
     except:
         return render_template('map.html')
 @app.route('/terms')
@@ -296,4 +298,4 @@ def terms():
 def more():
     return render_template('moreinfo.html')
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
