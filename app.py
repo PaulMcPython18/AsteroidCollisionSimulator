@@ -1,3 +1,4 @@
+
 import folium
 from flask import Flask, render_template, request
 app = Flask(__name__)
@@ -71,6 +72,7 @@ def calculate():
         return render_template('index.html', message='* Required input fields are empty. Please complete them and try again. *')
 @app.route('/map')
 def map():
+    global lat_lon
     try:
         diameter = of_diameter
         try:
@@ -79,6 +81,9 @@ def map():
         except:
             return render_template('index.html', message='* The diameter you inputted contains letters *')
         print('-=-')
+        print(lat_lon)
+        print('=-=')
+        lat_lon = lat_lon
         print(lat_lon)
         if int(crater_diameter) > 60000:
             m = folium.Map(location=lat_lon, zoom_start=5)
@@ -105,12 +110,11 @@ def map():
 
             folium.Circle(location=lat_lon, radius=crater_diameter/1.5, tooltip="Crater Area | Anything Living Dies ", color='orange', fill=True,
                               fill_color='orange', zoom_start=5).add_to(m)
-            folium.Circle(location=lat_lon  , radius=int(diameter), tooltip="Original Size of Asteroid | Click", color='grey',
+            folium.Circle(location=lat_lon , radius=int(diameter), tooltip="Original Size of Asteroid | Click", color='grey',
                           fill=True,
                           fill_color='grey', zoom_start=5).add_to(m)
             print(diameter)
-
-            return m.get_root().render(original_dia=diameter)
+            
         elif int(crater_diameter) > 7000:
             m = folium.Map(location=lat_lon, zoom_start=10)
             folium.Circle(location=lat_lon, radius=crater_diameter * 14,
@@ -145,8 +149,7 @@ def map():
                           fill=True,
                           fill_color='grey', zoom_start=10).add_to(m)
             print(diameter)
-
-            return m.get_root().render(original_dia=diameter)
+            
 
         elif int(crater_diameter) > 3000:
             m = folium.Map(location=lat_lon, zoom_start=11)
@@ -180,8 +183,7 @@ def map():
                           fill=True,
                           fill_color='grey', zoom_start=11).add_to(m)
             print(diameter)
-
-            return m.get_root().render(original_dia=diameter)
+            
         elif int(crater_diameter) > 1743:
             m = folium.Map(location=lat_lon, zoom_start=12)
             folium.Circle(location=lat_lon, radius=crater_diameter * 14,
@@ -217,8 +219,7 @@ def map():
                           fill=True,
                           fill_color='grey', zoom_start=12).add_to(m)
             print(diameter)
-
-            return m.get_root().render(original_dia=diameter)
+            
         elif int(crater_diameter) > 400:
             m = folium.Map(location=lat_lon, zoom_start=12)
             folium.Circle(location=lat_lon, radius=crater_diameter * 14,
@@ -248,8 +249,7 @@ def map():
                           color='grey',
                           fill=True,
                           fill_color='grey', zoom_start=12).add_to(m)
-
-            return m.get_root().render(original_dia=diameter)
+            
         else:
             m = folium.Map(location=lat_lon, zoom_start=17)
             folium.Circle(location=lat_lon, radius=crater_diameter * 14,
@@ -283,8 +283,7 @@ def map():
                           fill=True,
                           fill_color='grey', zoom_start=17).add_to(m)
             print(diameter)
-
-            return m.get_root().render()
+        return m.get_root().render()
     except:
         return render_template('map.html')
 @app.route('/terms')
