@@ -1,4 +1,3 @@
-
 import folium
 from flask import Flask, render_template, request
 app = Flask(__name__)
@@ -79,6 +78,8 @@ def map():
             print(crater_diameter)
         except:
             return render_template('index.html', message='* The diameter you inputted contains letters *')
+        print('-=-')
+        print(lat_lon)
         if int(crater_diameter) > 60000:
             m = folium.Map(location=lat_lon, zoom_start=5)
             folium.Circle(location=lat_lon, radius=crater_diameter * 51,
