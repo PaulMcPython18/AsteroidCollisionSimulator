@@ -75,7 +75,6 @@ def calculate():
 def map():
     global lat_lon
     global city
-    print('City: ' + str(city))
     try:
         diameter = of_diameter
         try:
