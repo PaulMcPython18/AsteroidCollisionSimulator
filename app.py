@@ -74,6 +74,7 @@ def calculate():
 @app.route('/map')
 def map():
     global lat_lon
+    global city
     print('City: ' + str(city))
     try:
         diameter = of_diameter
