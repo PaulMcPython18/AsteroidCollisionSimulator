@@ -73,8 +73,6 @@ def calculate():
         return render_template('index.html', message='* Required input fields are empty. Please complete them and try again. *')
 @app.route('/map')
 def map():
-    global lat_lon
-    global city
     try:
         diameter = of_diameter
         try:
@@ -82,10 +80,6 @@ def map():
             print(crater_diameter)
         except:
             return render_template('index.html', message='* The diameter you inputted contains letters *')
-        print('-=-')
-        print(lat_lon)
-        print('=-=')
-        lat_lon = lat_lon
         print(lat_lon)
         if int(crater_diameter) > 60000:
             m = folium.Map(location=lat_lon, zoom_start=5)
