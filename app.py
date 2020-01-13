@@ -1,6 +1,7 @@
-
 import folium
 from flask import Flask, render_template, request
+import time
+
 app = Flask(__name__)
 @app.route('/')
 def index():
@@ -73,6 +74,7 @@ def calculate():
 @app.route('/map')
 def map():
     global lat_lon
+    print('City: ' + str(city))
     try:
         diameter = of_diameter
         try:
