@@ -83,6 +83,7 @@ def map():
         lat_lon2 = lat_lon
         print('lat_lon2 ', lat_lon2)
         print(lat_lon)
+        print('map city: ', city)
         if int(crater_diameter) > 60000:
             m = folium.Map(location=lat_lon, zoom_start=5)
             folium.Circle(location=lat_lon, radius=crater_diameter * 51,
