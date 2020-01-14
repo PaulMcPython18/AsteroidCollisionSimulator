@@ -285,6 +285,7 @@ def map():
                           fill=True,
                           fill_color='grey', zoom_start=17).add_to(m)
             print(diameter)
+        print('Process Finished!')
         return m.get_root().render()
     except:
         return render_template('map.html')
