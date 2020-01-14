@@ -62,7 +62,10 @@ def calculate():
                     word_two += str(char)
                 else:
                     word_three += str(char)
-
+            print('PRE CITY AND LAT LON BELOW \/')
+            print(city)
+            print(lat_lon)
+            print('^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^')
             if preset_diameter == False:
                 return render_template('index2.html', pre_diameter=str(of_diameter), word_one=word_one, word_two = word_two, word_three = word_three)
             else:
