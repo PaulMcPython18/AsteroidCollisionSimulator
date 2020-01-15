@@ -76,7 +76,6 @@ def calculate():
 @app.route('/map')
 def map():
     time.sleep(2)
-    print('Yolo: ', city)
     try:
         diameter = of_diameter
         try:
