@@ -3,7 +3,8 @@ from flask import Flask, render_template, request, sessions, session
 import time
 import os
 app = Flask(__name__)
-app.secret_key = os.urandom(24)
+
+
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -85,6 +86,7 @@ def map():
         session.modified = True
         if 'user_lat_lon' not in session:
             print('NOT IN SESSION!!!!!!!')
+            print('SELECT: ', city)
             return render_template('map.html')
         print('SESSION FIRST: ', session['user_lat_lon'])
         print('ASDF ', lat_lon, ' ', city)
@@ -310,4 +312,5 @@ def terms():
 def more():
     return render_template('moreinfo.html')
 if __name__ == "__main__":
+    app.secret_key = os.urandom(24)
     app.run(debug=False)
