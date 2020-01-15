@@ -65,8 +65,8 @@ def calculate():
             print(city)
             print(lat_lon)
             print('^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^')
-            global comp_finished
-            comp_finished = True
+            global comp_finished2
+            comp_finished2 = True
             if preset_diameter == False:
                 return render_template('index2.html', pre_diameter=str(of_diameter), word_one=word_one, word_two = word_two, word_three = word_three)
             else:
@@ -77,6 +77,7 @@ def calculate():
         return render_template('index.html', message='* Required input fields are empty. Please complete them and try again. *')
 @app.route('/map')
 def map():
+    comp_finished = comp_finished2
     for i in range(100):
         time.sleep(0.4)
         if comp_finished == True:
