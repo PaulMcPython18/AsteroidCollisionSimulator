@@ -11,14 +11,15 @@ def index():
     return render_template('index.html')
 @app.route('/', methods=['POST'])
 def calculate():
+    global of_diameter
     try:
-        global of_diameter
         global city
         city = request.form['city']
         if len(city) > 30:
             return render_template('index.html', message='* Please shorten the length of the city name input *')
         diameter = request.form['diameter']
         diameter2 = request.form['otherdiameter']
+        global of_diameter
         of_diameter = None
         if len(diameter2) == 0:
             preset_diameter = True
@@ -73,7 +74,8 @@ def calculate():
             session['user_lat_lon'] = lat_lon
             print('sesssion created \/')
             print('BEFORE MAP ', session['user_lat_lon'])
-
+            session['diameter', of_diameter]
+            print('BEFORE MAP DIAMETER ', session['diameter'])
             resp1 = make_response(render_template('index2.html', pre_diameter=str(of_diameter), word_one=word_one, word_two = word_two, word_three = word_three))
             resp2 = make_response(render_template('index2.html', word_one=word_one, word_two = word_two, word_three = word_three))
 
@@ -94,9 +96,10 @@ def map():
         session.modified = True
         if 'user_lat_lon' not in session:
             print('NOT IN SESSION!!!!!!!')
+            print('DOING NOT IN SESSION STATEMENT')
             lat_lons = request.cookies.get('latitude_longitude')
             lat_lons = ast.literal_eval(lat_lons)
-            diameter = of_diameter
+            diameter = session['diameter']
         else:
             print('SESSION FIRST: ', session['user_lat_lon'])
             print('ASDF ', lat_lon, ' ', city)
