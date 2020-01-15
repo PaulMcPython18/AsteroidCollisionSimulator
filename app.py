@@ -72,7 +72,7 @@ def calculate():
             else:
                 return render_template('index2.html', word_one=word_one, word_two=word_two, word_three = word_three)
         except:
-            return render_template('index2.html', pre_diameter=str(of_diameter), pre_city = city)
+            return render_template('index.html', pre_diameter=str(of_diameter), pre_city = city)
     except:
         return render_template('index.html', message='* Required input fields are empty. Please complete them and try again. *')
 @app.route('/map')
