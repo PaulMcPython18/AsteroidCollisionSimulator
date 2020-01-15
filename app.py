@@ -67,6 +67,7 @@ def calculate():
             print(lat_lon)
             print('^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^')
             session['user_lat_lon'] = lat_lon
+            session.modified = True
             print('sesssion created \/')
             print('BEFORE MAP ', session['user_lat_lon'])
             if preset_diameter == False:
