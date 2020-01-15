@@ -36,7 +36,6 @@ def calculate():
         print(city)
         print('----')
         try:
-
             global lat_lon
             import geocoder
             g = geocoder.osm(str(city))
@@ -77,7 +76,7 @@ def calculate():
 @app.route('/map')
 def map():
     time.sleep(2)
-    print('Yolo: ', lat_lon, ' ', city)
+    print('Yolo: ', city)
     try:
         diameter = of_diameter
         try:
