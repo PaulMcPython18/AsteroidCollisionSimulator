@@ -82,6 +82,7 @@ def calculate():
 @app.route('/map')
 def map():
     if 1 == 1:
+        session.modified = True
         print('SESSION FIRST: ', session['user_lat_lon'])
         print('ASDF ', lat_lon, ' ', city)
         diameter = of_diameter
