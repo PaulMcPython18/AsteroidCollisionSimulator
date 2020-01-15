@@ -77,6 +77,7 @@ def calculate():
 def map():
     time.sleep(2)
     try:
+        print('ASDF ', lat_lon, ' ', city)
         diameter = of_diameter
         try:
             crater_diameter = int(diameter) * 21.5
