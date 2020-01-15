@@ -41,6 +41,9 @@ def calculate():
             import geocoder
             g = geocoder.osm(str(city))
             lat_lon = [g.json['lat'], g.json['lng']]
+            session['user_lat_lon'] = lat_lon
+            session.modified = True
+            print(session['user_lat_lon'], ' changed to \/')
             print(lat_lon)
         except:
             return render_template('index.html', message='* The City You Inputted Does Not Exist | Fix: Try waiting and reloading*')
