@@ -94,7 +94,6 @@ def map():
         session.modified = True
         if 'user_lat_lon' not in session:
             print('NOT IN SESSION!!!!!!!')
-            lat_lon_session = lat_lon
             lat_lons = request.cookies.get('latitude_longitude')
         else:
             print('SESSION FIRST: ', session['user_lat_lon'])
