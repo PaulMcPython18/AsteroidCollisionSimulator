@@ -83,6 +83,8 @@ def calculate():
 def map():
     if 1 == 1:
         session.modified = True
+        if 'user_lat_lon' in session:
+            print('IN SESSION!!!!!!!')
         print('SESSION FIRST: ', session['user_lat_lon'])
         print('ASDF ', lat_lon, ' ', city)
         diameter = of_diameter
