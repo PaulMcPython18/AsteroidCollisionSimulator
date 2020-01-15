@@ -91,12 +91,12 @@ def calculate():
 @app.route('/map')
 def map():
     global of_diameter
-    if 1 == 1:
+    try:
         session.modified = True
         if 'user_lat_lon' not in session:
             print('NOT IN SESSION!!!!!!!')
             lat_lons = request.cookies.get('latitude_longitude')
-            lat_lons = ast.literal_eval(lat_lons) 
+            lat_lons = ast.literal_eval(lat_lons)
             diameter = of_diameter
         else:
             print('SESSION FIRST: ', session['user_lat_lon'])
@@ -314,7 +314,7 @@ def map():
         print('Process Finished!')
 
         return m.get_root().render()
-    else:
+    except:
         return render_template('map.html')
 @app.route('/terms')
 def terms():
