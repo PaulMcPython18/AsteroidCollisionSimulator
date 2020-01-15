@@ -1,8 +1,9 @@
 import folium
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, sessions, session
 import time
-
+import os
 app = Flask(__name__)
+app.secret_key = os.urrandom(24)
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -65,6 +66,7 @@ def calculate():
             print(city)
             print(lat_lon)
             print('^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^')
+            session['user_lat_lon'] = lat_lon
             if preset_diameter == False:
                 return render_template('index2.html', pre_diameter=str(of_diameter), word_one=word_one, word_two = word_two, word_three = word_three)
             else:
@@ -75,7 +77,6 @@ def calculate():
         return render_template('index.html', message='* Required input fields are empty. Please complete them and try again. *')
 @app.route('/map')
 def map():
-    # time.sleep(2)
     try:
         print('ASDF ', lat_lon, ' ', city)
         diameter = of_diameter
@@ -88,6 +89,9 @@ def map():
         print('lat_lon2 ', lat_lon2)
         print(lat_lon)
         print('map city: ', city)
+        lat_lon_session = session['user_lat_lon']
+        print('SESSION: ', lat_lon_session)
+        print(lat_lon)
         if int(crater_diameter) > 60000:
             m = folium.Map(location=lat_lon, zoom_start=5)
             folium.Circle(location=lat_lon, radius=crater_diameter * 51,
