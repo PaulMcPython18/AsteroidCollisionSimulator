@@ -87,22 +87,23 @@ def map():
         session.modified = True
         if 'user_lat_lon' not in session:
             print('NOT IN SESSION!!!!!!!')
-            # return render_template('map.html')
-        print('SESSION FIRST: ', session['user_lat_lon'])
-        print('ASDF ', lat_lon, ' ', city)
-        diameter = of_diameter
-        try:
-            crater_diameter = int(diameter) * 21.5
-            print(crater_diameter)
-        except:
-            return render_template('index.html', message='* The diameter you inputted contains letters *')
-        lat_lon2 = lat_lon
-        print('lat_lon2 ', lat_lon2)
-        print(lat_lon)
-        print('map city: ', city)
-        lat_lon_session = session['user_lat_lon']
-        print('SESSION: ', lat_lon_session)
-        print(lat_lon)
+            lat_lon_session = lat_lon
+        else:
+            print('SESSION FIRST: ', session['user_lat_lon'])
+            print('ASDF ', lat_lon, ' ', city)
+            diameter = of_diameter
+            try:
+                crater_diameter = int(diameter) * 21.5
+                print(crater_diameter)
+            except:
+                return render_template('index.html', message='* The diameter you inputted contains letters *')
+            lat_lon2 = lat_lon
+            print('lat_lon2 ', lat_lon2)
+            print(lat_lon)
+            print('map city: ', city)
+            lat_lon_session = session['user_lat_lon']
+            print('SESSION: ', lat_lon_session)
+            print(lat_lon)
         if int(crater_diameter) > 60000:
             m = folium.Map(location=lat_lon, zoom_start=5)
             folium.Circle(location=lat_lon, radius=crater_diameter * 51,
