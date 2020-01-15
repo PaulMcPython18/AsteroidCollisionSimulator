@@ -76,7 +76,7 @@ def calculate():
         return render_template('index.html', message='* Required input fields are empty. Please complete them and try again. *')
 @app.route('/map')
 def map():
-    time.sleep(5)
+    time.sleep(3)
     try:
         diameter = of_diameter
         try:
