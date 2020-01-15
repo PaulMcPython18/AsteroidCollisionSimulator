@@ -90,18 +90,17 @@ def calculate():
         return render_template('index.html', message='* Required input fields are empty. Please complete them and try again. *')
 @app.route('/map')
 def map():
-    diameter = of_diameter
     if 1 == 1: # IF ONE = ONE GO BACK
         session.modified = True
         if 'user_lat_lon' not in session:
             print('NOT IN SESSION!!!!!!!')
             lat_lons = request.cookies.get('latitude_longitude')
             lat_lons = ast.literal_eval(lat_lons)
-            # diameter = of_diameter
+            diameter = of_diameter
         else:
             print('SESSION FIRST: ', session['user_lat_lon'])
             print('ASDF ', lat_lon, ' ', city)
-            # diameter = of_diameter
+            diameter = of_diameter
             lat_lon2 = lat_lon
             print('lat_lon2 ', lat_lon2)
             print(lat_lon)
