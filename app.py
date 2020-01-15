@@ -81,7 +81,7 @@ def calculate():
         return render_template('index.html', message='* Required input fields are empty. Please complete them and try again. *')
 @app.route('/map')
 def map():
-    try:
+    if 1 == 1:
         print('SESSION FIRST: ', session['user_lat_lon'])
         print('ASDF ', lat_lon, ' ', city)
         diameter = of_diameter
@@ -297,7 +297,7 @@ def map():
             print(diameter)
         print('Process Finished!')
         return m.get_root().render()
-    except:
+    else:
         return render_template('map.html')
 @app.route('/terms')
 def terms():
