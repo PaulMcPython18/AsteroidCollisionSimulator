@@ -96,6 +96,7 @@ def map():
         if 'user_lat_lon' not in session:
             print('NOT IN SESSION!!!!!!!')
             lat_lons = request.cookies.get('latitude_longitude')
+            diameter = of_diameter
         else:
             print('SESSION FIRST: ', session['user_lat_lon'])
             print('ASDF ', lat_lon, ' ', city)
@@ -109,7 +110,6 @@ def map():
             print(lat_lon)
             lat_lons = lat_lon
         print('LATLONS: FINAL BEFORE SUBMITION: ', lat_lons)
-        diameter = of_diameter
         crater_diameter = int(diameter) * 21.5
         print(crater_diameter)
         if int(crater_diameter) > 60000:
