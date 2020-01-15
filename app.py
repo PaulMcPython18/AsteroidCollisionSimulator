@@ -67,6 +67,8 @@ def calculate():
             print(lat_lon)
             print('^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^')
             session['user_lat_lon'] = lat_lon
+            print('sesssion created \/')
+            print('BEFORE MAP ', session)
             if preset_diameter == False:
                 return render_template('index2.html', pre_diameter=str(of_diameter), word_one=word_one, word_two = word_two, word_three = word_three)
             else:
