@@ -6,6 +6,8 @@ app = Flask(__name__)
 
 app.secret_key = os.urandom(24)
 
+of_diameter = None
+
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -90,7 +92,6 @@ def calculate():
         return render_template('index.html', message='* Required input fields are empty. Please complete them and try again. *')
 @app.route('/map')
 def map():
-    global of_diameter
     if 1 == 1: # IF ONE = ONE GO BACK
         session.modified = True
         if 'user_lat_lon' not in session:
