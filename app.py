@@ -86,8 +86,10 @@ def map():
             print('NOT IN SESSION!!!!!!!')
             lat_lons = request.cookies.get('latitude_longitude')
             lat_lons = ast.literal_eval(lat_lons)
+            print(lat_lons)
+            print(ast.literal_eval(lat_lons))
             diameter = of_diameter
-        else:
+        else:   
             print('SESSION FIRST: ', session['user_lat_lon'])
             print('ASDF ', lat_lon, ' ', city)
             diameter = of_diameter
