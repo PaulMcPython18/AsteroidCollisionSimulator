@@ -36,8 +36,7 @@ def calculate():
         except:
             return render_template('index.html', message='* Diameter input cannot contain letters or decimals *')
         tooltip = 'Click for more information.'
-        print(city)
-        print('----')
+
         try:
             global lat_lon
             import geocoder
@@ -45,7 +44,6 @@ def calculate():
             lat_lon = [g.json['lat'], g.json['lng']]
             session['user_lat_lon'] = lat_lon
             print(session['user_lat_lon'], ' changed to \/')
-            print(lat_lon)
         except:
             return render_template('index.html', message='* The City You Inputted Does Not Exist | Fix: Try waiting and reloading*')
 
@@ -66,14 +64,6 @@ def calculate():
                     word_two += str(char)
                 else:
                     word_three += str(char)
-            print('PRE CITY AND LAT LON BELOW \/')
-            print(city)
-            print(lat_lon)
-            print('^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^')
-            session['user_lat_lon'] = lat_lon
-            print('sesssion created \/')
-            print('BEFORE MAP ', session['user_lat_lon'])
-
             resp1 = make_response(render_template('index2.html', pre_diameter=str(of_diameter), word_one=word_one, word_two = word_two, word_three = word_three))
             resp2 = make_response(render_template('index2.html', word_one=word_one, word_two = word_two, word_three = word_three))
 
@@ -101,10 +91,6 @@ def map():
             print('SESSION FIRST: ', session['user_lat_lon'])
             print('ASDF ', lat_lon, ' ', city)
             diameter = of_diameter
-            lat_lon2 = lat_lon
-            print('lat_lon2 ', lat_lon2)
-            print(lat_lon)
-            print('map city: ', city)
             lat_lon_session = session['user_lat_lon']
             print('SESSION: ', lat_lon_session)
             print(lat_lon)
