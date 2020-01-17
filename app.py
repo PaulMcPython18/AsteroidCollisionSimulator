@@ -255,10 +255,10 @@ def map():
                           tooltip="Human Skin May Burn and infastructure destroyed | Flying Debris Fatal ",
                           color='#ff6666', fill=True,
                           fill_color='#ff6666', zoom_start=12).add_to(m)
-            folium.Circle(location=lat_lon, radius=crater_diameter * 1.2,
+            folium.Circle(location=lat_lons, radius=crater_diameter * 1.2,
                           tooltip="Most Buildings Knocked Over | Human Skin Burns | Most Perish ", color='yellow', fill=True,
                           fill_color='yellow', zoom_start=12).add_to(m)
-            folium.Circle(location=lat_lon, radius=crater_diameter / 1.5,
+            folium.Circle(location=lat_lons, radius=crater_diameter / 1.5,
                           tooltip="Crater Area | Anything Living Dies ",
                           color='orange', fill=True,
                           fill_color='orange', zoom_start=12).add_to(m)
