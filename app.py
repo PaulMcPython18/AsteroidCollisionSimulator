@@ -134,7 +134,7 @@ def map():
             print(diameter)
 
         elif int(crater_diameter) > 7000:
-            m = folium.Map(location=lat_lon, zoom_start=10)
+            m = folium.Map(location=lat_lons, zoom_start=10)
             folium.Circle(location=lat_lons, radius=crater_diameter * 14,
                           tooltip="Worldwide Fallout Possible From Dust & Ash | Almost all people are aware of the situation either by hearing or sight.",
                           color='purple', fill=True,
