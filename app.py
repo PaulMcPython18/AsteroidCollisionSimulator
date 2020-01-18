@@ -88,6 +88,7 @@ def map():
             lat_lons = ast.literal_eval(lat_lons)
             print(lat_lons)
             print(type(lat_lons))
+            print(of_diameter)
             diameter = of_diameter
         else:
             print('SESSION FIRST: ', session['user_lat_lon'])
