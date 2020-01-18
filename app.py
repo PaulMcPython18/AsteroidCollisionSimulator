@@ -70,6 +70,9 @@ def calculate():
             resp1.set_cookie('latitude_longitude', str(lat_lon))
             resp2.set_cookie('latitude_longitude', str(lat_lon))
 
+            resp1.set_cookie('diameters', str(of_diameter))
+            resp2.set_cookie('diameters', str(of_diameter))
+
             if preset_diameter == False:
                 return resp1
             else:
