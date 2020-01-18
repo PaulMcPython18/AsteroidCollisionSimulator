@@ -129,7 +129,7 @@ def map():
             folium.Circle(location=lat_lons, radius=crater_diameter*1.45, tooltip="All Buildings Knocked Over | Human Skin Burns | Most Perish ",color='yellow', fill=True,
                           fill_color='yellow', zoom_start=5).add_to(m)
 
-            folium.Circle(location=lat_lon, radius=crater_diameter/1.5, tooltip="Crater Area | Anything Living Dies ", color='orange', fill=True,
+            folium.Circle(location=lat_lons, radius=crater_diameter/1.5, tooltip="Crater Area | Anything Living Dies ", color='orange', fill=True,
                               fill_color='orange', zoom_start=5).add_to(m)
             folium.Circle(location=lat_lons , radius=int(diameter), tooltip="Original Size of Asteroid | Click", color='grey',
                           fill=True,
