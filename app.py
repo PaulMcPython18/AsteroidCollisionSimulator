@@ -35,7 +35,6 @@ def calculate():
             checkvar = int(diameter)
         except:
             return render_template('index.html', message='* Diameter input cannot contain letters or decimals *')
-        tooltip = 'Click for more information.'
 
         try:
             global lat_lon
