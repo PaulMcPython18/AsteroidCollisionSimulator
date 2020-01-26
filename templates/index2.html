@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,10 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Simulate and visualize the destruction of asteroids with Asteroid Damage Visualization Map. It simulates and displays the destruction of asteroids from the size of a house, to the size of a large city. Visualize/model the destruction of an asteroid collision on a map.">
+    <meta name="description" content="Asteroid Damage Visualization Map simulates and visualizes the destruction of asteroids in a certain location on a map. View the destruction on a beautiful looking interactive map.">
     <meta name=”viewport” content=”width=device-width, initial-scale=1″>
     <title>Asteroid Damage Visualization Map</title>
-    <meta name="google-site-verification" content="ENQ9n1V4rvA6leMytUmttgBGMMBaH5NBZXMNwnWZDg0" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 <style>
@@ -50,32 +48,46 @@
         background-color: #f2f2f2;
     }
 }
-
 </style>
-<body>
+<body style="background-color: #f2f2f2; margin-top: 1em;">
 
 <div id="container" style="">
-    <div id="second" style="margin-top: -1.75em; overflow-y: auto;"><br>
-        {% include '_navbar.html' %}
+    <div id="second" style="margin-top: -2.4%; overflow-y: auto;"><br>
+<!--        {% include '_navbar.html' %}-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" style="height:-50%;">
+  <a class="navbar-brand" href="/" style="font-size: 25px;"><strong>Asteroid Collision Map</strong></a>
+<!--  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="text-align: center; margin-left: 40%;">-->
+<!--    <span class="navbar-toggler-icon"></span>-->
+<!--  </button>-->
+  <div class="collapse navbar-collapse" id="navbarNav" style="float: right;">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/" style="font-size: 20px;">Home <span class="sr-only">(current)</span></a>
+      </li>
+
+
+    </ul>
+  </div>
+</nav>
         <div class="">
-            <h1 style="font-size: 20px; padding-left: 1em; font-weight: normal;"> Asteroid Damage Visualization Map</h1>
-            <h2 style="font-size: 15px; padding-left: 1.3em; font-weight: normal; margin-top: 1em;"> Asteroid Collision Map </h2>
-            <a href="/questions" style="font-size: 12px; padding-left: 1.6em; margin-top: 2em;"> Learn More</a>
+            <h1 style="font-size: 20px; padding-left: 1em; font-weight: normal; margin-top: 1em;"> Asteroid Damage Visualization Map</h1>
+            <h2 style="font-size: 15px; padding-left: 1.3em; font-weight: normal; margin-top: 1em;"> Asteroid Collision Map</h2>
             </div>
-        <p style="padding-left: 1em; padding-right: 1em; font-size: 15px; margin-top: 16px;"> Welcome to <b>Asteroid Damage Visualization Map.</b> Simulate an asteroid collision and view the the damage of the impact. Use the directions below to get started. &darr;</p>
+        <hr class="display-6">
+        <p style="padding-left: 1em; padding-right: 1em; font-size: 13px;"> Welcome to <b>Asteroid Damage Visualization Map.</b> Use the directions below to get started. Simulate an asteroid collision and view the the damage of the impact. Use the directions below to get started. &darr;</p>
         <hr>
                     <p style="color: red; padding-left: 1em;"> {{ message }} </p>
 
-        <p style="font-size: 16px; padding-left: 1em; padding-right: 1em;"> <b> 1.</b> Input the area of collision. (City or Address)</p>
+        <p style="font-size: 16px; padding-left: 1em; padding-right: 1em;"> <b> 1.</b> Input the area of collision (City or Address)</p>
         <form method='POST' action="/">
          <div class="form-group" style="padding-left: 1em; padding-right: 1em;">
 <!--    <label for="exampleFormControlInput1">Location/City Name</label>-->
-    <input type="text" class="form-control" name='city' style="width: 65%;" placeholder="Input City/Address">
+    <input type="text" class="form-control" name='city' style="width: 65%;" value="{{word_one}}{{word_two}}{{word_three}}" placeholder="Input City/Address">
   </div>
             <p style="font-size: 16px; padding-left: 1em; padding-right: 1em;"> <b> 2.</b> Select a preset diameter of the Asteroid <b>or</b> input your own in meters.</p>
               <div class="form-group" style="margin-left: 1em; margin-right: 1em; width: 62%;">
     <label for="exampleFormControlSelect1">Asteroid Size</label>
-        <select class="form-control" id="exampleFormControlSelect1" name="diameter">
+    <select class="form-control" id="exampleFormControlSelect1" name="diameter">
       <option value="22" selected>22m (Length of a large suburban house)</option>
       <option value="43">43m (Height of a 13 story building)</option>
         <option value="70">70m (Length of a Jumbojet)</option>
@@ -83,7 +95,7 @@
         <option value="91">91m (Length of a Football Field)</option>
         <option value="274">274m (Length of a city downtown)</option>
       <option value="381">381m (The height of the Empire State Building)</option>
-            <option value="1000">1000m (1 kilometer)</option>
+              <option value="1000">1000m (1 kilometer)</option>
         <option value="3658">3658m (The length of an International Airport Runway)</option>
       <option value="4300">4300m (The side length of a small city/town)</option>
         <option value="8000">8000m (The side length of 1 large city)</option>
@@ -92,28 +104,26 @@
                   <p style="margin-top: 1em;"> <b>Or</b> input asteroid diameter in meters.</p>
   </div>
             <div class="form-group" style="padding-left: 1em; padding-right: 1em;">
-    <input type="text" class="form-control" id="exampleFormControlInput1" name='otherdiameter' placeholder="Input Asteroid Diameter in Meters" style="width: 65%;">
+    <input type="text" class="form-control" id="exampleFormControlInput1" name='otherdiameter' placeholder="Input Asteroid Diameter in Meters" style="width: 65%;" value="{{ pre_diameter }}">
 
-                <button type="submit" class="btn btn-lg btn-secondary" style="background-color: #ff4d4d; margin-top: 13px;"> View Damage </button>
-                <p style="font-size: 9px; margin-top: 7px; margin-left: 1.2px;"> By viewing, you agree to the <a href="/terms">terms of service</a></p>
-
+                <button type="submit" class="btn btn-lg btn-secondary" style="background-color: #ff4d4d; margin-top: 0.9em;"> View Damage! </button>
+                <p style="font-size: 9px; margin-top: 5px; margin-left: 1.2px;"> By viewing, you agree to the <a href="/terms">terms of service</a></p>
                 <hr> <p style="font-size: 12px;"> Hover over the colored circles to view the effects of the collision. Fallout and possible Extinction usually occurs from <b>asteroids with a diameter over 1000-2000 meters.</b></p>
+                <p style="font-size: 8px; margin-left: 1.2px;"> Disclaimer: Information and map portrayal of destruction may be exagerated to improve user experience. </p>
+                <hr>
                 <p style="font-size: 12px;"> Commonly asked Questions (Q&A): <a href="/questions">Learn More</a>  <b style="font-size: 20px; margin-left: 5px; color: black;"> &larr;</b></p>
-            </div>
-
-        </form>
+  </div>
 <hr>
-<div style="position: absolute; bottom: 5px; left: 5px;">
-
+        </form>
     </div>
+    <div id="first" style="background-color: #f2f2f2; height: 80vh;">
+           <iframe src="/map" style="width: 100%; min-height: 135vh;" scrolling="no" frameborder="0"></iframe>
+<!--        <div style="height: 100vh">-->
+<!--    {% include 'map2.html' %}-->
+<!--        </div>-->
     </div>
-<!--        <footer style="bottom: 0;"> Asteroid Collision Simulations</footer>-->
-    <div id="first">
-
-            {% include 'map.html' %}
-    </div>
+<hr>
 </div>
-
 
 </body>
 </html>
