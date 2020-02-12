@@ -44,7 +44,20 @@ def calculate():
             session['user_lat_lon'] = lat_lon
             print(session['user_lat_lon'], ' changed to \/')
         except:
-            return render_template('index.html', message='* The City You Inputted Does Not Exist | Fix: Try waiting and reloading*')
+            import pandas as pd
+
+            df = pd.read_csv("static/worldcities.csv")
+
+            for index, row in df.iterrows():
+                if str(row['city']).lower() == str(city).lower():
+                    print(row['city'])
+                    lat_lon = [row['lat'], row['lng']]
+                    session['user_lat_lon'] = lat_lon
+                    break
+                else:
+                    lat_lon = ""
+            if len(lat_lon) == 0:
+                return render_template('index.html', message='* The City You Inputted Does Not Exist | Fix: Try waiting and reloading*')
 
 
         try:
