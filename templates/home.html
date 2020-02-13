@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Asteroid Damage Visualization Map simulates and visualizes the destruction of asteroids in a certain location on a map. View the destruction on a beautiful looking interactive map.">
+    <meta name=”viewport” content=”width=device-width, initial-scale=1″>
+    <title>Asteroid/Military/Astronomy Simulations</title>
+    <meta name="google-site-verification" content="ENQ9n1V4rvA6leMytUmttgBGMMBaH5NBZXMNwnWZDg0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<style>
+    #header {
+    width: 100%;
+    background-color: #f2f2f2;
+    height: 30px;
+}
+
+#container {
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f2;
+}
+#first {
+    width: 75%;
+    float: left;
+    height: 100%;
+    background-color: #f2f2f2;
+}
+#second {
+    width: 25%;
+    float: left;
+    height: 100%;
+    background-color: #f2f2f2;
+}
+@media (max-width: 760px) {
+    #second {
+        width: 50%;
+        float: left;
+        height: 100%;
+        background-color: #f2f2f2;
+    }
+    #first {
+        width: 50%;
+        float: left;
+        height: 100%;
+        background-color: #f2f2f2;
+    }
+}
+
+</style>
+<body>
+
+<div id="container" style="">
+    <div id="second" style="margin-top: -1.75em; overflow-y: auto; overflow: hidden;"><br>
+        {% include '_navbar.html' %}
+        <h1 style="font-size: 23px; font-weight: normal; margin-left: 1em;"> Asteroid/Astronomy/Military Simulations</h1>
+        <p class="lead" style="font-size: 20px; margin-left: 1em;">Simulations Below &darr;</p>
+        <hr>
+        <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" alt="Asteroid Collision Simulator" src="{{ url_for('static', filename='favicon.png') }}">
+                <div class="card-body">
+                  <p class="card-text">Asteroid Simulation where you can view the damages that a devestating asteroid collision would cause.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <a href="/" type="button" class="btn btn-sm btn-outline-secondary">Open Simulation</a>
+                    </div>
+                    <small class="text-muted">Last Edit: 2/12/2020</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+
+    <div id="first">
+
+            {% include 'map.html' %}
+    </div>
+</div>
+
+</body>
+</html>
