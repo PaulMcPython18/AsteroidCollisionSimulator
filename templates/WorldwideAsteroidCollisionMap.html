@@ -49,7 +49,20 @@
         background-color: #f2f2f2;
     }
 }
-
+.mainpara {
+    font-size: 16px;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+.smallpara {
+    font-size: 12px;
+    margin-left: 1em;
+}
+.abspos {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+}
 </style>
 <body>
 
@@ -69,14 +82,14 @@
         </form>
         <hr>
                     <p style="color: red; padding-left: 1em;"> {{ message }} </p>
-        <p style="font-size: 16px; padding-left: 1em; padding-right: 1em;"><b>Steps: </b>Click the button above to show asteroid collision locations. Then follow the directions below to understand the asteroid collision location simulation map!</p>
+        <p class="mainpara"><b>Steps: </b>Click the button above to show asteroid collision locations. Then follow the directions below to understand the asteroid collision location simulation map!</p>
         <hr>
-        <p style="font-size: 16px; padding-left: 1em; padding-right: 1em;"> <b> 1.</b> Click the red button above to show locations of the asteroid collisions. Locate the locations of asteroid collisions/impacts. These areas are marked with markers with their color depending on severity. </p>
-        <p style="font-size: 16px; padding-left: 1em; padding-right: 1em;"> <b> 2.</b> Hover over the location of the collision. When you hover over this location, a box will popup giving information about the certain collision.</p>
-        <p style="font-size: 16px; padding-left: 1em; padding-right: 1em;"> <b> 3.</b> After knowing the location of the impact, you can hover over the marker and view information about the asteroid like its <b>mass/weight, composition, and date of impact.</b> All very helpful statistics! </p>
+        <p class="mainpara"> <b> 1.</b> Click the red button above to show locations of the asteroid collisions. Locate the locations of asteroid collisions/impacts. These areas are marked with markers with their color depending on severity. </p>
+        <p class="mainpara"> <b> 2.</b> Hover over the location of the collision. When you hover over this location, a box will popup giving information about the certain collision.</p>
+        <p class="mainpara"> <b> 3.</b> After knowing the location of the impact, you can hover over the marker and view information about the asteroid like its <b>mass/weight, composition, and date of impact.</b> All very helpful statistics! </p>
         <hr>
-        <p style="font-size: 12px; padding-left: 1em;"> Asteroid Collision Location Map <b>&copy;</b></p>
-<div style="position: absolute; bottom: 5px; left: 5px;">
+        <p class="smallpara"> Asteroid Collision Location Map <b>&copy;</b></p>
+<div class="abspos">
 
     </div>
     </div>
