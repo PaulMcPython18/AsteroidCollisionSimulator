@@ -330,6 +330,18 @@ def more():
 @app.route('/home')
 def home():
     return render_template('home.html')
+@app.route('/asteroid-collision-location-map')
+def globalasteroidlocationmap():
+    return render_template('WorldwideAsteroidCollisionMap.html')
+@app.route('/asteroid-collision-location-map', methods=["POST"])
+def globalasteroidlocationmap2():
+    return render_template('WorldwideAsteroidCollisionMap2.html')
+@app.route('/earthquake-location-map')
+def earthquakelocationmap():
+    return render_template('WorldwideEarthquakeLocationMap.html')
+@app.route('/earthquake-location-map', methods=['POST'])
+def earthquakelocationmap2():
+    return render_template('WorldwideEarthquakeLocationMap2.html')
 if __name__ == "__main__":
     of_diameter = 22
     app.run(debug=False)
