@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Asteroid Collision Location Map enables you to locate all major asteroid collisions on earth in history.">
+    <meta name=”viewport” content=”width=device-width, initial-scale=1″>
+    <title>Asteroid Collision Location Map</title>
+    <meta name="google-site-verification" content="ENQ9n1V4rvA6leMytUmttgBGMMBaH5NBZXMNwnWZDg0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<style>
+    #header {
+    width: 100%;
+    background-color: #f2f2f2;
+    height: 30px;
+}
+
+#container {
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f2;
+}
+#first {
+    width: 75%;
+    float: left;
+    height: 100%;
+    background-color: #f2f2f2;
+}
+#second {
+    width: 25%;
+    float: left;
+    height: 100%;
+    background-color: #f2f2f2;
+}
+@media (max-width: 760px) {
+    #second {
+        width: 50%;
+        float: left;
+        height: 100%;
+        background-color: #f2f2f2;
+    }
+    #first {
+        width: 50%;
+        float: left;
+        height: 100%;
+        background-color: #f2f2f2;
+    }
+}
+
+</style>
+<body>
+
+<div id="container" style="">
+    <div id="second" style="margin-top: -1.75em; overflow-y: auto;"><br>
+        {% include '_navbar.html' %}
+        <div class="">
+            <h1 style="font-size: 20px; padding-left: 1em; font-weight: normal;"> Asteroid Collision Location Map</h1>
+            <h2 style="font-size: 15px; padding-left: 1.3em; font-weight: normal; margin-top: 1em;"> Worldwide Asteroid Collision Location Map </h2>
+            <a href="/questions" style="font-size: 12px; padding-left: 1.6em; margin-top: 2em;"> Learn More</a>
+            </div>
+        <p style="padding-left: 1em; padding-right: 1em; font-size: 15px; margin-top: 16px;"> Welcome to <b>Asteroid Collision Location Map.</b> Locate the locations of all major asteroid collisions with earth in history. &darr;</p>
+        <hr>
+        <p class="maintag" style="margin-left: 1em; margin-right: 1em;"><b>Click!</b> Click the button below to show the locations of all known major earthquakes greater than 6.5 magnitude.</p>
+        <form action="/asteroid-collision-location-map", method="post">
+            <button type="submit" class="btn btn-lg btn-secondary" style="background-color: #ff4d4d; margin-top: 13px; margin-left: 1em;"> Show Locations Of All Earthquakes </button>
+        </form>
+        <hr>
+                    <p style="color: red; padding-left: 1em;"> {{ message }} </p>
+        <p style="font-size: 16px; padding-left: 1em; padding-right: 1em;"><b>Steps: </b>Click the button above to show asteroid collision locations. Then follow the directions below to understand the asteroid collision location simulation map!</p>
+        <hr>
+        <p style="font-size: 16px; padding-left: 1em; padding-right: 1em;"> <b> 1.</b> Click the red button above to show locations of the asteroid collisions. Locate the locations of asteroid collisions/impacts. These areas are marked with markers with their color depending on severity. </p>
+        <p style="font-size: 16px; padding-left: 1em; padding-right: 1em;"> <b> 2.</b> Hover over the location of the collision. When you hover over this location, a box will popup giving information about the certain collision.</p>
+        <p style="font-size: 16px; padding-left: 1em; padding-right: 1em;"> <b> 3.</b> After knowing the location of the impact, you can hover over the marker and view information about the asteroid like its <b>mass/weight, composition, and date of impact.</b> All very helpful statistics! </p>
+        <hr>
+        <p style="font-size: 12px; padding-left: 1em;"> Asteroid Collision Location Map <b>&copy;</b></p>
+<div style="position: absolute; bottom: 5px; left: 5px;">
+
+    </div>
+    </div>
+    <div id="first">
+            {% include 'WorldwideAsteroidMap.html' %}
+    </div>
+</div>
+
+
+</body>
+</html>
+

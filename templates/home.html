@@ -23,13 +23,13 @@
     background-color: #f2f2f2;
 }
 #first {
-    width: 75%;
+    width: 65%;
     float: left;
     height: 100%;
     background-color: #f2f2f2;
 }
 #second {
-    width: 25%;
+    width: 35%;
     float: left;
     height: 100%;
     background-color: #f2f2f2;
@@ -53,35 +53,65 @@
 <body>
 
 <div id="container" style="">
-    <div id="second" style="margin-top: -1.75em; overflow-y: auto; overflow: hidden;"><br>
+    <div id="second" style="margin-top: -1.75em; overflow-y: auto; overflow-x: hidden;"><br>
         {% include '_navbar.html' %}
         <h1 style="font-size: 23px; font-weight: normal; margin-left: 1em;"> Random Simulations And Visualizations</h1>
-        <p class="lead" style="font-size: 20px; margin-left: 1em;">Simulations Below &darr;</p>
+        <p style="margin-left: 1em; font-size: 14px;">Use the <b>simulations</b> below to <b>empower</b> and <b>educate</b> yourself about natural occurances around the world. Some of the topics we simulate are astrononmy, asterodis, natural disasters and more! &darr;</p>
         <hr>
         <div class="container">
+            <p style="font-size: 16px; font-weight: bold;">Asteroid Collision Simulator Map:</p>
         <div class="row">
             <div class="col-md-4">
               <div class="card mb-4 box-shadow">
                 <img class="card-img-top" alt="Asteroid Collision Simulator" src="{{ url_for('static', filename='favicon.png') }}">
                 <div class="card-body">
-                  <p class="card-text">Asteroid Simulation where you can view the damages that a devestating asteroid collision would cause.</p>
+                    <p class="card-text"><b>Asteroid Simulation</b> where you can view the damages that a devestating asteroid collision would cause.</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                       <a href="/" type="button" class="btn btn-sm btn-outline-secondary">Open Simulation</a>
                     </div>
-                    <small class="text-muted">Last Edit: 2/12/2020</small>
+                    <small class="text-muted">Last Edit: 2/21/2020</small>
                   </div>
                 </div>
               </div>
             </div>
         </div>
+                        <p style="font-size: 16px; font-weight: bold;">Asteroid Collision Location Map:</p>
+<div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" alt="Asteroid Collision Simulator" src="{{ url_for('static', filename='antartica.png') }}">
+                <div class="card-body">
+                    <p class="card-text"><b>Asteroid Collision Location Map</b> - Locate the Locations of all major known asteroid collisions</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <a href="/asteroid-collision-location-map" type="button" class="btn btn-sm btn-outline-secondary">Open Map Simulation</a>
+                    </div>
+                    <small class="text-muted">Last Edit: 2/21/2020</small>
+                  </div>
+                </div>
+              </div>
         </div>
-    </div>
 
+    </div>
+<div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" alt="Asteroid Collision Simulator" src="{{ url_for('static', filename='earthquakesimulator.png') }}">
+                <div class="card-body">
+                    <p class="card-text"><b>Earthquake Location Map</b> - Locate the Locations of all major known earthquakes. Magnitudes and depth are also included.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <a href="/earthquake-location-map" type="button" class="btn btn-sm btn-outline-secondary">Open Map Simulation</a>
+                    </div>
+                    <small class="text-muted">Last Edit: 2/21/2020</small>
+                  </div>
+                </div>
+              </div>
+        </div>
 
 
     <div id="first">
-
             {% include 'map.html' %}
     </div>
 </div>
