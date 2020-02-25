@@ -116,7 +116,10 @@ def map():
         print('LATLONS: FINAL BEFORE SUBMITION: ', lat_lons)
         print(diameter)
         print(type(diameter))
-        crater_diameter = int(diameter) * 21.5
+        try:
+            crater_diameter = int(diameter) * 21.5
+        except:
+            return render_template('map.html')        
         print(crater_diameter)
         if int(crater_diameter) > 60000:
             m = folium.Map(location=lat_lons, zoom_start=5)
