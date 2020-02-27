@@ -345,6 +345,12 @@ def earthquakelocationmap():
 @app.route('/earthquake-location-map', methods=['POST'])
 def earthquakelocationmap2():
     return render_template('WorldwideEarthquakeLocationMap2.html')
+@app.route('/nuke-detonation-location-map')
+def nukedetonatinolocationmap():
+    return render_template('WorldwideNukeDetonationLocationMap.html')
+@app.route('/nuke-detonation-location-map', methods=['POST'])
+def nukedetonatinolocationmap2():
+    return render_template('WorldwideNukeDetonationLocationMap2.html')
 if __name__ == "__main__":
     of_diameter = 22
     app.run(debug=False)
