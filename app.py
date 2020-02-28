@@ -119,7 +119,7 @@ def map():
         try:
             crater_diameter = int(diameter) * 21.5
         except:
-            return render_template('map.html')        
+            return render_template('map.html')
         print(crater_diameter)
         if int(crater_diameter) > 60000:
             m = folium.Map(location=lat_lons, zoom_start=5)
@@ -351,6 +351,9 @@ def nukedetonatinolocationmap():
 @app.route('/nuke-detonation-location-map', methods=['POST'])
 def nukedetonatinolocationmap2():
     return render_template('WorldwideNukeDetonationLocationMap2.html')
+@app.route('/ret-map')
+def retmap():
+    return render_template('map.html')
 if __name__ == "__main__":
     of_diameter = 22
     app.run(debug=False)
