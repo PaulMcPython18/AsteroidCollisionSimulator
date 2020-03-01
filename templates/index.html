@@ -51,8 +51,12 @@
     }
 }
 
+.desktopandmobile {
+    width: 100%;
+    min-height: 100em;
+}
 </style>
-<body>
+<body style="background-color: #f2f2f2;">
 
 <div id="container" style="">
     <div id="second" style="margin-top: -1.75em; overflow-y: auto;"><br>
@@ -121,7 +125,7 @@
     </div>
 <!--        <footer style="bottom: 0;"> Asteroid Collision Simulations</footer>-->
     <div id="first">
-        <iframe src="/ret-map" style="width: 100%; min-height: 172vh;" scrolling="no" frameborder="0"></iframe>
+        <iframe src="/ret-map" class="desktopandmobile" scrolling="no" frameborder="0"></iframe>
 <!--            {% include 'map.html' %}-->
     </div>
 </div>
