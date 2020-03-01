@@ -57,7 +57,7 @@ def calculate():
                 else:
                     lat_lon = ""
             if len(lat_lon) == 0:
-                return render_template('index.html', message='* The City You Inputted Does Not Exist | Fix: Try waiting and reloading*')
+                return render_template('index.html', message='* The City You Inputted Does Not Exist   Fix: Try waiting and reloading*')
 
 
         try:
@@ -127,29 +127,29 @@ def map():
         if int(crater_diameter) > 60000:
             m = folium.Map(location=lat_lons, zoom_start=5)
             folium.Circle(location=lat_lons, radius=crater_diameter * 51,
-                          tooltip="Dust and Ash causes fallout around the world. Living animals and plants begin dieing because of lack of sunlight and the ability to get nutrition.",
+                          tooltip="Dust and Ash causes fallout <br> Living animals and plants begin dieing because of lack of sunlight and the ability to get nutrition.",
                           color='white', fill=True,
                           fill_color='', zoom_start=5).add_to(m)
             folium.Circle(location=lat_lons, radius=crater_diameter * 19,
-                          tooltip="Asteroid would cause fallout around the world because of dust and ash thrown into the atmosphere | All people are aware of the situation either by hearing or sight | Unbearable Heat",
+                          tooltip="Asteroid would cause fallout because of dust and ash thrown into the atmosphere <br> >All people are aware of the situation either by hearing or sight<br>   Unbearable Heat",
                           color='purple', fill=True,
                           fill_color='lightgrey', zoom_start=5).add_to(m)
             folium.Circle(location=lat_lons, radius=crater_diameter * 9,
-                          tooltip="Unbearable Fatal Heat Felt | Sound Shockwave | Buildings Likely Flattened | Heat & Shockwave Still Felt Farther Away",
+                          tooltip="Unbearable Fatal Heat Felt   <br>Sound Shockwave   <br>Buildings Likely Flattened   <br>Heat & Shockwave Still Felt Farther Away",
                           color='grey', fill=True,
                           fill_color='grey', zoom_start=5).add_to(m)
             folium.Circle(location=lat_lons, radius=crater_diameter * 5,
-                          tooltip="Buildings Destroyed | Certain Clothing may ignite | Debris and heat fatal to many ", color='limegreen', fill=True,
+                          tooltip="Buildings Destroyed   <br>Certain Clothing may ignite   <br>Debris and heat fatal to many ", color='limegreen', fill=True,
                           fill_color='limegreen', zoom_start=5).add_to(m)
             folium.Circle(location=lat_lons, radius=crater_diameter * 3,
-                          tooltip="Human Skin May Burn | Infastructure destroyed | Flying Debris Fatal ", color='#ff6666', fill=True,
+                          tooltip="Human Skin May Burn  <br> Infastructure destroyed<br>   Flying Debris Fatal ", color='#ff6666', fill=True,
                           fill_color='#ff6666', zoom_start=5).add_to(m)
-            folium.Circle(location=lat_lons, radius=crater_diameter*1.45, tooltip="All Buildings Knocked Over | Human Skin Burns | Most Perish ",color='yellow', fill=True,
+            folium.Circle(location=lat_lons, radius=crater_diameter*1.45, tooltip="All Buildings Knocked Over  <br> Human Skin Burns  <br> Most Perish ",color='yellow', fill=True,
                           fill_color='yellow', zoom_start=5).add_to(m)
 
-            folium.Circle(location=lat_lons, radius=crater_diameter/1.5, tooltip="Crater Area | Anything Living Dies ", color='orange', fill=True,
+            folium.Circle(location=lat_lons, radius=crater_diameter/1.5, tooltip="Crater Area  <br> Anything Living Dies ", color='orange', fill=True,
                               fill_color='orange', zoom_start=5).add_to(m)
-            folium.Circle(location=lat_lons , radius=int(diameter), tooltip="Original Size of Asteroid | Click", color='grey',
+            folium.Circle(location=lat_lons , radius=int(diameter), tooltip="Original Size of Asteroid", color='grey',
                           fill=True,
                           fill_color='grey', zoom_start=5).add_to(m)
             print(diameter)
@@ -157,33 +157,33 @@ def map():
         elif int(crater_diameter) > 7000:
             m = folium.Map(location=lat_lons, zoom_start=10)
             folium.Circle(location=lat_lons, radius=crater_diameter * 14,
-                          tooltip="Worldwide Fallout Possible From Dust & Ash | Almost all people are aware of the situation either by hearing or sight.",
+                          tooltip="Worldwide Fallout Possible From Dust & Ash   <br>All people are aware of the situation either by hearing or sight.",
                           color='purple', fill=True,
                           fill_color='lightgrey', zoom_start=10).add_to(m)
             folium.Circle(location=lat_lons, radius=crater_diameter * 8,
-                          tooltip="Unbearable Heat Waves Felt (Fatal to those of old age or certain medical conditions) | Sound Shockwave | Most Buildings Stand | Heat & Shockwave Still Felt Farther Away",
+                          tooltip="Unbearable Heat Waves Felt (Fatal to those of old age or certain medical conditions)  <br> Sound Shockwave  <br> Most Buildings Stand  <br> Heat & Shockwave Still Felt Farther Away",
                           color='grey', fill=True,
                           fill_color='grey', zoom_start=10).add_to(m)
             folium.Circle(location=lat_lons, radius=crater_diameter * 4,
-                          tooltip="Buildings Destroyed | Certain Clothing may ignite, debris and heat fatal to many ",
+                          tooltip="Buildings Destroyed  <br> Certain Clothing may ignite  <br> Debris and heat fatal to many ",
                           color='limegreen', fill=True,
                           fill_color='limegreen', zoom_start=10).add_to(m)
             folium.Circle(location=lat_lons, radius=crater_diameter * 2,
-                          tooltip="Human Skin May Burn and infastructure destroyed | Flying Debris Fatal ",
+                          tooltip="Human Skin May Burn  <br> Infastructure destroyed  <br> Flying Debris Fatal ",
 
                           color='#ff6666', fill=True,
                           fill_color='#ff6666', zoom_start=10).add_to(m)
             folium.Circle(location=lat_lons, radius=crater_diameter * 1.2,
-                          tooltip="Most Buildings Knocked Over | Human Skin Burns | Most Perish ",
+                          tooltip="Most Buildings Knocked Over  <br> Human Skin Burns  <br> Most Perish ",
                           color='yellow', fill=True,
                           fill_color='yellow', zoom_start=10).add_to(m)
 
             folium.Circle(location=lat_lons, radius=crater_diameter / 1.5,
-                          tooltip="Crater Area | Anything Living Dies ",
+                          tooltip="Crater Area  <br> Anything Living Dies ",
                           color='orange',
                           fill=True,
                           fill_color='orange', zoom_start=10).add_to(m)
-            folium.Circle(location=lat_lons, radius=int(diameter), tooltip="Original Size of Asteroid | Click",
+            folium.Circle(location=lat_lons, radius=int(diameter), tooltip="Original Size of Asteroid",
                           popup='(Circle Sizes Are Enlarged or Understated)', color='grey',
                           fill=True,
                           fill_color='grey', zoom_start=10).add_to(m)
@@ -193,31 +193,31 @@ def map():
         elif int(crater_diameter) > 3000:
             m = folium.Map(location=lat_lons, zoom_start=11)
             folium.Circle(location=lat_lons, radius=crater_diameter * 14,
-                          tooltip="Some Fallout Could Occur from dust & ash | Almost all people are aware of the situation either by hearing or sight.",
+                          tooltip="Some Fallout Could Occur from dust & ash  <br> All people are aware of the situation either by hearing or sight.",
                           color='purple', fill=True,
                           fill_color='lightgrey', zoom_start=11).add_to(m)
             folium.Circle(location=lat_lons, radius=crater_diameter * 8,
-                          tooltip="Unbearable Heat Waves Felt (Fatal to people of older age or certain medical conditions)| Sound Shockwave | Buildings Probably Stand | Heat & Shockwave Still Felt Farther Away",
+                          tooltip="Unbearable Heat Waves Felt (Fatal to people of older age or certain medical conditions) <br> Sound Shockwave  <br> Buildings Probably Stand  <br> Heat & Shockwave Still Felt Farther Away",
                           color='grey', fill=True,
                           fill_color='grey', zoom_start=11).add_to(m)
             folium.Circle(location=lat_lons, radius=crater_diameter * 4,
-                          tooltip="Buildings Destroyed | Certain Clothing may ignite, debris and heat fatal to many ",
+                          tooltip="Buildings Destroyed  <br> Certain Clothing may ignite  <br> Debris and heat fatal to many ",
                           color='limegreen', fill=True,
                           fill_color='limegreen', zoom_start=11).add_to(m)
             folium.Circle(location=lat_lons, radius=crater_diameter * 2,
-                          tooltip="Human Skin May Burn and infastructure destroyed | Flying Debris Fatal ",
+                          tooltip="Human Skin May Burn  <br> Infastructure destroyed  <br> Flying Debris Fatal ",
                           color='#ff6666', fill=True,
                           fill_color='#ff6666', zoom_start=11).add_to(m)
             folium.Circle(location=lat_lons, radius=crater_diameter * 1.2,
-                          tooltip="All Buildings Knocked Over | Human Skin Burns | Most Perish ",
+                          tooltip="All Buildings Knocked Over  <br> Human Skin Burns  <br> Most Perish ",
                           color='yellow', fill=True,
                           fill_color='yellow', zoom_start=11).add_to(m)
 
             folium.Circle(location=lat_lons, radius=crater_diameter / 1.5,
-                          tooltip="Crater Area | Anything Living Dies ",
+                          tooltip="Crater Area  <br> Anything Living Dies ",
                           color='orange', fill=True,
                           fill_color='orange', zoom_start=11).add_to(m)
-            folium.Circle(location=lat_lons, radius=int(diameter), tooltip="Original Size of Asteroid | Click",
+            folium.Circle(location=lat_lons, radius=int(diameter), tooltip="Original Size of Asteroid",
                           color='grey',
                           fill=True,
                           fill_color='grey', zoom_start=11).add_to(m)
@@ -226,34 +226,31 @@ def map():
         elif int(crater_diameter) > 1743:
             m = folium.Map(location=lat_lons, zoom_start=12)
             folium.Circle(location=lat_lons, radius=crater_diameter * 14,
-                          tooltip="Ash & Dust is kicked up from the collision, but not enough to cause fallout | Some heat felt",
-                          popup='Heat is felt, everyone is aware of the situation either by hearing or sight.',
+                          tooltip="Ash & Dust is kicked up from the collision, but not enough to cause fallout  <br> Some heat felt",
                           color='purple', fill=True,
                           fill_color='lightgrey', zoom_start=12).add_to(m)
             folium.Circle(location=lat_lons, radius=crater_diameter * 8,
-                          tooltip="Unbearable Heat Felt (Could Be Fatal To Certain People with Certain Medical Conditions) | Sound Shockwave | Buildings Probably Stand | Heat & Shockwave Still Felt Farther Away",
-                          popup='Buildings still stand because they have distance from the point of impact.',
+                          tooltip="Unbearable Heat Felt  <br> (Could Be Fatal To Certain People with Certain Medical Conditions)  <br> Sound Shockwave   Buildings Probably Stand   Heat & Shockwave Still Felt Farther Away",
                           color='grey', fill=True,
                           fill_color='grey', zoom_start=12).add_to(m)
             folium.Circle(location=lat_lons, radius=crater_diameter * 4,
-                          tooltip="Buildings Destroyed | Certain Clothing may ignite, debris and heat fatal to many ",
-                          popup='Fatal heat and debris causes casualties', color='limegreen', fill=True,
+                          tooltip="Buildings Destroyed  <br> Certain Clothing may ignite  <br> Debris and heat fatal to many ",
+                          color='limegreen', fill=True,
                           fill_color='limegreen', zoom_start=12).add_to(m)
             folium.Circle(location=lat_lons, radius=crater_diameter * 2,
-                          tooltip="Human Skin May Burn and infastructure destroyed | Flying Debris Fatal ",
-                          popup='Most bridges/houses flattened. Casualties occur from debris, earthquake and heat.',
+                          tooltip="Human Skin May Burn and infastructure destroyed  <br> Flying Debris Fatal ",
                           color='#ff6666', fill=True,
                           fill_color='#ff6666', zoom_start=12).add_to(m)
             folium.Circle(location=lat_lons, radius=crater_diameter * 1.2,
-                          tooltip="All Buildings Knocked Over | Human Skin Burns | Most Perish ",
-                          popup='Cities flattened by intense ground shaking.', color='yellow', fill=True,
+                          tooltip="All Buildings Knocked Over  <br> Human Skin Burns  <br> Most Perish ",
+                          color='yellow', fill=True,
                           fill_color='yellow', zoom_start=12).add_to(m)
 
             folium.Circle(location=lat_lons, radius=crater_diameter / 1.5,
-                          tooltip="Crater Area | Anything Living Dies ",
-                          popup='Crater Area | Hole in Ground', color='orange', fill=True,
+                          tooltip="Crater Area  <br> Anything Living Dies ",
+                          popup='Crater Area  <br> Hole in Ground', color='orange', fill=True,
                           fill_color='orange', zoom_start=12).add_to(m)
-            folium.Circle(location=lat_lons, radius=int(diameter), tooltip="Original Size of Asteroid | Click",
+            folium.Circle(location=lat_lons, radius=int(diameter), tooltip="Original Size of Asteroid  <br> Click",
                           popup='(Circle Sizes Are Enlarged or Understated)', color='grey',
                           fill=True,
                           fill_color='grey', zoom_start=12).add_to(m)
@@ -262,29 +259,29 @@ def map():
         elif int(crater_diameter) > 400:
             m = folium.Map(location=lat_lons, zoom_start=12)
             folium.Circle(location=lat_lons, radius=crater_diameter * 14,
-                          tooltip="Ash & Dust is kicked up from the collision, fallout is very unlikely but possible for the region | Heat Felt",
+                          tooltip="Ash & Dust is kicked up from the collision  <br> Fallout is extremely unlikely but possible for the region  <br> Heat Felt",
                           color='purple', fill=True,
                           fill_color='lightgrey', zoom_start=12).add_to(m)
             folium.Circle(location=lat_lons, radius=crater_diameter * 8,
-                          tooltip="Unbearable Heat Felt (Fatal to those of older age or have certain medical conditions)| Sound Shockwave | Buildings Probably Stand | Heat & Shockwave Still Felt Farther Away",
+                          tooltip="Unbearable Heat Felt  <br> (Fatal to those of older age or have certain medical conditions) <br> Sound Shockwave  <br> Buildings Probably Stand  <br> Heat & Shockwave Still Felt Farther Away",
                           color='grey', fill=True,
                           fill_color='grey', zoom_start=12).add_to(m)
             folium.Circle(location=lat_lons, radius=crater_diameter * 4,
-                          tooltip="Buildings Destroyed | Certain Clothing may ignite, debris and heat fatal to many ", color='limegreen',
+                          tooltip="Buildings Destroyed  <br> Certain Clothing may ignite  <br> Debris and heat fatal to many ", color='limegreen',
                           fill=True,
                           fill_color='limegreen', zoom_start=12).add_to(m)
             folium.Circle(location=lat_lons, radius=crater_diameter * 2,
-                          tooltip="Human Skin May Burn and infastructure destroyed | Flying Debris Fatal ",
+                          tooltip="Human Skin May Burn and infastructure destroyed  <br> Flying Debris Fatal ",
                           color='#ff6666', fill=True,
                           fill_color='#ff6666', zoom_start=12).add_to(m)
             folium.Circle(location=lat_lons, radius=crater_diameter * 1.2,
-                          tooltip="Most Buildings Knocked Over | Human Skin Burns | Most Perish ", color='yellow', fill=True,
+                          tooltip="Most Buildings Knocked Over  <br> Human Skin Burns  <br> Most Perish ", color='yellow', fill=True,
                           fill_color='yellow', zoom_start=12).add_to(m)
             folium.Circle(location=lat_lons, radius=crater_diameter / 1.5,
-                          tooltip="Crater Area | Anything Living Dies ",
+                          tooltip="Crater Area  <br> Anything Living Dies ",
                           color='orange', fill=True,
                           fill_color='orange', zoom_start=12).add_to(m)
-            folium.Circle(location=lat_lons, radius=int(diameter), tooltip="Original Size of Asteroid | Click",
+            folium.Circle(location=lat_lons, radius=int(diameter), tooltip="Original Size of Asteroid  <br> Click",
                           color='grey',
                           fill=True,
                           fill_color='grey', zoom_start=12).add_to(m)
@@ -292,29 +289,29 @@ def map():
         else:
             m = folium.Map(location=lat_lons, zoom_start=17)
             folium.Circle(location=lat_lons, radius=crater_diameter * 14,
-                          tooltip="Some heat may be/is felt | Almost all people are aware of the situation either by hearing or sight.",
+                          tooltip="Some heat may be/is felt  <br> Almost all people are aware of the situation either by hearing or sight.",
                           color='purple', fill=True,
                           fill_color='lightgrey', zoom_start=17).add_to(m)
             folium.Circle(location=lat_lons, radius=crater_diameter * 8,
-                          tooltip="Unbearable Heat Felt | Sound Shockwave | Buildings Probably Stand | Heat & Shockwave Still Felt Farther Away",
+                          tooltip="Unbearable Heat Felt  <br> Sound Shockwave  <br> Buildings Probably Stand  <br> Heat & Shockwave Still Felt Farther Away",
                           color='grey', fill=True,
                           fill_color='grey', zoom_start=17).add_to(m)
             folium.Circle(location=lat_lons, radius=crater_diameter * 4.5,
-                          tooltip="Buildings Destroyed | Certain Clothing may ignite, debris and heat fatal to many",
+                          tooltip="Buildings Destroyed  <br> Certain Clothing may ignite  <br> Debris and heat fatal to many",
                           fill=True,
                           color='limegreen',
                           fill_color='limegreen', zoom_start=17).add_to(m)
             folium.Circle(location=lat_lons, radius=crater_diameter * 3,
-                          tooltip="Human Skin May Burn and infastructure destroyed | Flying Debris Fatal",
+                          tooltip="Human Skin May Burn and infastructure destroyed  <br> Flying Debris Fatal",
                           color='#ff6666', fill=True,
                           fill_color='#ff6666', zoom_start=17).add_to(m)
             folium.Circle(location=lat_lons, radius=crater_diameter * 1.6,
-                          tooltip="Most Buildings Knocked Over | Human Skin Burns | Most Perish ",
+                          tooltip="Most Buildings Knocked Over  <br> Human Skin Burns  <br> Most Perish ",
                         color='yellow', fill=True,
                           fill_color='yellow', zoom_start=17).add_to(m)
 
             folium.Circle(location=lat_lons, radius=crater_diameter / 1.5,
-                          tooltip="Crater Area | Anything Living Dies",
+                          tooltip="Crater Area  <br> Anything Living Dies",
                           color='orange', fill=True,
                           fill_color='orange', zoom_start=17).add_to(m)
             folium.Circle(location=lat_lons, radius=int(diameter), tooltip="Original Size of Asteroid",
