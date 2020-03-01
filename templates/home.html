@@ -24,26 +24,26 @@
     background-color: #f2f2f2;
 }
 #first {
-    width: 65%;
+    width: 0%;
     float: left;
     height: 100%;
     background-color: #f2f2f2;
 }
 #second {
-    width: 35%;
+    width: 100%;
     float: left;
     height: 100%;
     background-color: #f2f2f2;
 }
 @media (max-width: 760px) {
     #second {
-        width: 50%;
+        width: 100%;
         float: left;
         height: 100%;
         background-color: #f2f2f2;
     }
     #first {
-        width: 50%;
+        width: 0%;
         float: left;
         height: 100%;
         background-color: #f2f2f2;
@@ -53,11 +53,11 @@
 </style>
 <body>
 
-<div id="container" style="">
+<div id="container">
     <div id="second" style="margin-top: -1.75em; overflow-y: auto; overflow-x: hidden;"><br>
         {% include '_navbar.html' %}
-        <h1 style="font-size: 23px; font-weight: normal; margin-left: 1em;"> Random Simulations And Visualizations</h1>
-        <p style="margin-left: 1em; font-size: 14px;">Use the <b>simulations</b> below to <b>empower</b> and <b>educate</b> yourself about natural occurances around the world. Some of the topics we simulate are astrononmy, asterodis, natural disasters and more! &darr;</p>
+        <h1 style="text-align: center; font-size: 23px; font-weight: normal; margin-left: 1em;"> Random Simulations And Visualizations</h1>
+        <p style="text-align: center; margin-left: 1em; font-size: 14px;">Use the <b>simulations</b> below to <b>empower</b> and <b>educate</b> yourself about natural occurances around the world. Some of the topics we simulate are astrononmy, asterodis, natural disasters and more! &darr;</p>
         <hr>
         <div class="container">
             <p style="font-size: 16px; font-weight: bold;">Asteroid Collision Simulator Map:</p>
@@ -128,11 +128,12 @@
               </div>
         </div>
 
-
-    <div id="first">
-            {% include 'map.html' %}
-    </div>
+<!--    <div id="first">-->
+<!--            {% include 'map.html' %}-->
+<!--    </div>-->
 </div>
+            <hr>
+<p style="margin-left: 1em; text-align: center;">Asteroid Collision Map &copy;</p>
 
 </body>
 </html>
