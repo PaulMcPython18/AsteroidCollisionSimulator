@@ -351,9 +351,15 @@ def nukedetonatinolocationmap():
 @app.route('/nuke-detonation-location-map', methods=['POST'])
 def nukedetonatinolocationmap2():
     return render_template('WorldwideNukeDetonationLocationMap2.html')
+@app.route('/ret-map')
+def retmap():
+    return render_template('map.html')
 @app.route('/ads.txt')
 def ads():
     return render_template('ads.txt')
+@app.route('/ret-asteroid-location')
+def ast():
+    return render_template('WorldwideAsteroidMap.html')
 if __name__ == "__main__":
     of_diameter = 22
     app.run(debug=False)
