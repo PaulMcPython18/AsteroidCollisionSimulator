@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Interactive volcano eruption location map that shows statistics like location, date and casualties.">
+    <meta name=”viewport” content=”width=device-width, initial-scale=1″>
+    <title>Volcano Eruption Location Map</title>
+    <meta name="google-site-verification" content="ENQ9n1V4rvA6leMytUmttgBGMMBaH5NBZXMNwnWZDg0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script data-ad-client="ca-pub-2104426707154383" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+<style>
+    #header {
+    width: 100%;
+    background-color: #f2f2f2;
+    height: 30px;
+}
+
+#container {
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f2;
+}
+#first {
+    width: 75%;
+    float: left;
+    height: 100%;
+    background-color: #f2f2f2;
+}
+#second {
+    width: 25%;
+    float: left;
+    height: 100%;
+    background-color: #f2f2f2;
+}
+@media (max-width: 760px) {
+    #second {
+        width: 50%;
+        float: left;
+        height: 100%;
+        background-color: #f2f2f2;
+    }
+    #first {
+        width: 50%;
+        float: left;
+        height: 100%;
+        background-color: #f2f2f2;
+    }
+}
+.mainpara {
+    font-size: 16px;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+.smallpara {
+    font-size: 12px;
+    text-align: center;
+}
+.abspos {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+}
+</style>
+<body>
+
+<div id="container" style="">
+    <div id="second" style="margin-top: -1.75em; overflow-y: auto;"><br>
+        {% include '_navbar.html' %}
+        <div class="">
+            <h1 style="font-size: 20px; padding-left: 1em; font-weight: normal;"> Volcano Eruption Location Map</h1>
+            <h2 style="font-size: 15px; padding-left: 1.3em; font-weight: normal; margin-top: 1em;"> Worldwide Volcano Eruption Location Map </h2>
+            <a href="/questions" style="font-size: 12px; padding-left: 1.6em; margin-top: 2em;"> Learn More</a>
+            <br>
+            <a href="/home" style="margin-left: 1.6em; font-size: 12px; margin-top: 1em;" class="btn btn-danger">View More Simulations & Maps</a><br>
+        <hr>
+        </div>
+        <p style="padding-left: 1em; padding-right: 1em; font-size: 15px; margin-top: 16px;"> Welcome to <b>Volcano Eruption Location Map.</b> Locate the locations of all major Volcano Eruptions with earth in history. Including its locations. &darr;</p>
+        <div style="margin-left: 1em; margin-right: 1em;">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-2104426707154383"
+     data-ad-slot="3483841792"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+        </div>
+        <hr>
+                    <p style="color: red; padding-left: 1em;"> {{ message }} </p>
+        <p class="mainpara"><b>Steps: </b>Click the button above to show Volcano Eruption locations. Then follow the directions below to understand the Volcano Eruption location simulation map! &darr;</p>
+        <hr>
+        <p class="mainpara"> <b> 1.</b> Click the red button above to show locations of the Volcano Eruptions. Locate the locations of Volcano Eruptions/impacts. These areas are marked with markers with their color depending on severity. </p>
+        <p class="mainpara"> <b> 2.</b> Hover over the location of the collision. When you hover over this location, a box will popup giving information about the certain collision.</p>
+        <p class="mainpara"> <b> 3.</b> After knowing the location of the impact, you can hover over the marker and view information about the asteroid like its <b>location, eruption date, casualties, etc.</b> All interesting statistics!</p>
+        <hr>
+        <p class="smallpara"> Volcano Eruption Location Map <b>&copy;</b></p>
+
+<div class="abspos">
+
+    </div>
+    </div>
+    <div id="first">
+            {% include 'volcanolocationmap.html' %}
+    </div>
+</div>
+
+
+</body>
+</html>
+
