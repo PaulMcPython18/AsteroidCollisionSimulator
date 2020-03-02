@@ -360,6 +360,9 @@ def ads():
 @app.route('/ret-asteroid-location')
 def ast():
     return render_template('WorldwideAsteroidMap.html')
+@app.route('/volcano-location-map')
+def vol():
+    return render_template('volcanoeruptionlocationmap.html')
 if __name__ == "__main__":
     of_diameter = 22
     app.run(debug=False)
