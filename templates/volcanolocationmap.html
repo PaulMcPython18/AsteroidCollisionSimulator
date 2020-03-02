@@ -1,0 +1,1332 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_6090649e40c44027b5485e7cc8849cde {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_6090649e40c44027b5485e7cc8849cde" ></div>
+        
+</body>
+<script>    
+    
+            var map_6090649e40c44027b5485e7cc8849cde = L.map(
+                "map_6090649e40c44027b5485e7cc8849cde",
+                {
+                    center: [44.4629, -47.7465],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 3,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_dd7065318945459aab53cd69854d018c = L.tileLayer(
+                "https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg",
+                {"attribution": "Map tiles by \u003ca href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by-sa/3.0\"\u003eCC BY SA\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_6090649e40c44027b5485e7cc8849cde);
+        
+    
+            var marker_cluster_8c4a6f076c864d7fbc25bd32ea401172 = L.markerClusterGroup(
+                {}
+            );
+            map_6090649e40c44027b5485e7cc8849cde.addLayer(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var marker_9ae47dee93c4442cbc57d124e74db6e2 = L.marker(
+                [-1.4669999999999999, -78.442],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_3e1f5606165c48e38e4bd47d90a1c8f5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_9ae47dee93c4442cbc57d124e74db6e2.setIcon(icon_3e1f5606165c48e38e4bd47d90a1c8f5);
+        
+    
+            marker_9ae47dee93c4442cbc57d124e74db6e2.bindTooltip(
+                `<div>
+                     Name: Tungurahua<br>Location: Ecuador<br>Deaths: nan<br>Year: 2010<br>Month: 1<br>Day: nan
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ae7cc51fdadf4aabaaf65026a8178107 = L.marker(
+                [63.63, -19.62],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_e8dd1096169149e28ace1bfe41f3b140 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_ae7cc51fdadf4aabaaf65026a8178107.setIcon(icon_e8dd1096169149e28ace1bfe41f3b140);
+        
+    
+            marker_ae7cc51fdadf4aabaaf65026a8178107.bindTooltip(
+                `<div>
+                     Name: Eyjafjallajokull<br>Location: Iceland-S<br>Deaths: 2.0<br>Year: 2010<br>Month: 3<br>Day: 31.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3d5e97d0153845a09accb9c04094d70a = L.marker(
+                [14.380999999999998, -90.601],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_4266d0d021824a6296ebadbaa79fdd47 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_3d5e97d0153845a09accb9c04094d70a.setIcon(icon_4266d0d021824a6296ebadbaa79fdd47);
+        
+    
+            marker_3d5e97d0153845a09accb9c04094d70a.bindTooltip(
+                `<div>
+                     Name: Pacaya<br>Location: Guatemala<br>Deaths: 1.0<br>Year: 2010<br>Month: 5<br>Day: 27.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_25788f5ed7ac40f0a1468be48b17b730 = L.marker(
+                [16.708, 145.78],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_3907358fb51b4ebcb7d399be52bd1f30 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_25788f5ed7ac40f0a1468be48b17b730.setIcon(icon_3907358fb51b4ebcb7d399be52bd1f30);
+        
+    
+            marker_25788f5ed7ac40f0a1468be48b17b730.bindTooltip(
+                `<div>
+                     Name: Sarigan<br>Location: Mariana Is-C Pacific<br>Deaths: nan<br>Year: 2010<br>Month: 5<br>Day: 29.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_229f4902fab3437dbceb98d7269cd0d9 = L.marker(
+                [2.78, 125.48],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_eeb6a83fae964da4814f53aef3794287 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_229f4902fab3437dbceb98d7269cd0d9.setIcon(icon_eeb6a83fae964da4814f53aef3794287);
+        
+    
+            marker_229f4902fab3437dbceb98d7269cd0d9.bindTooltip(
+                `<div>
+                     Name: Karangetang [Api Siau]<br>Location: Sangihe Is-Indonesia<br>Deaths: 4.0<br>Year: 2010<br>Month: 8<br>Day: 6.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a09ad9ce97814ea8b2c5dd56c25052aa = L.marker(
+                [3.17, 98.39200000000001],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_c82d67d2cb094a688b09adb6bc488e09 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_a09ad9ce97814ea8b2c5dd56c25052aa.setIcon(icon_c82d67d2cb094a688b09adb6bc488e09);
+        
+    
+            marker_a09ad9ce97814ea8b2c5dd56c25052aa.bindTooltip(
+                `<div>
+                     Name: Sinabung<br>Location: Sumatra<br>Deaths: 2.0<br>Year: 2010<br>Month: 8<br>Day: 30.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_801ca364d9574e65a04d11ebc649b018 = L.marker(
+                [-7.542000000000001, 110.44200000000001],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_1338d2208c56462ebbb14246c2616470 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_801ca364d9574e65a04d11ebc649b018.setIcon(icon_1338d2208c56462ebbb14246c2616470);
+        
+    
+            marker_801ca364d9574e65a04d11ebc649b018.bindTooltip(
+                `<div>
+                     Name: Merapi<br>Location: Java<br>Deaths: 367.0<br>Year: 2010<br>Month: 10<br>Day: 26.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d4a2e3c158fb49b489ae416943787f05 = L.marker(
+                [-1.4669999999999999, -78.442],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_987fa486c2ec479d96d549c7f33f60b1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_d4a2e3c158fb49b489ae416943787f05.setIcon(icon_987fa486c2ec479d96d549c7f33f60b1);
+        
+    
+            marker_d4a2e3c158fb49b489ae416943787f05.bindTooltip(
+                `<div>
+                     Name: Tungurahua<br>Location: Ecuador<br>Deaths: nan<br>Year: 2010<br>Month: 11<br>Day: nan
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f7fc62978e214f848d6e0352721d25a9 = L.marker(
+                [-7.942, 112.95],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_e39baa24b52242ec92385cd7511cd5f3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_f7fc62978e214f848d6e0352721d25a9.setIcon(icon_e39baa24b52242ec92385cd7511cd5f3);
+        
+    
+            marker_f7fc62978e214f848d6e0352721d25a9.bindTooltip(
+                `<div>
+                     Name: Tengger Caldera<br>Location: Java<br>Deaths: nan<br>Year: 2010<br>Month: 12<br>Day: 28.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a0170c881ea747dfb5b0c05ac767245e = L.marker(
+                [-7.542000000000001, 110.44200000000001],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_d8e779d7e49242de8d310e7d19e7f514 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_a0170c881ea747dfb5b0c05ac767245e.setIcon(icon_d8e779d7e49242de8d310e7d19e7f514);
+        
+    
+            marker_a0170c881ea747dfb5b0c05ac767245e.bindTooltip(
+                `<div>
+                     Name: Merapi<br>Location: Java<br>Deaths: 1.0<br>Year: 2011<br>Month: 1<br>Day: 3.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4aed7a4226554fafbadd6e7f3e37ba84 = L.marker(
+                [31.93, 130.87],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_a9ae3fb7a995414cac6cb9c71437508e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_4aed7a4226554fafbadd6e7f3e37ba84.setIcon(icon_a9ae3fb7a995414cac6cb9c71437508e);
+        
+    
+            marker_4aed7a4226554fafbadd6e7f3e37ba84.bindTooltip(
+                `<div>
+                     Name: Kirishima<br>Location: Kyushu-Japan<br>Deaths: nan<br>Year: 2011<br>Month: 1<br>Day: 28.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d4d8f5b7552046feb50ad61df6382e8a = L.marker(
+                [12.77, 124.05],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_3300e3d65e924aa4b577a44da13e880f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_d4d8f5b7552046feb50ad61df6382e8a.setIcon(icon_3300e3d65e924aa4b577a44da13e880f);
+        
+    
+            marker_d4d8f5b7552046feb50ad61df6382e8a.bindTooltip(
+                `<div>
+                     Name: Bulusan<br>Location: Luzon-Philippines<br>Deaths: 1.0<br>Year: 2011<br>Month: 2<br>Day: 23.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8217034d151644549336319ea9eb166f = L.marker(
+                [2.78, 125.48],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_86725a93e5df471db8ee5bdd44fd6944 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_8217034d151644549336319ea9eb166f.setIcon(icon_86725a93e5df471db8ee5bdd44fd6944);
+        
+    
+            marker_8217034d151644549336319ea9eb166f.bindTooltip(
+                `<div>
+                     Name: Karangetang [Api Siau]<br>Location: Sangihe Is-Indonesia<br>Deaths: nan<br>Year: 2011<br>Month: 3<br>Day: 18.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_18dd92e1ce57406d8e0efcb24b81d856 = L.marker(
+                [-1.4669999999999999, -78.442],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_fdea032d9e2042cda750a9ad8ee053b4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_18dd92e1ce57406d8e0efcb24b81d856.setIcon(icon_fdea032d9e2042cda750a9ad8ee053b4);
+        
+    
+            marker_18dd92e1ce57406d8e0efcb24b81d856.bindTooltip(
+                `<div>
+                     Name: Tungurahua<br>Location: Ecuador<br>Deaths: nan<br>Year: 2011<br>Month: 4<br>Day: nan
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b613d7d2e22742cfb2f1408144bd3c0a = L.marker(
+                [-40.59, -72.117],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_e22afd35a8e74431a05df648c1210c2c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_b613d7d2e22742cfb2f1408144bd3c0a.setIcon(icon_e22afd35a8e74431a05df648c1210c2c);
+        
+    
+            marker_b613d7d2e22742cfb2f1408144bd3c0a.bindTooltip(
+                `<div>
+                     Name: Puyehue<br>Location: Chile-C<br>Deaths: nan<br>Year: 2011<br>Month: 6<br>Day: 4.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_68304005199f47e9b349e0cbbf939111 = L.marker(
+                [13.37, 41.7],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_c58c66c4df014bf58bf81fa11e6aba6d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_68304005199f47e9b349e0cbbf939111.setIcon(icon_c58c66c4df014bf58bf81fa11e6aba6d);
+        
+    
+            marker_68304005199f47e9b349e0cbbf939111.bindTooltip(
+                `<div>
+                     Name: Nabro<br>Location: Africa-NE<br>Deaths: 31.0<br>Year: 2011<br>Month: 6<br>Day: 22.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4b8266aac53c4be5a8c89af94aa2f5a1 = L.marker(
+                [63.63, -19.05],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_04fbfbca9b6b420e90ebcad3dba9e3db = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_4b8266aac53c4be5a8c89af94aa2f5a1.setIcon(icon_04fbfbca9b6b420e90ebcad3dba9e3db);
+        
+    
+            marker_4b8266aac53c4be5a8c89af94aa2f5a1.bindTooltip(
+                `<div>
+                     Name: Katla<br>Location: Iceland-S<br>Deaths: nan<br>Year: 2011<br>Month: 7<br>Day: 9.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_43fcb1f2b20843e9ae644d16661c4e5d = L.marker(
+                [1.358, 124.792],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_98f86890875a41cfb54575aec0235de3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_43fcb1f2b20843e9ae644d16661c4e5d.setIcon(icon_98f86890875a41cfb54575aec0235de3);
+        
+    
+            marker_43fcb1f2b20843e9ae644d16661c4e5d.bindTooltip(
+                `<div>
+                     Name: Lokon-Empung<br>Location: Sulawesi-Indonesia<br>Deaths: 1.0<br>Year: 2011<br>Month: 7<br>Day: 17.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6fc91ae5fdb145bfa3e6679d9e707b6c = L.marker(
+                [0.8, 127.325],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_5c56151e15db4125aea466bae53902c0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_6fc91ae5fdb145bfa3e6679d9e707b6c.setIcon(icon_5c56151e15db4125aea466bae53902c0);
+        
+    
+            marker_6fc91ae5fdb145bfa3e6679d9e707b6c.bindTooltip(
+                `<div>
+                     Name: Gamalama<br>Location: Halmahera-Indonesia<br>Deaths: 4.0<br>Year: 2011<br>Month: 12<br>Day: 27.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ac6e3b5123c6418094c979414ddc7289 = L.marker(
+                [19.425, -155.292],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_7932607e43d642b79c3060fd9b5ab30c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_ac6e3b5123c6418094c979414ddc7289.setIcon(icon_7932607e43d642b79c3060fd9b5ab30c);
+        
+    
+            marker_ac6e3b5123c6418094c979414ddc7289.bindTooltip(
+                `<div>
+                     Name: Kilauea<br>Location: Hawaiian Is<br>Deaths: nan<br>Year: 2012<br>Month: 2<br>Day: 10.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2b87fd435ec244f582d055bcbb3d4654 = L.marker(
+                [19.425, -155.292],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_fd9bf3b6b2f840beb933d73346368317 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_2b87fd435ec244f582d055bcbb3d4654.setIcon(icon_fd9bf3b6b2f840beb933d73346368317);
+        
+    
+            marker_2b87fd435ec244f582d055bcbb3d4654.bindTooltip(
+                `<div>
+                     Name: Kilauea<br>Location: Hawaiian Is<br>Deaths: nan<br>Year: 2012<br>Month: 3<br>Day: 2.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_03f0a1c9db7d423ea99ba7b8f76d81b6 = L.marker(
+                [55.83, 160.33],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_e93d6563117d435c857f2f726f6681cb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_03f0a1c9db7d423ea99ba7b8f76d81b6.setIcon(icon_e93d6563117d435c857f2f726f6681cb);
+        
+    
+            marker_03f0a1c9db7d423ea99ba7b8f76d81b6.bindTooltip(
+                `<div>
+                     Name: Tolbachik<br>Location: Kamchatka<br>Deaths: nan<br>Year: 2012<br>Month: 12<br>Day: 12.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_fadb0e0f182b470885e974846eee5cbd = L.marker(
+                [-7.542000000000001, 110.44200000000001],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_c279f7303c4843a6a78da4f1894b1761 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_fadb0e0f182b470885e974846eee5cbd.setIcon(icon_c279f7303c4843a6a78da4f1894b1761);
+        
+    
+            marker_fadb0e0f182b470885e974846eee5cbd.bindTooltip(
+                `<div>
+                     Name: Merapi<br>Location: Java<br>Deaths: 1.0<br>Year: 2013<br>Month: 2<br>Day: 12.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b99dac33e2d94463b8a5fd64280557d8 = L.marker(
+                [-8.32, 121.708],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_37037acb2efe46778ed4da7488415f17 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_b99dac33e2d94463b8a5fd64280557d8.setIcon(icon_37037acb2efe46778ed4da7488415f17);
+        
+    
+            marker_b99dac33e2d94463b8a5fd64280557d8.bindTooltip(
+                `<div>
+                     Name: Paluweh<br>Location: Lesser Sunda Is<br>Deaths: nan<br>Year: 2013<br>Month: 2<br>Day: nan
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4d71efef13d343fd8a4dc56cfc3e226e = L.marker(
+                [13.257, 123.685],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_a469d0178746400ab8a3901d44797aef = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_4d71efef13d343fd8a4dc56cfc3e226e.setIcon(icon_a469d0178746400ab8a3901d44797aef);
+        
+    
+            marker_4d71efef13d343fd8a4dc56cfc3e226e.bindTooltip(
+                `<div>
+                     Name: Mayon<br>Location: Luzon-Philippines<br>Deaths: 5.0<br>Year: 2013<br>Month: 5<br>Day: 7.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_327123be9c9248bdb8b42a4b7223ea27 = L.marker(
+                [-8.32, 121.708],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_a2e27e1929cc4c04972e0a17022a3c2b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_327123be9c9248bdb8b42a4b7223ea27.setIcon(icon_a2e27e1929cc4c04972e0a17022a3c2b);
+        
+    
+            marker_327123be9c9248bdb8b42a4b7223ea27.bindTooltip(
+                `<div>
+                     Name: Paluweh<br>Location: Lesser Sunda Is<br>Deaths: 5.0<br>Year: 2013<br>Month: 8<br>Day: 10.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7b1ed06cc397416cac9256668781944f = L.marker(
+                [-16.355, -70.903],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_fb3bb7482cd14a6689b23900f631d2de = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_7b1ed06cc397416cac9256668781944f.setIcon(icon_fb3bb7482cd14a6689b23900f631d2de);
+        
+    
+            marker_7b1ed06cc397416cac9256668781944f.bindTooltip(
+                `<div>
+                     Name: Ubinas<br>Location: Peru<br>Deaths: nan<br>Year: 2013<br>Month: 9<br>Day: 1.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ac97ec1dc9d1418c904347f4805aa751 = L.marker(
+                [31.58, 130.67],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_6f3511e2016c4bb289e475228cf92186 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_ac97ec1dc9d1418c904347f4805aa751.setIcon(icon_6f3511e2016c4bb289e475228cf92186);
+        
+    
+            marker_ac97ec1dc9d1418c904347f4805aa751.bindTooltip(
+                `<div>
+                     Name: Sakura-jima<br>Location: Kyushu-Japan<br>Deaths: nan<br>Year: 2013<br>Month: 9<br>Day: 4.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_72430485b308462cb68c4abcde1e6361 = L.marker(
+                [3.17, 98.39200000000001],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_03e792f40ce347e7aa1c5eb84724b9ad = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_72430485b308462cb68c4abcde1e6361.setIcon(icon_03e792f40ce347e7aa1c5eb84724b9ad);
+        
+    
+            marker_72430485b308462cb68c4abcde1e6361.bindTooltip(
+                `<div>
+                     Name: Sinabung<br>Location: Sumatra<br>Deaths: nan<br>Year: 2013<br>Month: 9<br>Day: 15.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_df11089bba17459094bd82f6256d013e = L.marker(
+                [-38.12, 176.5],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_c9cf47bf4d3f4d82bdfdcde1198f3758 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_df11089bba17459094bd82f6256d013e.setIcon(icon_c9cf47bf4d3f4d82bdfdcde1198f3758);
+        
+    
+            marker_df11089bba17459094bd82f6256d013e.bindTooltip(
+                `<div>
+                     Name: Okataina<br>Location: New Zealand<br>Deaths: 1.0<br>Year: 2013<br>Month: 12<br>Day: 13.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_055dcd1634a240c0ae54b66537a342eb = L.marker(
+                [3.17, 98.39200000000001],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_77226f4c87d94e81a0df0fe5fd5d0e19 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_055dcd1634a240c0ae54b66537a342eb.setIcon(icon_77226f4c87d94e81a0df0fe5fd5d0e19);
+        
+    
+            marker_055dcd1634a240c0ae54b66537a342eb.bindTooltip(
+                `<div>
+                     Name: Sinabung<br>Location: Sumatra<br>Deaths: 17.0<br>Year: 2014<br>Month: 2<br>Day: 1.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_45852696babd4e37899b226aa0fabfa5 = L.marker(
+                [-7.93, 112.30799999999999],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_d53f852d023c4e22ba1817ad13b16b2e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_45852696babd4e37899b226aa0fabfa5.setIcon(icon_d53f852d023c4e22ba1817ad13b16b2e);
+        
+    
+            marker_45852696babd4e37899b226aa0fabfa5.bindTooltip(
+                `<div>
+                     Name: Kelut<br>Location: Java<br>Deaths: 7.0<br>Year: 2014<br>Month: 2<br>Day: 13.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_97691f96c43946c9896f64d6b4d88255 = L.marker(
+                [35.9, 137.48],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_f2e3263961a745d99db5396df082751e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_97691f96c43946c9896f64d6b4d88255.setIcon(icon_f2e3263961a745d99db5396df082751e);
+        
+    
+            marker_97691f96c43946c9896f64d6b4d88255.bindTooltip(
+                `<div>
+                     Name: On-take<br>Location: Honshu-Japan<br>Deaths: 55.0<br>Year: 2014<br>Month: 9<br>Day: 27.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e32202eb0d60492588121e86848f6238 = L.marker(
+                [19.425, -155.292],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_ef84408ac8654f89b6009839a1e6a024 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_e32202eb0d60492588121e86848f6238.setIcon(icon_ef84408ac8654f89b6009839a1e6a024);
+        
+    
+            marker_e32202eb0d60492588121e86848f6238.bindTooltip(
+                `<div>
+                     Name: Kilauea<br>Location: Hawaiian Is<br>Deaths: nan<br>Year: 2014<br>Month: 11<br>Day: 10.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_16e8d211915c4c85a9c840ca9727648a = L.marker(
+                [14.95, -24.35],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_43eb0f5085c0418d9849af740c6330c7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_16e8d211915c4c85a9c840ca9727648a.setIcon(icon_43eb0f5085c0418d9849af740c6330c7);
+        
+    
+            marker_16e8d211915c4c85a9c840ca9727648a.bindTooltip(
+                `<div>
+                     Name: Fogo<br>Location: Cape Verde Is<br>Deaths: nan<br>Year: 2014<br>Month: 11<br>Day: 23.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c15f5ff7c7f64759a4c7accc048eb9a9 = L.marker(
+                [0.8, 127.325],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_0ae82555747f4eb9ab24ade56816672e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_c15f5ff7c7f64759a4c7accc048eb9a9.setIcon(icon_0ae82555747f4eb9ab24ade56816672e);
+        
+    
+            marker_c15f5ff7c7f64759a4c7accc048eb9a9.bindTooltip(
+                `<div>
+                     Name: Gamalama<br>Location: Halmahera-Indonesia<br>Deaths: 1.0<br>Year: 2014<br>Month: 12<br>Day: 18.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1c26bba9a39e4e79a47b098d41697ce7 = L.marker(
+                [3.17, 98.39200000000001],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_f288406c7e994d2e8d0789888fe29630 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_1c26bba9a39e4e79a47b098d41697ce7.setIcon(icon_f288406c7e994d2e8d0789888fe29630);
+        
+    
+            marker_1c26bba9a39e4e79a47b098d41697ce7.bindTooltip(
+                `<div>
+                     Name: Sinabung<br>Location: Sumatra<br>Deaths: nan<br>Year: 2015<br>Month: 2<br>Day: 20.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_68b7cf8463b64d49b6a49f9e954d895b = L.marker(
+                [-41.326, -72.61399999999999],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_2ffc87fa1dd94bc898c31d47817f9161 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_68b7cf8463b64d49b6a49f9e954d895b.setIcon(icon_2ffc87fa1dd94bc898c31d47817f9161);
+        
+    
+            marker_68b7cf8463b64d49b6a49f9e954d895b.bindTooltip(
+                `<div>
+                     Name: Calbuco<br>Location: Chile-S<br>Deaths: nan<br>Year: 2015<br>Month: 4<br>Day: 22.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e3e1f10ad99d4d579c878db6164098fc = L.marker(
+                [2.78, 125.48],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_e943a2c2738044b4a6e11b2f4e4860c8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_e3e1f10ad99d4d579c878db6164098fc.setIcon(icon_e943a2c2738044b4a6e11b2f4e4860c8);
+        
+    
+            marker_e3e1f10ad99d4d579c878db6164098fc.bindTooltip(
+                `<div>
+                     Name: Karangetang [Api Siau]<br>Location: Sangihe Is-Indonesia<br>Deaths: nan<br>Year: 2015<br>Month: 5<br>Day: 7.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f64abc8a8c5440e6bb90f64e3f1caa73 = L.marker(
+                [-4.1, 145.061],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_0153700f96774526aceb91773f797f8d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_f64abc8a8c5440e6bb90f64e3f1caa73.setIcon(icon_0153700f96774526aceb91773f797f8d);
+        
+    
+            marker_f64abc8a8c5440e6bb90f64e3f1caa73.bindTooltip(
+                `<div>
+                     Name: Manam<br>Location: New Guinea-NE of<br>Deaths: nan<br>Year: 2015<br>Month: 7<br>Day: 31.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2399081dfa3146c3a6eff18a66c15e2e = L.marker(
+                [3.17, 98.39200000000001],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_85e805972b3a4a6684046bf54af47e92 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_2399081dfa3146c3a6eff18a66c15e2e.setIcon(icon_85e805972b3a4a6684046bf54af47e92);
+        
+    
+            marker_2399081dfa3146c3a6eff18a66c15e2e.bindTooltip(
+                `<div>
+                     Name: Sinabung<br>Location: Sumatra<br>Deaths: 1.0<br>Year: 2015<br>Month: 10<br>Day: 16.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_bbd15fe2314d47bfb72b755f5ff3cf40 = L.marker(
+                [-38.12, 176.5],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_2e258aad217847cf95865dfa71d1570e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_bbd15fe2314d47bfb72b755f5ff3cf40.setIcon(icon_2e258aad217847cf95865dfa71d1570e);
+        
+    
+            marker_bbd15fe2314d47bfb72b755f5ff3cf40.bindTooltip(
+                `<div>
+                     Name: Okataina<br>Location: New Zealand<br>Deaths: 1.0<br>Year: 2015<br>Month: 10<br>Day: nan
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b3d70aa3ed3f475cb627c0b66cb6208b = L.marker(
+                [3.17, 98.39200000000001],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_ed275566d0374b6987d093ef8110bbff = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_b3d70aa3ed3f475cb627c0b66cb6208b.setIcon(icon_ed275566d0374b6987d093ef8110bbff);
+        
+    
+            marker_b3d70aa3ed3f475cb627c0b66cb6208b.bindTooltip(
+                `<div>
+                     Name: Sinabung<br>Location: Sumatra<br>Deaths: 1.0<br>Year: 2016<br>Month: 5<br>Day: 9.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4ff810634b9d4766a0549598984d55d9 = L.marker(
+                [3.17, 98.39200000000001],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_5e9ca82705044e7a80a3eacafaa76c37 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_4ff810634b9d4766a0549598984d55d9.setIcon(icon_5e9ca82705044e7a80a3eacafaa76c37);
+        
+    
+            marker_4ff810634b9d4766a0549598984d55d9.bindTooltip(
+                `<div>
+                     Name: Sinabung<br>Location: Sumatra<br>Deaths: 7.0<br>Year: 2016<br>Month: 5<br>Day: 21.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ff51c0604f5840688b0171fd99adb179 = L.marker(
+                [44.43, -110.67],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_7464c5b838224f7b9fe1958e03e92734 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_ff51c0604f5840688b0171fd99adb179.setIcon(icon_7464c5b838224f7b9fe1958e03e92734);
+        
+    
+            marker_ff51c0604f5840688b0171fd99adb179.bindTooltip(
+                `<div>
+                     Name: Yellowstone<br>Location: US-Wyoming<br>Deaths: 1.0<br>Year: 2016<br>Month: 6<br>Day: 9.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_de225d245e124495a49486813322ed22 = L.marker(
+                [-8.42, 116.47],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_274d496891a240749b1b0e2f2744aaa9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_de225d245e124495a49486813322ed22.setIcon(icon_274d496891a240749b1b0e2f2744aaa9);
+        
+    
+            marker_de225d245e124495a49486813322ed22.bindTooltip(
+                `<div>
+                     Name: Rinjani<br>Location: Lesser Sunda Is<br>Deaths: nan<br>Year: 2016<br>Month: 9<br>Day: 27.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1c0cac3ec80e4c38ad21b920d185149b = L.marker(
+                [32.88, 131.1],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_e56b0693723340b9aeb561b8ca86c4ff = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_1c0cac3ec80e4c38ad21b920d185149b.setIcon(icon_e56b0693723340b9aeb561b8ca86c4ff);
+        
+    
+            marker_1c0cac3ec80e4c38ad21b920d185149b.bindTooltip(
+                `<div>
+                     Name: Aso<br>Location: Kyushu-Japan<br>Deaths: nan<br>Year: 2016<br>Month: 10<br>Day: 8.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4fa9c58d1e7e4c03a9d8348edd0759b2 = L.marker(
+                [37.734, 15.004000000000001],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_8e2002617c374fe99a079aa20852ab52 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_4fa9c58d1e7e4c03a9d8348edd0759b2.setIcon(icon_8e2002617c374fe99a079aa20852ab52);
+        
+    
+            marker_4fa9c58d1e7e4c03a9d8348edd0759b2.bindTooltip(
+                `<div>
+                     Name: Etna<br>Location: Italy<br>Deaths: nan<br>Year: 2017<br>Month: 3<br>Day: 15.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3673c24724054c80a792daf8c0da547a = L.marker(
+                [3.17, 98.39200000000001],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_bb09540e02bf4ab28c3f72184bdee370 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_3673c24724054c80a792daf8c0da547a.setIcon(icon_bb09540e02bf4ab28c3f72184bdee370);
+        
+    
+            marker_3673c24724054c80a792daf8c0da547a.bindTooltip(
+                `<div>
+                     Name: Sinabung<br>Location: Sumatra<br>Deaths: nan<br>Year: 2017<br>Month: 4<br>Day: 13.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_abc07d1a68a445108b1e8817d04888e8 = L.marker(
+                [14.472999999999999, -90.88],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_84d43bfd78ca47c8bc5905b9ecd9bd40 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_abc07d1a68a445108b1e8817d04888e8.setIcon(icon_84d43bfd78ca47c8bc5905b9ecd9bd40);
+        
+    
+            marker_abc07d1a68a445108b1e8817d04888e8.bindTooltip(
+                `<div>
+                     Name: Fuego<br>Location: Guatemala<br>Deaths: nan<br>Year: 2017<br>Month: 6<br>Day: 6.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_772cd917910347c599bad71f205d2673 = L.marker(
+                [-7.2, 109.92],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_9266cb5dd406416fbe4d10c6cf8d4cb8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_772cd917910347c599bad71f205d2673.setIcon(icon_9266cb5dd406416fbe4d10c6cf8d4cb8);
+        
+    
+            marker_772cd917910347c599bad71f205d2673.bindTooltip(
+                `<div>
+                     Name: Dieng Volc Complex<br>Location: Java<br>Deaths: 8.0<br>Year: 2017<br>Month: 7<br>Day: 1.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e3f9ba31beea46e9b01ec0d030e491b3 = L.marker(
+                [40.827, 14.139000000000001],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_b293eb0128dc4595a5df9c29983c7c4c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_e3f9ba31beea46e9b01ec0d030e491b3.setIcon(icon_b293eb0128dc4595a5df9c29983c7c4c);
+        
+    
+            marker_e3f9ba31beea46e9b01ec0d030e491b3.bindTooltip(
+                `<div>
+                     Name: Campi Flegrei<br>Location: Italy<br>Deaths: 3.0<br>Year: 2017<br>Month: 9<br>Day: 12.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e2c215b986e6469a87aa35e903451407 = L.marker(
+                [-15.4, 167.83],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_50cbc259eaa047769f94c128f45195e8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_e2c215b986e6469a87aa35e903451407.setIcon(icon_50cbc259eaa047769f94c128f45195e8);
+        
+    
+            marker_e2c215b986e6469a87aa35e903451407.bindTooltip(
+                `<div>
+                     Name: Aoba<br>Location: Vanuatu-SW Pacific<br>Deaths: nan<br>Year: 2017<br>Month: 9<br>Day: 23.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ff4ec47a223346e692eeef74b6efb4f0 = L.marker(
+                [-7.542000000000001, 110.44200000000001],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_b3cf0e561a1945f4888fa82c38c431b2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_ff4ec47a223346e692eeef74b6efb4f0.setIcon(icon_b3cf0e561a1945f4888fa82c38c431b2);
+        
+    
+            marker_ff4ec47a223346e692eeef74b6efb4f0.bindTooltip(
+                `<div>
+                     Name: Merapi<br>Location: Java<br>Deaths: 8.0<br>Year: 2017<br>Month: 12<br>Day: 18.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_666fddc824724cfc96a576080c876e76 = L.marker(
+                [3.17, 98.39200000000001],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_829e8dd467eb4b4bbae92553034bb9a0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_666fddc824724cfc96a576080c876e76.setIcon(icon_829e8dd467eb4b4bbae92553034bb9a0);
+        
+    
+            marker_666fddc824724cfc96a576080c876e76.bindTooltip(
+                `<div>
+                     Name: Sinabung<br>Location: Sumatra<br>Deaths: nan<br>Year: 2017<br>Month: 12<br>Day: 27.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7e92d843041749fe8fcfb0085b0fad39 = L.marker(
+                [-3.62, 144.62],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_08b18f8f082d4f8ab5b4216488647335 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_7e92d843041749fe8fcfb0085b0fad39.setIcon(icon_08b18f8f082d4f8ab5b4216488647335);
+        
+    
+            marker_7e92d843041749fe8fcfb0085b0fad39.bindTooltip(
+                `<div>
+                     Name: Kadovar<br>Location: New Guinea-NE of<br>Deaths: nan<br>Year: 2018<br>Month: 1<br>Day: 5.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_07b2a97c73f040a5aa36db234fc414bf = L.marker(
+                [13.257, 123.685],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_08d94475e99743669684d95dc0284695 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_07b2a97c73f040a5aa36db234fc414bf.setIcon(icon_08d94475e99743669684d95dc0284695);
+        
+    
+            marker_07b2a97c73f040a5aa36db234fc414bf.bindTooltip(
+                `<div>
+                     Name: Mayon<br>Location: Luzon-Philippines<br>Deaths: nan<br>Year: 2018<br>Month: 1<br>Day: 13.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7d536e0304cd4a79be2b2df09d12996f = L.marker(
+                [36.62, 138.55],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_c1113767452347378278cdad29c20fb7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_7d536e0304cd4a79be2b2df09d12996f.setIcon(icon_c1113767452347378278cdad29c20fb7);
+        
+    
+            marker_7d536e0304cd4a79be2b2df09d12996f.bindTooltip(
+                `<div>
+                     Name: Kusatsu-Shirane<br>Location: Honshu-Japan<br>Deaths: 1.0<br>Year: 2018<br>Month: 1<br>Day: 23.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_35f4f1e849dd439189a98ccfa2a4eae9 = L.marker(
+                [19.425, -155.292],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_176c3f45800c45e096d0d7a7c2925283 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_35f4f1e849dd439189a98ccfa2a4eae9.setIcon(icon_176c3f45800c45e096d0d7a7c2925283);
+        
+    
+            marker_35f4f1e849dd439189a98ccfa2a4eae9.bindTooltip(
+                `<div>
+                     Name: Kilauea<br>Location: Hawaiian Is<br>Deaths: 1.0<br>Year: 2018<br>Month: 2<br>Day: 1.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6801e6cf5dbc40d99997ba75700ef0b8 = L.marker(
+                [-3.62, 144.62],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_3a922becda5344509a8a63312a53177d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_6801e6cf5dbc40d99997ba75700ef0b8.setIcon(icon_3a922becda5344509a8a63312a53177d);
+        
+    
+            marker_6801e6cf5dbc40d99997ba75700ef0b8.bindTooltip(
+                `<div>
+                     Name: Kadovar<br>Location: New Guinea-NE of<br>Deaths: nan<br>Year: 2018<br>Month: 2<br>Day: 9.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3f34c080986a4b81b58618ee8f7dc208 = L.marker(
+                [-8.058, 114.242],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_8b4b4dbe573e4416a8d4ce0e51f17a6b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_3f34c080986a4b81b58618ee8f7dc208.setIcon(icon_8b4b4dbe573e4416a8d4ce0e51f17a6b);
+        
+    
+            marker_3f34c080986a4b81b58618ee8f7dc208.bindTooltip(
+                `<div>
+                     Name: Ijen<br>Location: Java<br>Deaths: nan<br>Year: 2018<br>Month: 3<br>Day: 21.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c856e789addd41019898078dbb7afc50 = L.marker(
+                [19.425, -155.292],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_5c9dcffef0104308aa238bd0e3b015f5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_c856e789addd41019898078dbb7afc50.setIcon(icon_5c9dcffef0104308aa238bd0e3b015f5);
+        
+    
+            marker_c856e789addd41019898078dbb7afc50.bindTooltip(
+                `<div>
+                     Name: Kilauea<br>Location: Hawaiian Is<br>Deaths: nan<br>Year: 2018<br>Month: 4<br>Day: 28.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a26a18d1497747449f7a7a96b8331db9 = L.marker(
+                [-15.4, 167.83],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8c4a6f076c864d7fbc25bd32ea401172);
+        
+    
+            var icon_51d73cc725c94cd2a6e4fcaba6a7ee01 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_a26a18d1497747449f7a7a96b8331db9.setIcon(icon_51d73cc725c94cd2a6e4fcaba6a7ee01);
+        
+    
+            marker_a26a18d1497747449f7a7a96b8331db9.bindTooltip(
+                `<div>
+                     Name: Aoba<br>Location: Vanuatu-SW Pacific<br>Deaths: 4.0<br>Year: 2018<br>Month: 4<br>Day: nan
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
