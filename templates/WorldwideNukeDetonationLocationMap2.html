@@ -53,9 +53,15 @@
 }
 .maintag {
     font-size: 16px; padding-left: 1em;
+    margin-right: 1em;
 }
+.desktopandmobile {
+    width: 100%;
+    min-height: 82em;
+}
+
 </style>
-<body>
+<body style="background-color: #f2f2f2;">
 
 <div id="container" style="">
     <div id="second" style="margin-top: -1.75em; overflow-y: auto;"><br>
@@ -84,7 +90,7 @@
         <hr>
         <p class="maintag"><b>Click!</b> Click the button below to show the locations of all known major Nuke Detonations. Nuke locations included!</p>
         <form action="/nuke-detonation-location-map", method="post">
-            <button type="submit" class="btn btn-lg btn-secondary" style="background-color: #ff4d4d; margin-top: 13px; margin-left: 1em; font-size: 16px;"> Show Nuke Detonations Locations</button>
+            <button type="submit" class="btn btn-lg btn-secondary" style="background-color: #ff4d4d; margin-top: 13px; margin-left: 1em; font-size: 16px; margin-right: 1em;"> Show Nuke Detonations Locations</button>
         </form>
         <hr>
         <p class="maintag"><b>Steps: </b>Follow the directions below to understand the Nuke Detonation Location Map!</p>
@@ -92,7 +98,6 @@
         <p class="maintag"> <b> 1.</b> First, click the button to show the locations of all Nuke Detonations. Then locate the locations of Nuke Detonations. These areas are marked with markers with their color depending on severity/yield of Nuke Detonation. </p>
         <p class="maintag"> <b> 2.</b> Hover over the location of the Nuke Detonation. When you hover over this location, a box will popup giving information about the certain Nuke Detonation.</p>
         <p class="maintag"> <b> 3.</b> After knowing the location of the Nuke Detonation, you can hover over the marker and view information about the Nuke Detonation like its <b>yield, depth, country, and date of detonation.</b> All very helpful and insightful statistics, all while knowing the location of the Nuke Detonation! The recorded time period is from 1945 to 1988.</p>
-        <hr>
 
         <hr>
         <p style="font-size: 12px; margin-left: 1em;"> Worldwide Nuke Detonation Location Map <b>&copy;</b></p>
@@ -102,7 +107,8 @@
     </div>
 <!--        <footer style="bottom: 0;"> Nuke Detonation Simulations</footer>-->
     <div id="first">
-            {% include 'nukedetonationlocationmap.html' %}
+<!--            {% include 'nukedetonationlocationmap.html' %}-->
+                <iframe src="/ret-nuke-loc" class="desktopandmobile" scrolling="no" frameborder="0"></iframe>
     </div>
 </div>
 
