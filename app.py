@@ -42,7 +42,6 @@ def calculate():
             g = geocoder.osm(str(city))
             lat_lon = [g.json['lat'], g.json['lng']]
             session['user_lat_lon'] = lat_lon
-            print(session['user_lat_lon'], ' changed to \/')
         except:
             import pandas as pd
 
@@ -50,7 +49,6 @@ def calculate():
 
             for index, row in df.iterrows():
                 if str(row['city']).lower() == str(city).lower():
-                    print(row['city'])
                     lat_lon = [row['lat'], row['lng']]
                     session['user_lat_lon'] = lat_lon
                     break
@@ -135,7 +133,7 @@ def map():
                           color='purple', fill=True,
                           fill_color='lightgrey', zoom_start=5).add_to(m)
             folium.Circle(location=lat_lons, radius=crater_diameter * 9,
-                          tooltip="Unbearable Fatal Heat Felt   <br>Sound Shockwave   <br>Buildings Likely Flattened   <br>Heat & Shockwave Still Felt Farther Away",
+                          tooltip="Unbearable Fatal Heat Felt   <br>Sound Shockwave   <br>Buildings Likely Flattened   <br>Heat & Shockwave ",
                           color='grey', fill=True,
                           fill_color='grey', zoom_start=5).add_to(m)
             folium.Circle(location=lat_lons, radius=crater_diameter * 5,
@@ -161,7 +159,7 @@ def map():
                           color='purple', fill=True,
                           fill_color='lightgrey', zoom_start=10).add_to(m)
             folium.Circle(location=lat_lons, radius=crater_diameter * 8,
-                          tooltip="Unbearable Heat Waves Felt (Fatal to those of old age or certain medical conditions)  <br> Sound Shockwave  <br> Most Buildings Stand  <br> Heat & Shockwave Still Felt Farther Away",
+                          tooltip="Unbearable Heat Waves Felt (Fatal to those of old age or certain medical conditions)  <br> Sound Shockwave  <br> Most Buildings Stand  <br> Heat & Shockwave ",
                           color='grey', fill=True,
                           fill_color='grey', zoom_start=10).add_to(m)
             folium.Circle(location=lat_lons, radius=crater_diameter * 4,
@@ -197,7 +195,7 @@ def map():
                           color='purple', fill=True,
                           fill_color='lightgrey', zoom_start=11).add_to(m)
             folium.Circle(location=lat_lons, radius=crater_diameter * 8,
-                          tooltip="Unbearable Heat Waves Felt (Fatal to people of older age or certain medical conditions) <br> Sound Shockwave  <br> Buildings Probably Stand  <br> Heat & Shockwave Still Felt Farther Away",
+                          tooltip="Unbearable Heat Waves Felt (Fatal to people of older age or certain medical conditions) <br> Sound Shockwave  <br> Buildings Probably Stand  <br> Heat & Shockwave ",
                           color='grey', fill=True,
                           fill_color='grey', zoom_start=11).add_to(m)
             folium.Circle(location=lat_lons, radius=crater_diameter * 4,
@@ -230,7 +228,7 @@ def map():
                           color='purple', fill=True,
                           fill_color='lightgrey', zoom_start=12).add_to(m)
             folium.Circle(location=lat_lons, radius=crater_diameter * 8,
-                          tooltip="Unbearable Heat Felt  <br> (Could Be Fatal To Certain People with Certain Medical Conditions)  <br> Sound Shockwave   Buildings Probably Stand   Heat & Shockwave Still Felt Farther Away",
+                          tooltip="Unbearable Heat Felt  <br> (Could Be Fatal To Certain People with Certain Medical Conditions)  <br> Sound Shockwave   Buildings Probably Stand   Heat & Shockwave ",
                           color='grey', fill=True,
                           fill_color='grey', zoom_start=12).add_to(m)
             folium.Circle(location=lat_lons, radius=crater_diameter * 4,
@@ -263,7 +261,7 @@ def map():
                           color='purple', fill=True,
                           fill_color='lightgrey', zoom_start=12).add_to(m)
             folium.Circle(location=lat_lons, radius=crater_diameter * 8,
-                          tooltip="Unbearable Heat Felt  <br> (Fatal to those of older age or have certain medical conditions) <br> Sound Shockwave  <br> Buildings Probably Stand  <br> Heat & Shockwave Still Felt Farther Away",
+                          tooltip="Unbearable Heat Felt  <br> (Fatal to those of older age or have certain medical conditions) <br> Sound Shockwave  <br> Buildings Probably Stand  <br> Heat & Shockwave ",
                           color='grey', fill=True,
                           fill_color='grey', zoom_start=12).add_to(m)
             folium.Circle(location=lat_lons, radius=crater_diameter * 4,
@@ -293,7 +291,7 @@ def map():
                           color='purple', fill=True,
                           fill_color='lightgrey', zoom_start=17).add_to(m)
             folium.Circle(location=lat_lons, radius=crater_diameter * 8,
-                          tooltip="Unbearable Heat Felt  <br> Sound Shockwave  <br> Buildings Probably Stand  <br> Heat & Shockwave Still Felt Farther Away",
+                          tooltip="Unbearable Heat Felt  <br> Sound Shockwave  <br> Buildings Probably Stand  <br> Heat & Shockwave ",
                           color='grey', fill=True,
                           fill_color='grey', zoom_start=17).add_to(m)
             folium.Circle(location=lat_lons, radius=crater_diameter * 4.5,
@@ -332,6 +330,7 @@ def more():
     return render_template('moreinfo.html')
 @app.route('/home')
 def home():
+    print('GO HOME')
     return render_template('home.html')
 @app.route('/asteroid-collision-location-map')
 def globalasteroidlocationmap():
@@ -351,6 +350,9 @@ def nukedetonatinolocationmap():
 @app.route('/nuke-detonation-location-map', methods=['POST'])
 def nukedetonatinolocationmap2():
     return render_template('WorldwideNukeDetonationLocationMap2.html')
+@app.route('/volcano-location-map')
+def vol():
+    return render_template('volcanoeruptionlocationmap.html')
 @app.route('/ret-map')
 def retmap():
     return render_template('map.html')
@@ -360,9 +362,9 @@ def ads():
 @app.route('/ret-asteroid-location')
 def ast():
     return render_template('WorldwideAsteroidMap.html')
-@app.route('/volcano-location-map')
-def vol():
-    return render_template('volcanoeruptionlocationmap.html')
+@app.route('/ret-earthquake')
+def euake():
+    return render_template('EarthquakeLocationMap.html')
 if __name__ == "__main__":
     of_diameter = 22
     app.run(debug=False)
