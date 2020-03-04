@@ -54,6 +54,10 @@
 .maintag {
     font-size: 16px; padding-left: 1em;
 }
+.desktopandmobile {
+    width: 100%;
+    min-height: 67em;
+}
 </style>
 <body>
 
@@ -104,7 +108,9 @@
     </div>
 <!--        <footer style="bottom: 0;"> Earthquake Simulations</footer>-->
     <div id="first">
-            {% include 'EarthquakeLocationMap.html' %}
+                        <iframe src="/ret-map" class="desktopandmobile" scrolling="no" frameborder="0"></iframe>
+
+<!--            {% include 'EarthquakeLocationMap.html' %}-->
     </div>
 </div>
 
