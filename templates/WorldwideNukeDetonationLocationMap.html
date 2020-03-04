@@ -10,7 +10,6 @@
     <title>Nuke Detonation Location Map</title>
     <meta name="google-site-verification" content="ENQ9n1V4rvA6leMytUmttgBGMMBaH5NBZXMNwnWZDg0" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script data-ad-client="ca-pub-2104426707154383" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 <style>
 
@@ -53,15 +52,9 @@
 }
 .maintag {
     font-size: 16px; padding-left: 1em;
-    margin-right: 1em;
 }
-.desktopandmobile {
-    width: 100%;
-    min-height: 100em;
-}
-
 </style>
-<body style="background-color: #f2f2f2;">
+<body>
 
 <div id="container" style="">
     <div id="second" style="margin-top: -1.75em; overflow-y: auto;"><br>
@@ -84,18 +77,31 @@
             <h2 style="font-size: 15px; padding-left: 1.3em; font-weight: normal; margin-top: 1em;"> Worldwide Nuke Detonation Location Map </h2>
             <a href="/questions" style="font-size: 12px; padding-left: 1.6em; margin-top: 2em;"> Learn More</a>
             </div>
-        <p style="padding-left: 1em; padding-right: 1em; font-size: 15px; margin-top: 16px;"> Welcome to <b>Nuke Detonation Location Map.</b> Locate the locations of all discovered major Nuke Detonations from 1945 to 1988. Nuke Detonations are shown if their the detonation and locations are recorded! &darr;</p>
+        <p style="padding-left: 1em; padding-right: 1em; font-size: 15px; margin-top: 16px;"> Welcome to <b>Nuke Detonation Location Map.</b> Locate the locations of all discovered major Nuke Detonations from 1945 to 1988. Nuke Detonations are shown if their magnitude is greater than 6.5! &darr;</p>
         <hr>
-        <p class="maintag"><b>Click!</b> Click the button below to show the locations of all known major Nuke Detonations. Major detonation locations included..</p>
-        <form action="/nuke-detonation-location-map" method="post">
-            <button type="submit" class="btn btn-lg btn-secondary" style="background-color: #ff4d4d; margin-top: 13px; margin-left: 1em; margin-right: 1em;"> Show Nuke Detonations Locations</button>
+
+        <p class="maintag"><b>Click!</b> Click the button below to show the locations of all known major Nuke Detonations greater than 6.5 magnitude.</p>
+        <form action="/nuke-detonation-location-map", method="post">
+            <button type="submit" class="btn btn-lg btn-secondary" style="background-color: #ff4d4d; margin-top: 13px; margin-left: 1em;"> Show Nuke Detonations Locations</button>
         </form>
         <hr>
-        <p class="maintag"><b>Steps: </b>Follow the directions below to understand the Nuke Detonation Location Map!</p>
+<div style="margin-left: 1em; margin-right: 1em;">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-2104426707154383"
+     data-ad-slot="3483841792"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+        </div>        <p class="maintag"><b>Steps: </b>Follow the directions below to understand the Nuke Detonation Location Map!</p>
         <hr>
         <p class="maintag"> <b> 1.</b> First, click the button to show the locations of all Nuke Detonations. Then locate the locations of Nuke Detonations. These areas are marked with markers with their color depending on severity/yield of Nuke Detonation. </p>
         <p class="maintag"> <b> 2.</b> Hover over the location of the Nuke Detonation. When you hover over this location, a box will popup giving information about the certain Nuke Detonation.</p>
         <p class="maintag"> <b> 3.</b> After knowing the location of the Nuke Detonation, you can hover over the marker and view information about the Nuke Detonation like its <b>yield, depth, country, and date of detonation.</b> All very helpful and insightful statistics, all while knowing the location of the Nuke Detonation! The recorded time period is from 1945 to 1988.</p>
+        <hr>
 
         <hr>
         <p style="font-size: 12px; margin-left: 1em;"> Worldwide Nuke Detonation Location Map <b>&copy;</b></p>
@@ -105,8 +111,7 @@
     </div>
 <!--        <footer style="bottom: 0;"> Nuke Detonation Simulations</footer>-->
     <div id="first">
-                <iframe src="/ret-map" class="desktopandmobile" scrolling="no" frameborder="0"></iframe>
-<!--            {% include 'map.html' %}-->
+            {% include 'map.html' %}
     </div>
 </div>
 
