@@ -365,6 +365,9 @@ def ast():
 @app.route('/ret-earthquake')
 def euake():
     return render_template('EarthquakeLocationMap.html')
+@app.route('/ret-nuke-loc')
+def nukeloc():
+    return render_template('nukedetonationlocationmap.html')
 if __name__ == "__main__":
     of_diameter = 22
     app.run(debug=False)
