@@ -368,6 +368,9 @@ def euake():
 @app.route('/ret-nuke-loc')
 def nukeloc():
     return render_template('nukedetonationlocationmap.html')
+@app.route('/coronavirus-location-map')
+def corona():
+    return render_template('CoronavirusLocation.html')
 if __name__ == "__main__":
     of_diameter = 22
     app.run(debug=False)
