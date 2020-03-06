@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Coronavirus Case Location Map shows worldwide coronavirus locations with in interactive and scientific map.">
+    <meta name=”viewport” content=”width=device-width, initial-scale=1″>
+    <title>Coronavirus Case Location Map</title>
+    <meta name="google-site-verification" content="ENQ9n1V4rvA6leMytUmttgBGMMBaH5NBZXMNwnWZDg0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<style>
+
+    #header {
+    width: 100%;
+    background-color: #f2f2f2;
+    height: 30px;
+}
+
+#container {
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f2;
+}
+#first {
+    width: 75%;
+    float: left;
+    height: 100%;
+    background-color: #f2f2f2;
+}
+#second {
+    width: 25%;
+    float: left;
+    height: 100%;
+    background-color: #f2f2f2;
+}
+@media (max-width: 760px) {
+    #second {
+        width: 50%;
+        float: left;
+        height: 100%;
+        background-color: #f2f2f2;
+    }
+    #first {
+        width: 50%;
+        float: left;
+        height: 100%;
+        background-color: #f2f2f2;
+    }
+}
+.maintag {
+    font-size: 16px; padding-left: 1em; margin-right: 1em;
+}
+.desktopandmobile {
+    width: 100%;
+    min-height: 82em;
+}
+
+</style>
+<body>
+
+<div id="container" style="">
+    <div id="second" style="margin-top: -1.75em; overflow-y: auto;"><br>
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="height:-50%;">
+  <a class="navbar-brand" href="/" style="font-size: 25px;"><strong>Coronavirus Map</strong></a>
+<!--  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="text-align: center; margin-left: 40%;">-->
+<!--    <span class="navbar-toggler-icon"></span>-->
+<!--  </button>-->
+  <div class="collapse navbar-collapse" id="navbarNav" style="float: right;">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/home" style="font-size: 20px;">Home <span class="sr-only">(current)</span></a>
+      </li>
+
+
+    </ul>
+  </div>
+</nav>        <div class="">
+            <h1 style="font-size: 20px; padding-left: 1em; font-weight: normal; background-size: cover;"> <b>Coronavirus Case</b> Location Map</h1>
+            <h2 style="font-size: 15px; padding-left: 1.3em; font-weight: normal; margin-top: 1em;"> Worldwide Coronavirus Case Location Map </h2>
+            <a href="/questions" style="font-size: 12px; padding-left: 1.6em; margin-top: 2em;"> Learn More</a>
+            </div>
+        <p style="padding-left: 1em; padding-right: 1em; font-size: 15px; margin-top: 16px;"> Welcome to <b>Coronavirus Case Location Map.</b> Worldwide cases of coronavirus and their locations are listed. &darr;</p>
+
+
+        <hr>
+<p class="maintag"><b>Steps: </b>Follow the directions below to understand the Coronavirus Location Map!</p>
+        <hr>
+        <p class="maintag"> <b> 1.</b> View the coronavirus location map. Red circle sizes are marked with the severity of the location based upon the number of cases of coronavirus.</p>
+        <p class="maintag"> <b> 2.</b> Hover over the location of the Coronavirus. When you hover over this location, a box will popup giving information about the certain Coronavirus. For example, the number of cases in the location/area, province/state, and country are included in these statistics.</p>
+        <hr>
+        <p style="margin-left: 1em; margin-right: 1em;"><b style="color: red;">Warning: </b> Please consult a local health professional about Coronavirus Information. Do not take seriously any data provided on this map as data could be incorrect.</p>
+        <hr>
+        <p style="font-size: 12px; margin-left: 1em;"> Worldwide Coronavirus Location Map <b>&copy;</b></p>
+<div style="position: absolute; bottom: 5px; left: 5px;">
+
+    </div>
+    </div>
+    <div id="first" style="">
+        {% include 'corona.html' %}
+    </div>
+</div>
+
+
+</body>
+</html>
+
