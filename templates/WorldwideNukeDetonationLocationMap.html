@@ -51,8 +51,13 @@
     }
 }
 .maintag {
-    font-size: 16px; padding-left: 1em;
+    font-size: 16px; padding-left: 1em; margin-right: 1em;
 }
+.desktopandmobile {
+    width: 100%;
+    min-height: 82em;
+}
+
 </style>
 <body>
 
@@ -82,21 +87,10 @@
 
         <p class="maintag"><b>Click!</b> Click the button below to show the locations of all known major Nuke Detonations greater than 6.5 magnitude.</p>
         <form action="/nuke-detonation-location-map", method="post">
-            <button type="submit" class="btn btn-lg btn-secondary" style="background-color: #ff4d4d; margin-top: 13px; margin-left: 1em;"> Show Nuke Detonations Locations</button>
+            <button type="submit" class="btn btn-lg btn-secondary" style="background-color: #ff4d4d; margin-top: 13px; margin-left: 1em; font-size: 16px; margin-right: 1em;"> Show Nuke Detonations Locations</button>
         </form>
         <hr>
-<div style="margin-left: 1em; margin-right: 1em;">
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-2104426707154383"
-     data-ad-slot="3483841792"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-        </div>        <p class="maintag"><b>Steps: </b>Follow the directions below to understand the Nuke Detonation Location Map!</p>
+<p class="maintag"><b>Steps: </b>Follow the directions below to understand the Nuke Detonation Location Map!</p>
         <hr>
         <p class="maintag"> <b> 1.</b> First, click the button to show the locations of all Nuke Detonations. Then locate the locations of Nuke Detonations. These areas are marked with markers with their color depending on severity/yield of Nuke Detonation. </p>
         <p class="maintag"> <b> 2.</b> Hover over the location of the Nuke Detonation. When you hover over this location, a box will popup giving information about the certain Nuke Detonation.</p>
@@ -110,8 +104,9 @@
     </div>
     </div>
 <!--        <footer style="bottom: 0;"> Nuke Detonation Simulations</footer>-->
-    <div id="first">
-            {% include 'map.html' %}
+    <div id="first" style="">
+        {% include 'map.html' %}
+<!--                <iframe src="/ret-map" class="desktopandmobile" scrolling="no" frameborder="0" style="width: 100%;"></iframe>-->
     </div>
 </div>
 
