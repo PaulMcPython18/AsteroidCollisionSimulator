@@ -371,6 +371,9 @@ def nukeloc():
 @app.route('/coronavirus-location-map')
 def corona():
     return render_template('CoronavirusLocation.html')
+@app.route('/bad-links')
+def badlinks():
+    return render_template('badlinks.txt')
 if __name__ == "__main__":
     of_diameter = 22
     app.run(debug=False)
