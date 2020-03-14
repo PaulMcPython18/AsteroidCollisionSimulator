@@ -374,6 +374,12 @@ def corona():
 @app.route('/bad-links')
 def badlinks():
     return render_template('badlinks.txt')
+@app.route('/blog')
+def astblog():
+    return render_template('blog.html')
+@app.route('/asteroid-hit-earth')
+def ahe():
+    return render_template('article1.html')
 if __name__ == "__main__":
     of_diameter = 22
     app.run(debug=False)
