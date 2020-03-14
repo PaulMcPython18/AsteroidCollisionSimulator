@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Could this large asteroid hit earth? According to NASA, this massive meteor may impact earth and could cause disastrous damages.">
+    <meta name=”viewport” content=”width=device-width, initial-scale=1″>
+    <title>Will an asteroid hit earth in 2029? This one could.</title>
+    <meta name="google-site-verification" content="ENQ9n1V4rvA6leMytUmttgBGMMBaH5NBZXMNwnWZDg0" />
+<!--    <script data-ad-client="ca-pub-2104426707154383" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
+</head>
+<style>
+    #header {
+    width: 100%;
+    background-color: #f2f2f2;
+    height: 30px;
+}
+
+#container {
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f2;
+}
+#first {
+    width: 0%;
+    float: left;
+    height: 100%;
+    background-color: #f2f2f2;
+}
+#second {
+    width: 100%;
+    float: left;
+    height: 100%;
+    background-color: #f2f2f2;
+}
+
+.mobileeffect {
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+@media (max-width: 760px) {
+    #second {
+        width: 100%;
+        float: left;
+        height: 100%;
+        background-color: #f2f2f2;
+    }
+    #first {
+        width: 0%;
+        float: left;
+        height: 100%;
+        background-color: #f2f2f2;
+    }
+}
+
+
+articleimg {
+    width: 200px;
+    height: 100%;
+}
+.twitter-share-button {
+     margin-left: 25%;
+}
+.whyhellothere {
+  width: 200px;
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  z-index: 9;
+}
+</style>
+<body>
+
+<div id="container">
+    <div id="second" style="margin-top: -1.75em; overflow-y: auto; overflow-x: hidden;"><br>
+        {% include '_navbar.html' %}
+        <h1 style="font-size: 30px; margin-top: 1em; font-weight: bold;" class="mobileeffect"> Will an asteroid hit earth in 2029? This one could.</h1>
+        <p class="mobileeffect">By Paul McBurney Jr</p>
+<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <div class="mobileeffects">
+        <img src="static/ast.jpg" class="articleimg mobileeffect" style="margin-top: 1em; width: 42%;" alt="An asteroid that could hit earth with earth in the background.">
+                </div>
+        <p style="font-size: 13px;" class="mobileeffect">Picture of a large asteroid that could hit earth. Labeled For Reuse. &darr;</p>
+        <p style="font-size: 13px;" class="mobileeffect"><a href="/home" class="btn btn-primary">View Site Homepage</a></p>
+        <hr>
+        <h2 class="mobileeffect" style="font-size: 22px; margin-top: 1em;">Will an asteroid hit earth soon?</h2>
+        <br>
+        <p class="mobileeffect">Could this large asteroid hit earth in 2029?</p>
+        <p class="mobileeffect"><b>Yes!</b> According to NASA, this massive meteor has a chance of impacting earth. Hence, its collision could cause disastrous damages.</p>
+        <p class="mobileeffect">Asteroid 99942 Apophis could hit earth in <b>2029</b>, but its more likely that a near miss will happen. Scientists estimate that there is a 1 in 40 that this large asteroid will impact earth. Apophis is about the size of the <b>Eiffel Tower in Paris.</b> If it does hit earth, we can only imagine the <b>catastrophic damages</b> that it could cause.</p>
+        <p class="mobileeffect">However, just because Apophis will likely experience a near miss doesn't that we are safe. In <b>2036</b>, the <b>massive asteroid</b> will have a much higher chance of impact when it completes its next nerveracking orbit near earth.</p>
+        <p class="mobileeffect">Now the question that many of us are asking is <b>"what would happen if this asteroid hit earth?"</b></p>
+        <p class="mobileeffect" style="margin-bottom: 2em;">We can use this <b>asteroid simulation</b> to find out!</p>
+        <div class="mobileeffects">
+        <img src="static/astsim.png" class="mobileeffect" style="width: 56%;" alt="Photo from an Asteroid Impact Simulator that simulates an asteroid hitting earth.">
+            </div>
+        <p style="font-size: 13px;" class="mobileeffect">Free & Easy To Use Asteroid Impact Simulator called <a href="https://asteroidcollision.herokuapp.com/">Asteroid Collision Map</a> </p>
+        <hr style="margin-top: 1em; margin-bottom: 1em;">
+
+        <p class="mobileeffect">According to the results of the linked interactive <b>asteroid collision map</b>, Apophis would cause <b>disastrous damages</b> if it landed in San Francisco.</p>
+        <p class="mobileeffect">Some of these effects can include shockwaves, burnt skin, destroyed infrastructure, thousands of casualties, and more. Fortunatley, it is <b>extremely unlikely</b> for asteroids like Apophis to <b>impact in densely populated areas</b> as most of the <b>world is rural</b>.</p>
+        <p class="mobileeffect">However, it is important to note that a relatively small asteroid like Apophis is not able to cause <b>worldwide extinction.</b> But could cause pretty serious damages for those in the vicinity. </p>
+        <p class="mobileeffect">Scientists currently predict that extinction causing asteroids hit earth every sixty million years. At the moment we are currently five years over-due. </p>
+        <hr>
+        <p class="mobileeffect" style="font-size: 18px;">Want to <b>simulate asteroid collisions</b> yourself? Check out this interactive map!</p>        <a href="/" class="btn btn-danger mobileeffect">View Map!</a>
+
+        <div id="AsteroidForm" class="whyhellothere">
+  <form class="form-container">
+    <div style="background-color: #f2f9f9; border-radius: 10px;">
+        <p style="margin-left: 1em; margin-right: 1em; font-weight: bold;">Popup:</p>
+        <p style="margin-left: 1em; margin-right: 1em;">Check out our <b>asteroid collision simulator map!</b></p>
+        <p style="margin-left: 1em; margin-right: 1em;">Bring the power of nature into your hands and <b>simulate the destruction/effects</b> of asteroids using our cool webpage!</p>
+        <br>
+        <a href="/" style="color: green;" class="btn open">Open</a>
+            <button type="button" class="btn cancel" onclick="begoneee()" style="color: red;">Close</button>
+
+    </div>
+
+  </form>
+</div>
+        <hr><p style="margin-left: 1em; text-align: center;">2020 Asteroid Collision Map &copy;</p>
+        <script>
+              document.getElementById("AsteroidForm").style.display = "block";
+              function begoneee() {
+                document.getElementById("AsteroidForm").style.display = "none";
+              }
+        </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Random Simulations Visualizations, and Generators on random topics like natural disasters, asteroids and names.">
+    <meta name=”viewport” content=”width=device-width, initial-scale=1″>
+    <title>Random Simulations And Visualizations</title>
+    <meta name="google-site-verification" content="ENQ9n1V4rvA6leMytUmttgBGMMBapNBZXMNwnWZDg0" />
+</head>
+<style>
+
+    #header {
+    width: 100%;
+    background-color: #f2f2f2;
+    height: 30px;
+}
+
+#container {
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f2;
+}
+#first {
+    width: 30%;
+    float: left;
+    height: 0%;
+    background-color: #f2f2f2;
+}
+#second {
+    width: 100%;
+    float: left;
+    height: 100%;
+    background-color: #f2f2f2;
+}
+
+@media (max-width: 800px) {
+    .articleimg {
+        width: 300px;
+    }
+    img {
+        width: 300px;
+    }
+}
+img {
+    width: 600px;
+}
+
+.article1:hover {
+    color: brown;
+}
+
+body {
+    text-align: center;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+</style>
+<body style="background-color: #f2f2f2;">
+
+    <div style="margin-top: -1.75em; overflow-y: auto; overflow-x: hidden; width: 100%;
+    float: left;
+    height: 100%;
+    background-color: #f2f2f2;"><br>
+        {% include '_navbar.html' %}
+        <div style="margin-left: 15%; margin-right: 15%;">
+        <h1 style="font-size: 23px; font-weight: normal; margin-left: 1em; margin-top: 1em; margin-right: 1em;"> Asteroid Collision Blog</h1>
+                <h2 style="font-size: 19px; font-weight: normal; margin-left: 1em; margin-right: 1em;"> Blog about <b>asteroids, astrononmy, space and physics.</b> Read our blogposts and learn more. </h2>
+        <br>
+
+
+        <hr>
+    </div>
+    <div id="second" style="margin-left: 15%; margin-right: 15%;">
+        <div>
+        <h3 style="margin-left: 1em; font-size: 18px; font-weight: bold;" class="article1"><a href="/" style="color: inherit;">This massive asteroid could hit earth in 2029.
+</a> </h3>
+        <p style="margin-left: 1em; margin-right: 1em;">By: Paul McBurney | Mar. 09 2020</p>
+        <img class="articleimg" style="margin-left: 1em; border-radius: 20px; text-align: center;" src="static/couldhitearth.png">
+            <p style="margin-top: 0.5em; margin-left: 1em;"><b>-</b> Asteroid 99942 Apophis could hit earth in 2029.<br>What would happen if it did hit earth?<br>Read more to find out...</p>
+            <p style="margin-left: 1em; margin-top: 1em; color: #39ff14;"><a href="/asteroid-hit-earth" class="btn btn-success" style="background-color: #66ff66;">Continue Reading</a></p>
+        <hr>
+                    </div>
+
+<!--        <div>-->
+<!--        <h3 style="margin-left: 1em; font-size: 18px; font-weight: bold; margin-right: 1em;" class="article1"><a href="/" style="color: inherit;">Asteroid Impact Simulator Shows The Devestating Effects From Asteroids</a> </h3>-->
+<!--        <p style="margin-left: 1em; margin-right: 1em;">By: Paul McBurney | Mar. 09 2020</p>-->
+<!--        <img class="articleimg" style="margin-left: 1em; margin-right: 1em; border-radius: 20px; text-align: center;" src="static/infographic.png">-->
+<!--            <p style="margin-top: 0.5em; margin-right: 1em;"><b>-</b> We used an online simulator to simulate the dangers of asteroid collisions. <br>We tried inputting the size of an asteroid that could hit earth in 2029..<br> the results blew us away!</p>-->
+<!--&lt;!&ndash;            <p style="margin-top: 0.5em; margin-right: 1em;"><b>-</b> We inputted the size of it and simulated the effects.</p>&ndash;&gt;-->
+<!--&lt;!&ndash;            <p style="margin-top: 0.5em; margin-right: 1em;"><b>-</b> The effects of the collision will shock you.</p>&ndash;&gt;-->
+<!--            <p style="margin-left: 1em; margin-right: 1em; margin-top: 1em; color: #39ff14;"><a href="/" class="btn btn-success" style="background-color: #66ff66;">Continue Reading</a></p>-->
+<!--            </div>-->
+        <p>Asteroid Collision Map 2020 &copy;</p>
+    <div id="first">
+    </div>
+    </div>
+
+</body>
+</html>
