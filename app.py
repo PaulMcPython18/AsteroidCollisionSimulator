@@ -380,6 +380,9 @@ def astblog():
 @app.route('/asteroid-hit-earth')
 def ahe():
     return render_template('article1.html')
+@app.route('/asteroid-earth')
+def asteroidearth():
+    return render_template('article2.html')
 if __name__ == "__main__":
     of_diameter = 22
     app.run(debug=False)
