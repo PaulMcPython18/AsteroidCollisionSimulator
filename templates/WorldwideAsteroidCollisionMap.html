@@ -85,7 +85,7 @@ body {
             <h2 style="font-size: 15px; padding-left: 1.3em; font-weight: normal; margin-top: 1em;"> Worldwide Asteroid Collision Location Map </h2>
             <a href="/questions" style="font-size: 12px; padding-left: 1.6em; margin-top: 2em;"> Learn More</a>
             </div>
-        <p style="padding-left: 1em; padding-right: 1em; font-size: 15px; margin-top: 16px;"> Welcome to <b>Asteroid Collision Location Map.</b> Locate the locations of all major asteroid collisions with earth in history. &darr;</p>
+        <p style="padding-left: 1em; padding-right: 1em; font-size: 15px; margin-top: 16px;"> Welcome to <b>Asteroid Collision Location Map.</b> Locate the locations of over 765 major asteroid collisions with earth throughout the 18th, 19th, 20th and 21st centuries. &darr;</p>
         <hr>
         <p class="maintag" style="margin-left: 1em; margin-right: 1em;"><b>Click!</b> Click the button below to show the locations of all known major Asteroid Collisions near the 20th and 19th centuries. Note that these asteroid impacts are recorded and that there are many more unrecorded asteroid impacts at unlogged locations.</p>
         <form action="/asteroid-collision-location-map", method="post">
@@ -107,10 +107,142 @@ body {
     </div>
     <div id="first">
 <!--            {% include 'map.html' %}-->
-                   <iframe src="/ret-map" style="width: 100%; min-height: 200vh;" scrolling="no" frameborder="0"></iframe>
+                   <iframe src="/ret-map" style="width: 100%; min-height: 215vh;" scrolling="no" frameborder="0"></iframe>
     </div>
 </div>
 
 
 </body>
 </html>
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <meta http-equiv="X-UA-Compatible" content="ie=edge">-->
+<!--    <meta name="description" content="Asteroid Collision Location Map enables you to locate all major asteroid collisions on earth in history.">-->
+<!--    <meta name=”viewport” content=”width=device-width, initial-scale=1″>-->
+<!--    <title>Asteroid Collision Location Map</title>-->
+<!--    <meta name="google-site-verification" content="ENQ9n1V4rvA6leMytUmttgBGMMBaH5NBZXMNwnWZDg0" />-->
+<!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">-->
+<!--    <script data-ad-client="ca-pub-2104426707154383" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
+<!--</head>-->
+<!--<style>-->
+<!--body {-->
+<!--    background-color: #f2f2f2;-->
+<!--    margin-right: 1em;-->
+<!--}-->
+<!--    #header {-->
+<!--    width: 100%;-->
+<!--    background-color: #f2f2f2;-->
+<!--    height: 30px;-->
+<!--}-->
+
+<!--#container {-->
+<!--    width: 100%;-->
+<!--    height: 100%;-->
+<!--    background-color: #f2f2f2;-->
+<!--}-->
+<!--#first {-->
+<!--    position: absoloute;-->
+<!--    z-index:-1;-->
+<!--    width: 75%;-->
+<!--    float: left;-->
+<!--    height: 100%;-->
+<!--    background-color: #f2f2f2;-->
+<!--}-->
+<!--#second {-->
+<!--    width: 25%;-->
+<!--    float: left;-->
+<!--    height: 100%;-->
+<!--    background-color: #f2f2f2;-->
+<!--}-->
+<!--@media (max-width: 760px) {-->
+<!--    #second {-->
+<!--        width: 50%;-->
+<!--        float: left;-->
+<!--        height: 100%;-->
+<!--        background-color: #f2f2f2;-->
+<!--    }-->
+<!--    #first {-->
+<!--        width: 50%;-->
+<!--        float: left;-->
+<!--        height: 100%;-->
+<!--        background-color: #f2f2f2;-->
+<!--        overflow: hidden;-->
+<!--    }-->
+<!--    iframe {-->
+<!--        min-height: 150vh;-->
+<!--    }-->
+<!--}-->
+<!--.mainpara {-->
+<!--    font-size: 16px;-->
+<!--    padding-left: 1em;-->
+<!--    padding-right: 1em;-->
+<!--}-->
+<!--.smallpara {-->
+<!--    font-size: 12px;-->
+<!--    margin-left: 1em;-->
+<!--}-->
+<!--.abspos {-->
+<!--    position: absolute;-->
+<!--    bottom: 5px;-->
+<!--    left: 5px;-->
+<!--}-->
+<!--.callme {-->
+<!--    margin-left: 1em;-->
+<!--    margin-right: 1me;-->
+<!--}-->
+<!--</style>-->
+<!--<body>-->
+
+<!--<div id="container" style="">-->
+<!--    <div id="second" style="margin-top: -1.75em; overflow-y: auto;"><br>-->
+<!--        {% include '_navbar.html' %}-->
+<!--        <div class="">-->
+<!--            <h1 style="font-size: 20px; padding-left: 1em; font-weight: normal;"> Asteroid Collision Location Map</h1>-->
+<!--            <h2 style="font-size: 15px; padding-left: 1.3em; font-weight: normal; margin-top: 1em;"> Worldwide Asteroid Collision Location Map </h2>-->
+<!--            <a href="/questions" style="font-size: 12px; padding-left: 1.6em; margin-top: 2em;"> Learn More</a>-->
+<!--            </div>-->
+<!--        <p style="padding-left: 1em; padding-right: 1em; font-size: 15px; margin-top: 16px;"> Welcome to <b>Asteroid Collision Location Map.</b> Locate the locations of all major asteroid collisions with earth in history. &darr;</p>-->
+<!--        <hr>-->
+<!--        <p class="maintag" style="margin-left: 1em; margin-right: 1em;"><b>Click!</b> Click the button below to show the locations of all known major Asteroid Collisions near the 20th and 19th centuries.</p>-->
+<!--        <form action="/asteroid-collision-location-map", method="post">-->
+<!--            <button type="submit" class="btn btn-lg btn-secondary" style="background-color: #ff4d4d; margin-top: 13px; margin-left: 1em; margin-right: 1em;"> Show Asteroid Collision Locations </button>-->
+<!--        </form>-->
+<!--        <hr>-->
+<!--                                                        <div style="margin-left: 1em; margin-right: 1em;">-->
+<!--            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
+<!--<ins class="adsbygoogle"-->
+<!--     style="display:block; text-align:center;"-->
+<!--     data-ad-layout="in-article"-->
+<!--     data-ad-format="fluid"-->
+<!--     data-ad-client="ca-pub-2104426707154383"-->
+<!--     data-ad-slot="3483841792"></ins>-->
+<!--<script>-->
+<!--     (adsbygoogle = window.adsbygoogle || []).push({});-->
+<!--</script>-->
+<!--        </div>-->
+<!--                    <p style="color: red; padding-left: 1em;"> {{ message }} </p>-->
+<!--        <p class="mainpara"><b>Steps: </b>Click the button above to show asteroid collision locations. Then follow the directions below to understand the asteroid collision location simulation map!</p>-->
+<!--        <hr>-->
+<!--        <p class="mainpara"> <b> 1.</b> Click the red button above to show locations of the asteroid collisions. Locate the locations of asteroid collisions/impacts. These areas are marked with markers with their color depending on severity. </p>-->
+<!--        <p class="mainpara"> <b> 2.</b> Hover over the location of the collision. When you hover over this location, a box will popup giving information about the certain collision.</p>-->
+<!--        <p class="mainpara"> <b> 3.</b> After knowing the location of the impact, you can hover over the marker and view information about the asteroid like its <b>mass/weight, composition, and date of impact.</b> All very helpful statistics! </p>-->
+<!--        <hr>-->
+<!--        <p class="smallpara"> Asteroid Collision Location Map <b>&copy;</b></p>-->
+<!--<div class="abspos">-->
+
+<!--    </div>-->
+<!--    </div>-->
+<!--    <div id="first">-->
+<!--            {% include 'map.html' %}-->
+<!--&lt;!&ndash;                   <iframe src="/ret-map" style="width: 100%; min-height: 138vh;" scrolling="no" frameborder="0"></iframe>&ndash;&gt;-->
+<!--    </div>-->
+<!--</div>-->
+
+
+<!--</body>-->
+<!--</html>-->
