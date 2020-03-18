@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="Nuke Detonation Location Map enables you to know the locations of Nuke Detonations worldwide and global nuke detonations on earth.">
     <meta name=”viewport” content=”width=device-width, initial-scale=1″>
-    <title>Nuke Detonation Location Visualization</title>
+    <title>Nuke Detonation Location Visualization - Map</title>
     <meta name="google-site-verification" content="ENQ9n1V4rvA6leMytUmttgBGMMBaH5NBZXMNwnWZDg0" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
@@ -57,12 +57,18 @@
     width: 100%;
     min-height: 82em;
 }
-
+.nukedetonationlocationmapservice {
+  width: 180px;
+  display: none;
+  position: fixed;
+  bottom: 0;
+  z-index: 9;
+}
 </style>
 <body>
 
 <div id="container" style="">
-    <div id="second" style="margin-top: -1.75em; overflow-y: auto;"><br>
+    <div id="second" style="margin-top: -1.75em; overflow-y: auto; overflow-x: hidden;"><br>
 <nav class="navbar navbar-expand-lg navbar-light bg-light" style="height:-50%;">
   <a class="navbar-brand" href="/" style="font-size: 25px;"><strong>Nuke Detonation Location Map</strong></a>
 <!--  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="text-align: center; margin-left: 40%;">-->
@@ -78,7 +84,7 @@
     </ul>
   </div>
 </nav>        <div class="">
-            <h1 style="font-size: 20px; padding-left: 1em; font-weight: normal;"> Nuke Detonation Location Map</h1>
+            <h1 style="font-size: 20px; padding-left: 1em; font-weight: normal;"> <strong>Nuke Detonation Location Map</strong></h1>
             <h2 style="font-size: 15px; padding-left: 1.3em; font-weight: normal; margin-top: 1em;"> Worldwide Nuke Detonation Visualization Map </h2>
             <a href="/questions" style="font-size: 12px; padding-left: 1.6em; margin-top: 2em;"> Learn More</a>
             </div>
@@ -86,9 +92,11 @@
         <hr>
 
         <p class="maintag"><b>Click!</b> Click the button below to show the locations of all known major Nuke Detonations greater than 6.5 magnitude.</p>
+        <center>
         <form action="/nuke-detonation-location-map", method="post">
-            <button type="submit" class="btn btn-lg btn-secondary" style="background-color: #ff4d4d; margin-top: 13px; margin-left: 1em; font-size: 16px; margin-right: 1em;"> Show Nuke Detonations Locations</button>
+            <button type="submit" class="btn btn-lg btn-secondary" style="background-color: #ff4d4d; margin-top: 13px; margin-left: 1em; font-size: 15px; margin-right: 1em;"> Show Detonations</button>
         </form>
+            </center>
         <hr>
 <p class="maintag"><b>Steps: </b>Follow the directions below to understand the Nuke Detonation Location Map!</p>
         <hr>
@@ -99,9 +107,24 @@
 
         <hr>
         <p style="font-size: 12px; margin-left: 1em;"> Worldwide Nuke Detonation Location Map <b>&copy;</b></p>
-<div style="position: absolute; bottom: 5px; left: 5px;">
+        <div id="NukeForm" class="nukedetonationlocationmapservice">
+  <form class="form-container">
+    <div style="background-color: #f2f9f9; border-radius: 10px; font-size: 15px;">
+        <p style="margin-left: 1em; margin-right: 1em; font-weight: bold;">Popup:</p>
+        <hr>
+        <p style="margin-left: 1em; margin-right: 1em;"><b>Simulate asteroid collisions</b> yourself and see how <b>your community would be destroyed</b> if an asteroid hit earth! Use our <b>simulator</b> to get started!</p>
+
+        <p style="margin-left: 1em; margin-right: 1em;">Click the <b>"Open"</b> button to <b>Get Started!</b></p>
+
+        <br>
+        <a href="/" style="color: green;" class="btn open">Open</a>
+            <button type="button" class="btn cancel" onclick="begoneee()" style="color: red;">Close</button>
 
     </div>
+
+  </form>
+</div>
+
     </div>
 <!--        <footer style="bottom: 0;"> Nuke Detonation Simulations</footer>-->
     <div id="first" style="">
@@ -110,7 +133,12 @@
     </div>
 </div>
 
-
+        <script>
+              document.getElementById("NukeForm").style.display = "block";
+              function begoneee() {
+                document.getElementById("NukeForm").style.display = "none";
+              }
+        </script>
 </body>
 </html>
 

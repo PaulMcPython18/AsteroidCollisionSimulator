@@ -60,12 +60,18 @@ body {
     width: 100%;
     min-height: 82em;
 }
-
+.nukelocationmap {
+  width: 180px;
+  display: none;
+  position: fixed;
+  bottom: 0;
+  z-index: 99;
+}
 </style>
 <body style="background-color: #f2f2f2;">
 
 <div id="container" style="">
-    <div id="second" style="margin-top: -1.75em; overflow-y: auto;"><br>
+    <div id="second" style="margin-top: -1.75em; overflow-y: auto; overflow-x: hidden;"><br>
 <nav class="navbar navbar-expand-lg navbar-light bg-light" style="height:-50%;">
   <a class="navbar-brand" href="/" style="font-size: 25px;"><strong>Nuke Detonation Location Map</strong></a>
 <!--  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="text-align: center; margin-left: 40%;">-->
@@ -81,17 +87,17 @@ body {
     </ul>
   </div>
 </nav>        <div class="">
-            <h1 style="font-size: 20px; padding-left: 1em; font-weight: normal;"> Nuke Detonation Location Map</h1>
+            <h1 style="font-size: 20px; padding-left: 1em; font-weight: normal;"> <strong>Nuke Detonation Location Map</strong></h1>
             <h2 style="font-size: 15px; padding-left: 1.3em; font-weight: normal; margin-top: 1em;"> Worldwide Nuke Detonation Location Map </h2>
             <a href="/questions" style="font-size: 12px; padding-left: 1.6em; margin-top: 2em;"> Learn More</a>
             <hr>
-            <a href="/home" style="margin-left: 1.6em; font-size: 12px; margin-right: 1.6em;" class="btn btn-danger">View More Simulations & Maps</a><br>
+            <a href="/home" style="background-color: #ff4d4d; margin-left: 1.6em; font-size: 12px; margin-right: 1.6em;" class="btn btn-lg btn-secondary">Go Home</a><br>
             </div>
-        <p style="padding-left: 1em; padding-right: 1em; font-size: 15px; margin-top: 16px;"> Welcome to <b>Nuke Detonation Location Map.</b> Locate the locations of all discovered major Nuke Detonations from 1945 to 1988. Nuke Detonations are shown if discovered! &darr;</p>
+        <p style="padding-left: 1em; padding-right: 1em; font-size: 15px; margin-top: 16px;"> Welcome to <b>Nuke Detonation Location Map.</b> Locate the locations of all major Nuke Detonations from 1945 to 1988. Nuke Detonations are shown if recorded! &darr;</p>
         <hr>
         <p class="maintag"><b>Click!</b> Click the button below to show the locations of all known major Nuke Detonations. Nuke locations included!</p>
         <form action="/nuke-detonation-location-map", method="post">
-            <button type="submit" class="btn btn-lg btn-secondary" style="background-color: #ff4d4d; margin-top: 13px; margin-left: 1em; font-size: 16px; margin-right: 1em;"> Show Nuke Detonations Locations</button>
+            <button type="submit" class="btn btn-lg btn-secondary" style="background-color: #ff4d4d; margin-top: 13px; margin-left: 1em; font-size: 15px; margin-right: 1em;"> Show Detonations</button>
         </form>
         <hr>
         <p class="maintag"><b>Steps: </b>Follow the directions below to understand the Nuke Detonation Location Map!</p>
@@ -102,9 +108,7 @@ body {
 
         <hr>
         <p style="font-size: 12px; margin-left: 1em;"> Worldwide Nuke Detonation Location Map <b>&copy;</b></p>
-<div style="position: absolute; bottom: 5px; left: 5px;">
 
-    </div>
     </div>
 <!--        <footer style="bottom: 0;"> Nuke Detonation Simulations</footer>-->
     <div id="first">
@@ -112,8 +116,29 @@ body {
 <!--                <iframe src="/ret-nuke-loc" class="desktopandmobile" scrolling="no" frameborder="0"></iframe>-->
     </div>
 </div>
+<div id="NukeForm" class="nukelocationmap">
+  <form class="form-container">
+    <div style="background-color: #f2f9f9; border-radius: 10px; font-size: 15px;">
+        <p style="margin-left: 1em; margin-right: 1em; font-weight: bold;">Popup:</p>
+        <hr>
+        <p style="margin-left: 1em; margin-right: 1em;"><b>Simulate asteroid collisions</b> yourself and see how <b>your community would be destroyed</b> if an asteroid hit earth! Use our <b>simulator</b> to get started!</p>
 
+        <p style="margin-left: 1em; margin-right: 1em;">Click the <b>"Open"</b> button to <b>Get Started!</b></p>
 
+        <br>
+        <a href="/" style="color: green;" class="btn open">Open</a>
+            <button type="button" class="btn cancel" onclick="begoneee()" style="color: red;">Close</button>
+
+    </div>
+
+  </form>
+</div>
+        <script>
+              document.getElementById("NukeForm").style.display = "block";
+              function begoneee() {
+                document.getElementById("NukeForm").style.display = "none";
+              }
+        </script>
 </body>
 </html>
 
