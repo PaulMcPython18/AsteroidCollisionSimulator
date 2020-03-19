@@ -101,7 +101,11 @@ def map():
             # try:
             #     lat_lons = ast.literal_eval(lat_lons)
             # except:
-            lat_lons = lat_lons.strip('][').split(', ')
+            try:
+                lat_lons = lat_lons.strip('][').split(', ')
+            except:
+                lat_lons = [40.7128, 74.0060]
+                print('DevNote: Occ Strip Failed Set to NYC Lat Lon')
             print(lat_lons)
             print(type(lat_lons))
             diameter = request.cookies.get('diameters')
