@@ -387,6 +387,9 @@ def ahe():
 @app.route('/asteroid-earth')
 def asteroidearth():
     return render_template('article2.html')
+@app.route('/near-asteroids')
+def nearasteroids():
+    return render_template('article3.html')
 if __name__ == "__main__":
     of_diameter = 22
     app.run(debug=False)
