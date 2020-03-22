@@ -390,6 +390,9 @@ def asteroidearth():
 @app.route('/near-asteroids')
 def nearasteroids():
     return render_template('article3.html')
+@app.route('/asteroid-hit')
+def asteroidhit():
+    return render_template('article4.html')
 if __name__ == "__main__":
     of_diameter = 22
     app.run(debug=False)
