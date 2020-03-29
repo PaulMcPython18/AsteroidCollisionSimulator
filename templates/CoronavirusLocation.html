@@ -38,10 +38,18 @@
     float: left;
     height: 100%;
     background-color: #1a1a1a;
-    color: #cccccc
-
-;
+    color: #cccccc;
 }
+
+.whyhellothere {
+  width: 210px;
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 25%;
+  z-index: 1000;
+}
+
 @media (max-width: 760px) {
     #second {
         width: 50%;
@@ -57,6 +65,14 @@
         background-color: #1a1a1a;
         color: #cccccc;
     }
+    .whyhellothere {
+        width: 210px;
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 50%;
+        z-index: 1000;
+    }
 }
 .maintag {
     font-size: 16px; margin-left: 1em; margin-right: 1em;
@@ -67,14 +83,12 @@
 }
 .turn#1a1a1a {
     color: #cccccc
-
-;
     background-color: #1a1a1a;
 }
-</style>
-<body style="color: #cccccc
 
-; background-color: #1a1a1a;" class="turn#1a1a1a">
+
+</style>
+<body style="color: #cccccc; background-color: #1a1a1a;" class="turn#1a1a1a">
 
 <div id="container" style="">
 
@@ -99,15 +113,16 @@
             <h2 style="font-size: 15px; margin-left: 1.3em; font-weight: normal; margin-top: 1em;"> Worldwide Coronavirus Case Locations Map </h2>
             <a href="/home" style="margin-left: 1.4em; font-size: 12px; margin-right: 1.6em;" class="btn btn-danger">View More Simulations & Maps</a><br>
             </div>
+        <div>
         <p style="margin-left: 1em; margin-right: 1em; font-size: 15px; margin-top: 16px;"> Welcome to the interactive <b>Real Time Coronavirus Case Location Map.</b> View Real Time cases of coronavirus and their locations.</p>
         <hr>
         <p style="font-size: 20px; margin-top: 16px; text-align: center;">Worldwide: <b style="color: red;">660706</b></p>
         <p style="font-size: 20px; margin-top: 16px; text-align: center;">Recovered: <b style="color: limegreen;">139415</b></p>
         <p style="font-size: 20px; margin-top: 16px; text-align: center;">Active: <b style="color: red;">367210</b></p>
         <p style="font-size: 20px; margin-top: 16px; text-align: center;">Deaths: <b style="color: red;">30652</b></p>
-
-
         <hr>
+            </div>
+                
 <p class="maintag"><b>Steps: </b>Follow the directions below to understand the Coronavirus Visualization Location Map!</p>
         <hr>
         <p class="maintag"> <b> 1.</b> View the coronavirus location map. Red circle sizes are marked with the severity of the location based upon the number of cases of coronavirus.</p>
@@ -122,12 +137,37 @@
 
     </div>
     </div>
+
     <div id="first" style="">
         {% include 'corona.html' %}
+            <div id="NearEarthAsteroidForm" class="whyhellothere">
+  <form class="form-container">
+    <div style="background-color: #1a1a1a; border-radius: 10px; color: cccccc;">
+        <p style="margin-left: 1em; margin-right: 1em; font-weight: bold;">Popup:</p>
+
+        <p style="margin-left: 1em; margin-right: 1em;">Control nature and <b>destroy earth with asteroids using our asteroid collision simulator!</b></p>
+        <p style="margin-left: 1em; margin-right: 1em;">See how <b>your city</b> would be <b>destroyed</b> if an asteroid hit earth!</p>
+
+        <p style="margin-left: 1em; margin-right: 1em;">Click the <b>"Open"</b> button to <b>Get Started!</b></p>
+
+        <br>
+        <a href="/" style="color: green;" class="btn open">Open</a>
+            <button type="button" class="btn cancel" onclick="begoneee()" style="color: red;">Close</button>
+
+    </div>
+
+  </form>
+</div>
     </div>
 </div>
 
-
+<script>
+    document.getElementById("NearEarthAsteroidForm").style.display = "block";
+    console.log('Generated')
+    function begoneee() {
+         document.getElementById("NearEarthAsteroidForm").style.display = "none";
+    }
+</script>
 </body>
 </html>
 
