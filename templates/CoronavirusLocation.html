@@ -60,6 +60,17 @@
     margin-top: 14.5px;
     text-align: center;
 }
+
+.arrow {
+    position: fixed;
+    bottom: 0;
+    left: 11%;
+    z-index: 1000;
+    animation-name: updown;
+    animation-duration: 1.3s;
+    animation-iteration-count: infinite;
+}
+
 @media (max-width: 760px) {
     #second {
         width: 50%;
@@ -89,6 +100,15 @@
     .makesmall2 {
         font-size: 14px;
     }
+    .arrow {
+        position: fixed;
+        bottom: 0;
+        left: 20%;
+        z-index: 1000;
+        animation-name: updown;
+        animation-duration: 1.3s;
+        animation-iteration-count: infinite;
+    }
 }
 .maintag {
     font-size: 16px; margin-left: 1em; margin-right: 1em;
@@ -101,8 +121,11 @@
     color: #cccccc
     background-color: #1a1a1a;
 }
-
-
+@keyframes updown {
+  0% {bottom: 0px;}
+  50% {bottom: 35px;}
+  100% {bottom: 0px;}
+}
 </style>
 <body style="color: #cccccc; background-color: #1a1a1a;" class="turn#1a1a1a">
 
@@ -124,7 +147,12 @@
 
     </ul>
   </div>
-</nav>        <div class="statistics">
+</nav>
+        <div class="arrow">
+            <p style="font-weight: bold; font-size: 50px; color: white; z-index: 99;">&#8595;</p>
+
+        </div>
+        <div class="statistics">
             <h1 style="font-size: 20px; margin-left: 1em; font-weight: normal; background-size: cover;"> <b>Coronavirus Case</b> Real Time Map</h1>
             <h2 style="font-size: 15px; margin-left: 1.3em; font-weight: normal; margin-top: 1em;"> Worldwide Coronavirus Case Locations Map </h2>
             <a href="/home" style="margin-left: 1.4em; font-size: 12px; margin-right: 1.6em;" class="btn btn-danger">View More Simulations & Maps</a><br>
@@ -138,9 +166,14 @@
         <p style="">Active: <b style="color: red;">395606</b></p>
         <p>Deaths: <b style="color: red;">33925</b></p>
         </div>
-                <hr>
-                        <div class="makesmall2">
-                                <p style=""><b style="color: white;">Real Time:</b></p>
+
+                        <div class="makesmall2" style="">
+
+<hr>
+
+
+                            <p style=""><b style="color: white;">Real Time:</b></p>
+
                                 <p style="">USA: <b style="color: red;">140886</b></p>
                                 <p style="">China: <b style="color: red;">82122</b></p>
                                 <p style="">UK: <b style="color: red;">97689</b></p>
@@ -149,12 +182,24 @@
                                 <p style="">Australia: <b style="color: red;">3984</b></p>
                                 <p style="">Iran: <b style="color: red;">38309</b></p>
                                 <p style="">Russia: <b style="color: red;">1534</b></p>
-
-
+                            <hr>
+                            <p style="color: white; margin-left: 10px; margin-right: 10px;"><b>Corona Progression</b></p>
+                                        <img src="static/CaseInc.png" style="width: 80%;">
+                            <hr>
+                            <p style=""><b style="color: white;">Most Deaths:</b></p>
+                            <p style="font-size: 11px; color: white;">(By Country)</p>
+                                <p style="">USA: <b style="color: red;">2484</b></p>
+                                <p style="">China: <b style="color: red;">3182</b></p>
+                                <p style="">UK: <b style="color: red;">1228</b></p>
+                                <p style="">France: <b style="color: red;">2606</b></p>
+                                <p style="">Spain: <b style="color: red;">6803</b></p>
+                                <p style="">Netherlands: <b style="color: red;">771</b></p>
+                                <p style="">Iran: <b style="color: red;">2640</b></p>
+                            <hr>
 
 
                         </div>
-            <hr>
+
             </div>
 
 <p class="maintag"><b>Steps: </b>Follow the directions below to understand the Coronavirus Visualization Location Map!</p>
