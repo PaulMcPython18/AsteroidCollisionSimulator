@@ -71,7 +71,16 @@
     animation-iteration-count: infinite;
 }
 
+.maintagforcovid {
+    color: white;
+    font-size: 22px;
+}
+
 @media (max-width: 760px) {
+    .maintagforcovid {
+        color: white;
+        font-size: 14px;
+    }
     #second {
         width: 50%;
         float: left;
@@ -127,6 +136,7 @@
   100% {bottom: 0px;}
 }
 
+
 </style>
 <body style="color: #cccccc; background-color: #1a1a1a;" class="turn#1a1a1a">
 
@@ -173,7 +183,7 @@
 <hr>
 
 
-                            <p style=""><b style="color: white;">Coronavirus Cases:</b></p>
+                            <h2 class="maintagforcovid"><b style="color: white;">Coronavirus Cases:</b></h2>
 
                                 <p style="">USA: <b style="color: red;">140886</b></p>
                                 <p style="">China: <b style="color: red;">82122</b></p>
@@ -195,7 +205,7 @@
                                 <p style="">Netherlands: <b style="color: red;">771</b></p>
                                 <p style="">Iran: <b style="color: red;">2640</b></p>
                             <hr>
-                            <p style=""><b style="color: white;">Coronavirus Recovery:</b></p>
+                            <p class=""maintagforcovid><b style="color: white;">Coronavirus Recovery:</b></p>
                             <p style="font-size: 11px; color: white;">(By Country)</p>
                             <div class="greenbold">
                                 <p style="">China: <b style="color: limegreen;">70079</b></p>
@@ -212,7 +222,7 @@
                             </div>
                             <hr>
                             <p style="color: white; margin-left: 10px; margin-right: 10px;"><b>Corona Progression</b></p>
-                                        <img src="static/CaseInc.png" style="width: 80%;">
+                                        <img src="static/CaseInc.png" style="width: 80%;" alt="Coronavirus Map/Graph That Shows Cases Increase In Real Time">
                             <hr>
 
                         </div>
