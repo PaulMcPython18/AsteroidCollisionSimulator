@@ -61,7 +61,7 @@
     text-align: center;
 }
 
-.arrow {
+#arrow {
     position: fixed;
     bottom: 0;
     left: 11%;
@@ -71,13 +71,11 @@
     animation-iteration-count: infinite;
 }
 
+
+
 .maintagforcovid {
     color: white;
     font-size: 22px;
-}
-
-.viewmore {
-    display: none;
 }
 
 @media (max-width: 760px) {
@@ -113,12 +111,48 @@
     .makesmall2 {
         font-size: 14px;
     }
-    .arrow {
+    #arrow {
         position: fixed;
         bottom: 0;
         left: 20%;
         z-index: 1000;
         animation-name: updown;
+        animation-duration: 1.3s;
+        animation-iteration-count: infinite;
+    }
+
+    #sliderbutton {
+        position: fixed;
+        bottom: 52%;
+        background-color: #1a1a1a;
+        color: white;
+        border-radius: 5px;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 20px;
+        left: 51.5%;
+        z-index: 2000;
+        width: 32px;
+        height: 32px;
+        animation-name: leftright;
+        animation-duration: 1.3s;
+        animation-iteration-count: infinite;
+    }
+    #sliderbutton2 {
+        display: none;
+        position: fixed;
+        bottom: 52%;
+        background-color: #1a1a1a;
+        color: white;
+        border-radius: 5px;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 20px;
+        left: 1.5%;
+        z-index: 2000;
+        width: 32px;
+        height: 32px;
+        animation-name: leftright;
         animation-duration: 1.3s;
         animation-iteration-count: infinite;
     }
@@ -138,6 +172,12 @@
   0% {bottom: 0px;}
   50% {bottom: 35px;}
   100% {bottom: 0px;}
+}
+
+@keyframes leftright {
+    0% {margin-left: 0px;}
+    50% {margin-left: 10px;}
+    100% {margin-left: 0px}
 }
 
 .statistics2 {
@@ -166,7 +206,7 @@
     </ul>
   </div>
 </nav>
-        <div class="arrow">
+        <div id="arrow">
             <p style="font-weight: bold; font-size: 50px; color: white; z-index: 99;">&#8595;</p>
 
         </div>
@@ -255,8 +295,23 @@
 
     <div id="first" style="">
         {% include 'corona.html' %}
+        <form>
+            <button onclick="fullscreen()" class="btn cancel" type="button">
+            <div id="sliderbutton">
+                <p style="margin-top: 2px;" onclick="fullscreen()">&lArr;</p>
+            </div>
+            </button>
+        </form>
+        <form>
+            <button onclick="fullscreen()" class="btn cancel" type="button">
+            <div id="sliderbutton2">
+                <p style="margin-top: 2px;" onclick="fullscreen()">&lArr;</p>
+            </div>
+            </button>
+        </form>
             <div id="NearEarthAsteroidForm" class="whyhellothere">
   <form class="form-container">
+
     <div style="background-color: #1a1a1a; border-radius: 10px; color: cccccc;">
         <p style="margin-left: 1em; margin-right: 1em; font-weight: bold; padding-top: 1em; color: white;">Popup:</p>
 
@@ -267,7 +322,6 @@
         <br>
         <a href="/" style="color: limegreen; font-size: 15px;" class="btn open">Open</a>
             <button type="button" class="btn cancel" onclick="begoneee()" style="color: red;">Close</button>
-
     </div>
 
   </form>
@@ -277,11 +331,20 @@
 
 <script>
     document.getElementById("NearEarthAsteroidForm").style.display = "block";
-    console.log('Generated')
     function begoneee() {
          document.getElementById("NearEarthAsteroidForm").style.display = "none";
+    }
+    function fullscreen() {
+        document.getElementById("first").style.width = "100%";
+        document.getElementById("second").style.width = "0%";
+        document.getElementById("sliderbutton").style.display = "none";
+        document.getElementById("sliderbutton2").style.display = "block";
+        document.getElementById("arrow").style.display = "none";
+        document.getElementById("NearEarthAsteroidForm").style.display = "none";
+        map_0d2afc44120f416887520ad473307e09.invalidateSize();
     }
 </script>
 </body>
 </html>
+
 
