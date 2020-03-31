@@ -124,7 +124,7 @@
     #sliderbutton {
         position: fixed;
         bottom: 52%;
-        background-color: #1a1a1a;
+        background-color: #0d0d0d;
         color: white;
         border-radius: 5px;
         text-align: center;
@@ -142,7 +142,7 @@
         display: none;
         position: fixed;
         bottom: 52%;
-        background-color: #1a1a1a;
+        background-color: #0d0d0d;
         color: white;
         border-radius: 5px;
         text-align: center;
@@ -301,11 +301,10 @@
                 <p style="margin-top: 2px;" onclick="fullscreen()">&lArr;</p>
             </div>
             </button>
-        </form>
-        <form>
-            <button onclick="fullscreen()" class="btn cancel" type="button">
+
+            <button onclick="closescreen()" class="btn cancel" type="button">
             <div id="sliderbutton2">
-                <p style="margin-top: 2px;" onclick="fullscreen()">&lArr;</p>
+                <p style="margin-top: 2px;" onclick="fullscreen()">&rArr;</p>
             </div>
             </button>
         </form>
@@ -341,6 +340,15 @@
         document.getElementById("sliderbutton2").style.display = "block";
         document.getElementById("arrow").style.display = "none";
         document.getElementById("NearEarthAsteroidForm").style.display = "none";
+        map_0d2afc44120f416887520ad473307e09.invalidateSize();
+    }
+    function closescreen() {
+        document.getElementById("first").style.width = "50%";
+        document.getElementById("second").style.width = "50%";
+        document.getElementById("sliderbutton").style.display = "block";
+        document.getElementById("sliderbutton2").style.display = "none";
+        document.getElementById("arrow").style.display = "block";
+        document.getElementById("NearEarthAsteroidForm").style.display = "block";
         map_0d2afc44120f416887520ad473307e09.invalidateSize();
     }
 </script>
