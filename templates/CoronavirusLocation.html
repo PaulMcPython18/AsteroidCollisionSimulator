@@ -76,6 +76,10 @@
     font-size: 22px;
 }
 
+.viewmore {
+    display: none;
+}
+
 @media (max-width: 760px) {
     .maintagforcovid {
         color: white;
@@ -136,7 +140,10 @@
   100% {bottom: 0px;}
 }
 
-
+.statistics2 {
+    margin-left: 1.2em;
+    margin-top: 1em;
+}
 </style>
 <body style="color: #cccccc; background-color: #1a1a1a; font-family: 'Ubuntu', sans-serif;" class="turn#1a1a1a">
 
@@ -166,7 +173,10 @@
         <div class="statistics">
             <h1 style="font-size: 20px; margin-left: 1em; font-weight: normal; background-size: cover; margin-right: 1em;"> <b>Coronavirus Case Real Time Map</b></h1>
             <h2 style="font-size: 15px; margin-left: 1.3em; margin-right: 1em; font-weight: normal; margin-top: 1em;"> Worldwide Coronavirus Case Locations Map </h2>
-            <a href="/home" style="margin-left: 1.4em; font-size: 12px; margin-right: 1.6em;" class="btn btn-danger">View More Maps</a><br>
+            <a href="/home" style="margin-left: 1.4em; font-size: 12px; margin-right: 1.6em;" class="btn btn-danger viewmore">View More Maps</a><br>
+            <div class="statistics2">
+            <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" style="margin-left: 1em; margin-right: 1em;" class="twitter-share-button" data-text="Check out this real time coronavirus map that lets you view COVID-19 cases, deaths &amp; recoveries in your area! " data-url="https://asteroidcollision.herokuapp.com/coronavirus-location-map" data-hashtags="#Coronavirus #COVID19" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
             </div>
         <div>
         <p style="margin-left: 1em; margin-right: 1em; font-size: 15px; margin-top: 16px;"> Welcome to the interactive <b>Real Time Coronavirus Case Location Map.</b> View Real Time cases of coronavirus and their locations.</p>
@@ -185,40 +195,39 @@
 
                             <h2 class="maintagforcovid"><b style="color: white;">Coronavirus Cases:</b></h2>
 
-                                <p style="">USA: <b style="color: red;">140886</b></p>
-                                <p style="">China: <b style="color: red;">82122</b></p>
-                                <p style="">UK: <b style="color: red;">97689</b></p>
-                                <p style="">France: <b style="color: red;">40708</b></p>
-                                <p style="">Spain: <b style="color: red;">80110</b></p>
-                                <p style="">Australia: <b style="color: red;">3984</b></p>
-                                <p style="">Iran: <b style="color: red;">38309</b></p>
-                                <p style="">Russia: <b style="color: red;">1534</b></p>
+                                <p style="">USA: <b style="color: red;">161807</b></p>
+                                <p style="">China: <b style="color: red;">82198</b></p>
+                                <p style="">UK: <b style="color: red;">101739</b></p>
+                                <p style="">France: <b style="color: red;">45170</b></p>
+                                <p style="">Spain: <b style="color: red;">87956</b></p>
+                                <p style="">Australia: <b style="color: red;">4361</b></p>
+                                <p style="">Iran: <b style="color: red;">41495</b></p>
+                                <p style="">Russia: <b style="color: red;">1836</b></p>
                             <hr>
 
                             <p style=""><b style="color: white;">Most Deaths:</b></p>
                             <p style="font-size: 11px; color: white;">(By Country)</p>
-                                <p style="">USA: <b style="color: red;">2484</b></p>
-                                <p style="">China: <b style="color: red;">3182</b></p>
-                                <p style="">UK: <b style="color: red;">1228</b></p>
-                                <p style="">France: <b style="color: red;">2606</b></p>
-                                <p style="">Spain: <b style="color: red;">6803</b></p>
-                                <p style="">Netherlands: <b style="color: red;">771</b></p>
-                                <p style="">Iran: <b style="color: red;">2640</b></p>
+                                <p style="">USA: <b style="color: red;">3148</b></p>
+                                <p style="">China: <b style="color: red;">3186</b></p>
+                                <p style="">UK: <b style="color: red;">1408</b></p>
+                                <p style="">France: <b style="color: red;">3024</b></p>
+                                <p style="">Spain: <b style="color: red;">7716</b></p>
+                                <p style="">Italy: <b style="color: red;">11591</b></p>
+                                <p style="">Iran: <b style="color: red;">2575</b></p>
                             <hr>
                             <p class=""maintagforcovid><b style="color: white;">Coronavirus Recovery:</b></p>
                             <p style="font-size: 11px; color: white;">(By Country)</p>
                             <div class="greenbold">
-                                <p style="">China: <b style="color: limegreen;">75582</b></p>
-                                <p style="">US: <b style="color: limegreen;">2665</b></p>
-                                <p style="">Spain: <b style="color: limegreen;">14709</b></p>
-                                <p style="">Italy: <b style="color: limegreen;">13030</b></p>
-                                <p style="">Iran: <b style="color: limegreen;">12391</b></p>
-                                <p style="">South Korea: <b style="color: limegreen;">5033</b></p>
-
-                                <p style="">Germany: <b style="color: limegreen;">9211</b></p>
-                                <p style="">France: <b style="color: limegreen;">7202</b></p>
-                                <p style="">Switzerland: <b style="color: limegreen;">1595</b></p>
-                                <p style="">Belgium: <b style="color: limegreen;">1359</b></p>
+                                <p style="">China: <b style="color: limegreen;">75923</b></p>
+                                <p style="">US: <b style="color: limegreen;">5644</b></p>
+                                <p style="">Spain: <b style="color: limegreen;">16780</b></p>
+                                <p style="">Italy: <b style="color: limegreen;">14620</b></p>
+                                <p style="">Iran: <b style="color: limegreen;">13911</b></p>
+                                <p style="">South Korea: <b style="color: limegreen;">5228</b></p>
+                                <p style="">Canada: <b style="color: limegreen;">5033</b></p>
+                                <p style="">Germany: <b style="color: limegreen;">13500</b></p>
+                                <p style="">France: <b style="color: limegreen;">7964</b></p>
+                                <p style="">Switzerland: <b style="color: limegreen;">1823</b></p>
                             </div>
                             <hr>
                             <p style="color: white; margin-left: 10px; margin-right: 10px;"><b>Corona Progression</b></p>
