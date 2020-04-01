@@ -57,6 +57,46 @@
         height: 100%;
         background-color: #f2f2f2;
     }
+        #sliderbutton {
+        position: fixed;
+        bottom: 52%;
+        background-color: #f2f2f2;
+        color: black;
+        border-radius: 5px;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 20px;
+        left: 51.5%;
+        z-index: 2000;
+        width: 32px;
+        height: 32px;
+        animation-name: leftright;
+        animation-duration: 1.3s;
+        animation-iteration-count: infinite;
+    }
+    #sliderbutton2 {
+        position: fixed;
+        bottom: 52%;
+        background-color: #f2f2f2;
+        color: black;
+        border-radius: 5px;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 20px;
+        left: 1.5%;
+        z-index: 2000;
+        width: 32px;
+        height: 32px;
+<!--        animation-name: leftright;-->
+<!--        animation-duration: 1.3s;-->
+<!--        animation-iteration-count: infinite;-->
+    }
+}
+
+@keyframes leftright {
+    0% {margin-left: 0px;}
+    50% {margin-left: 7px;}
+    100% {margin-left: 0px}
 }
 
 .desktopandmobile {
@@ -156,11 +196,41 @@
     </div>
     <div id="first">
            <iframe src="/map" class="desktopandmobile" scrolling="no" frameborder="0"></iframe>
+        <form>
+            <button onclick="fullscreen()" class="btn cancel" type="button">
+            <div id="sliderbutton">
+                <p style="margin-top: 2px;" onclick="fullscreen()">&lArr;</p>
+            </div>
+            </button>
+
+            <button onclick="closescreen()" class="btn cancel" type="button">
+            <div id="sliderbutton2">
+                <p>&rArr;</p>
+            </div>
+            </button>
+        </form>
     </div>
 <hr>
 </div>
 <script>
     window.scrollBy(0, 110);
+    function fullscreen() {
+        document.getElementById("first").style.width = "100%";
+        document.getElementById("second").style.width = "0%";
+        document.getElementById("sliderbutton").style.display = "none";
+        document.getElementById("sliderbutton2").style.display = "block";
+        document.getElementById("arrow").style.display = "none";
+        document.getElementById("NearEarthAsteroidForm").style.display = "none";
+        map_0d2afc44120f416887520ad473307e09.invalidateSize();
+    }
+    function closescreen() {
+        document.getElementById("first").style.width = "50%";
+        document.getElementById("second").style.width = "50%";
+        document.getElementById("sliderbutton").style.display = "block";
+        document.getElementById("sliderbutton2").style.display = "none";
+        document.getElementById("NearEarthAsteroidForm").style.display = "block";
+        map_0d2afc44120f416887520ad473307e09.invalidateSize();
+    }
 </script>
 </body>
 </html>
