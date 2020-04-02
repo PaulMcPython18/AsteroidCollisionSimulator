@@ -250,7 +250,7 @@ html {
 <hr>
 
 
-                            <h2 class="maintagforcovid"><b style="color: white;">Coronavirus Cases:</b></h2>
+                            <h2 class="maintagforcovid" id="findme"><b style="color: white;">Coronavirus Cases:</b></h2>
 
                                 <p style="">USA: <b style="color: red;">215004</b></p>
                                 <p style="">Italy: <b style="color: red;">110574</b></p>
@@ -348,7 +348,8 @@ html {
 </div>
 
 <script>
-    window.scrollBy(0, 450);
+    var elmntToView = document.getElementById("findme");
+    elmntToView.scrollIntoView();
 
     document.getElementById("NearEarthAsteroidForm").style.display = "block";
 
