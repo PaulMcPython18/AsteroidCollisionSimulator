@@ -13,6 +13,10 @@
     <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
 <style>
 
+html {
+  scroll-behavior: smooth;
+}
+
     #header {
     width: 100%;
     background-color: #f2f2f2;
@@ -123,7 +127,7 @@
 
     #sliderbutton {
         position: fixed;
-        bottom: 52%;
+        bottom: 47%;
         background-color: #0d0d0d;
         color: white;
         border-radius: 5px;
@@ -141,7 +145,7 @@
     #sliderbutton2 {
         display: none;
         position: fixed;
-        bottom: 52%;
+        bottom: 47%;
         background-color: #0d0d0d;
         color: white;
         border-radius: 5px;
@@ -344,7 +348,10 @@
 </div>
 
 <script>
+    window.scrollBy(0, 200);
+
     document.getElementById("NearEarthAsteroidForm").style.display = "block";
+
     function begoneee() {
          document.getElementById("NearEarthAsteroidForm").style.display = "none";
     }
@@ -365,8 +372,8 @@
         document.getElementById("NearEarthAsteroidForm").style.display = "block";
         map_0d2afc44120f416887520ad473307e09.invalidateSize();
     }
+
+
 </script>
 </body>
 </html>
-
-
