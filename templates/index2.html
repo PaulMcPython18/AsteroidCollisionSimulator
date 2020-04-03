@@ -21,6 +21,9 @@
     </script>
 </head>
 <style>
+    html {
+      scroll-behavior: smooth;
+    }
     #header {
     width: 100%;
     background-color: #f2f2f2;
@@ -44,6 +47,26 @@
     height: 100%;
     background-color: #f2f2f2;
 }
+
+#sliderbutton {
+    position: fixed;
+    display: none;
+}
+#sliderbutton2 {
+    position: fixed;
+    display: none;
+}
+
+.whyhellothere {
+    width: 178px;
+    height: 178px;
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 0%;
+    z-index: 1000;
+}
+
 @media (max-width: 760px) {
     #second {
         width: 50%;
@@ -102,7 +125,7 @@
 
 .desktopandmobile {
     width: 100%;
-    min-height: 76em;
+    min-height: 86em;
 }
 </style>
 <body style="background-color: #f2f2f2; margin-top: 1em;">
@@ -212,9 +235,32 @@
         </form>
     </div>
 <hr>
+    <div id="NearEarthAsteroidForm" class="whyhellothere">
+  <form class="form-container">
+
+    <div style="background-color: #1a1a1a;">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-fb+5w+4e-db+86"
+     data-ad-client="ca-pub-2104426707154383"
+     data-ad-slot="4606307034"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    </div>
+
+  </form>
+</div>
 </div>
 <script>
-    window.scrollBy(0, 110);
+    document.getElementById("NearEarthAsteroidForm").style.display = "block";
+
+    function begoneee() {
+         document.getElementById("NearEarthAsteroidForm").style.display = "none";
+    }
+
     function fullscreen() {
         document.getElementById("first").style.width = "100%";
         document.getElementById("second").style.width = "0%";
@@ -232,6 +278,7 @@
         document.getElementById("NearEarthAsteroidForm").style.display = "block";
         map_0d2afc44120f416887520ad473307e09.invalidateSize();
     }
+    window.scrollBy(0, 300);
 </script>
 </body>
 </html>
