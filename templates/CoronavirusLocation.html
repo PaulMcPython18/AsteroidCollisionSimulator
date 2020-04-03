@@ -47,6 +47,7 @@ html {
 ;
 }
 #second {
+	scroll-behavior: smooth;
     width: 25%;
     float: left;
     height: 100%;
@@ -136,7 +137,7 @@ html {
 
     #sliderbutton {
         position: fixed;
-        bottom: 47%;
+        bottom: 46%;
         background-color: #0d0d0d;
         color: white;
         border-radius: 5px;
@@ -154,7 +155,7 @@ html {
     #sliderbutton2 {
         display: none;
         position: fixed;
-        bottom: 47%;
+        bottom: 46%;
         background-color: #0d0d0d;
         color: white;
         border-radius: 5px;
@@ -357,8 +358,7 @@ html {
 </div>
 
 <script>
-    var elmntToView = document.getElementById("plzfindme");
-    elmntToView.scrollIntoView();
+
 
     document.getElementById("NearEarthAsteroidForm").style.display = "block";
 
@@ -372,17 +372,19 @@ html {
         document.getElementById("sliderbutton2").style.display = "block";
         document.getElementById("arrow").style.display = "none";
         document.getElementById("NearEarthAsteroidForm").style.display = "none";
-        map_0d2afc44120f416887520ad473307e09.invalidateSize();
+        map_980688425f3f471797715a435934a3fa.invalidateSize();
     }
     function closescreen() {
         document.getElementById("first").style.width = "50%";
         document.getElementById("second").style.width = "50%";
         document.getElementById("sliderbutton").style.display = "block";
         document.getElementById("sliderbutton2").style.display = "none";
-        document.getElementById("NearEarthAsteroidForm").style.display = "block";
-        map_0d2afc44120f416887520ad473307e09.invalidateSize();
+        document.getElementById("NearEarthAsteroidForm").style.display = "none";
+        map_980688425f3f471797715a435934a3fa.invalidateSize();
     }
 
+    var myElement = document.getElementById('second');
+    myElement.scrollBy(0, 320);
 
 </script>
 </body>
