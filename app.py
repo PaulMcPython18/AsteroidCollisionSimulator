@@ -2,6 +2,8 @@ import folium
 from flask import Flask, render_template, request, sessions, session, make_response
 import time
 import os, ast
+import pandas as pd
+from folium.plugins import MarkerCluster
 app = Flask(__name__)
 
 app.secret_key = os.urandom(24)
@@ -393,6 +395,12 @@ def nearasteroids():
 @app.route('/asteroid-hit')
 def asteroidhit():
     return render_template('article4.html')
+@app.route('/testing')
+def testing():
+    return render_template('trackertemplate.html')
+@app.route('/corona')
+def coronatracking():
+    return render_template('corona.html')
 if __name__ == "__main__":
     of_diameter = 22
     app.run(debug=False)
