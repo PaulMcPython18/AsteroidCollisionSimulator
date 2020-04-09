@@ -20,7 +20,6 @@
 
         gtag('config', 'UA-153516768-2');
     </script>
-</head>
 <style>
     html {
       scroll-behavior: smooth;
@@ -37,6 +36,15 @@
     height: 100%;
     background-color: #f2f2f2;
 }
+#first {
+    width: 75%;
+    float: left;
+    height: 100%;
+    background-color: #1a1a1a;
+    color: #cccccc
+
+;
+}
 #second {
 	scroll-behavior: smooth;
     width: 25%;
@@ -45,19 +53,16 @@
     background-color: #1a1a1a;
     color: #cccccc;
 }
-#first {
-    width: 75%;
-    float: left;
-    height: 100%;
-    background-color: #1a1a1a;
-    color: #cccccc;
+
+.whyhellothere {
+  width: 210px;
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 25%;
+  z-index: 1000;
 }
 
-
-.maintagforcovid {
-    color: white;
-    font-size: 22px;
-}
 .makesmall {
     font-size: 20px;
     margin-top: 16px;
@@ -68,24 +73,35 @@
     margin-top: 14.5px;
     text-align: center;
 }
+
+#arrow {
+    position: fixed;
+    bottom: 0;
+    left: 11%;
+    z-index: 1000;
+    animation-name: updown;
+    animation-duration: 1.3s;
+    animation-iteration-count: infinite;
+}
+
+
+
+.maintagforcovid {
+    color: white;
+    font-size: 22px;
+}
+
 @media (max-width: 760px) {
     .maintagforcovid {
         color: white;
         font-size: 14px;
     }
-    .makesmall {
-        font-size: 17px;
-    }
-    .makesmall2 {
-        font-size: 14px;
-    }
     #second {
-	scroll-behavior: smooth;
-    width: 50%;
-    float: left;
-    height: 100%;
-    background-color: #1a1a1a;
-    color: #cccccc;
+        width: 50%;
+        float: left;
+        height: 100%;
+        background-image: url(static/CoronavirusCase.png)
+        color: #cccccc
     }
     #first {
         width: 50%;
@@ -94,45 +110,82 @@
         background-color: #1a1a1a;
         color: #cccccc;
     }
-    .statistics2 {
-        margin-left: 0.5em;
-        margin-top: 1em;
-        margin-bottom: 1em;
+    .whyhellothere {
+        width: 178px;
+        position: fixed;
+        top: 0;
+        left: 50%;
+        z-index: 1000;
+        display: none;
+        visibility: hidden;
     }
+    .makesmall {
+        font-size: 17px;
+    }
+    .makesmall2 {
+        font-size: 14px;
+    }
+    #arrow {
+        position: fixed;
+        bottom: 0;
+        left: 20%;
+        z-index: 1000;
+        animation-name: updown;
+        animation-duration: 1.3s;
+        animation-iteration-count: infinite;
+    }
+
     #sliderbutton {
         position: fixed;
         bottom: 46%;
+        background-color: #0d0d0d;
         color: white;
         border-radius: 5px;
         text-align: center;
         vertical-align: middle;
         font-size: 20px;
         left: 51.5%;
-        z-index: 100000;
+        z-index: 2000;
         width: 32px;
         height: 32px;
         animation-name: leftright;
         animation-duration: 1.3s;
         animation-iteration-count: infinite;
-
     }
     #sliderbutton2 {
         display: none;
         position: fixed;
         bottom: 46%;
+        background-color: #0d0d0d;
         color: white;
         border-radius: 5px;
         text-align: center;
         vertical-align: middle;
         font-size: 20px;
         left: 1.5%;
-        z-index: 100000;
+        z-index: 2000;
         width: 32px;
         height: 32px;
         animation-name: leftright;
         animation-duration: 1.3s;
         animation-iteration-count: infinite;
     }
+}
+.maintag {
+    font-size: 16px; margin-left: 1em; margin-right: 1em;
+}
+.desktopandmobile {
+    width: 100%;
+    min-height: 82em;
+}
+.turn#1a1a1a {
+    color: #cccccc
+    background-color: #1a1a1a;
+}
+@keyframes updown {
+  0% {bottom: 0px;}
+  50% {bottom: 35px;}
+  100% {bottom: 0px;}
 }
 
 @keyframes leftright {
@@ -141,66 +194,84 @@
     100% {margin-left: 0px}
 }
 
+.statistics2 {
+    margin-left: 1.2em;
+    margin-top: 1em;
+}
 </style>
-<body style="color: #cccccc; background-color: #1a1a1a;" class="turn#1a1a1a">
-
-<!--Facebook SDK | Required-->
-
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0"></script>
-
-<!--Facebook SDK-->
+<body style="color: #cccccc; background-color: #1a1a1a; font-family: 'Ubuntu', sans-serif;" class="turn#1a1a1a">
 
 <div id="container" style="">
-    <nav class="navbar navbar-fixed-top navbar-dark bg-dark">
-        <a class="navbar-brand" href="/"><b>🦠 Coronavirus Real Time Tracker</b></a>
 
 
-  <a class="nav-link btn btn-danger" onclick="" href="/">Embed This Website</a>
+    <div id="second" style="overflow-y: auto; overflow-x: hidden;"><br>
+<nav class="navbar navbar-expand-lg" style="margin-top: -1.70em; height:-50%; color: red; background-color: #1a1a1a;">
+  <a class="navbar-brand" href="/" style="font-size: 25px; color: crimson;"><strong>Coronavirus Map</strong></a>
+<!--  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="text-align: center; margin-left: 40%;">-->
+<!--    <span class="navbar-toggler-icon"></span>-->
+<!--  </button>-->
+  <div class="collapse navbar-collapse" id="navbarNav" style="float: right;">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/home" style="font-size: 20px; color: #cccccc;">Home <span class="sr-only">(current)</span></a>
+      </li>
 
+
+    </ul>
+  </div>
 </nav>
-
-
-
-    <div id="second" style="text-align: center; overflow: auto;">
-        <div class="bg-dark" style="border-radius: 15px; padding-top: 0.5em; padding-bottom: 0.5em; margin-top: 1em; margin-left: 0.5em; margin-right: 0.5em;">
-        <h1 style="font-size: 27px; margin-top: 1em; color: white;">Coronavirus Real Time Map</h1>
-        <p style="font-size: 13px; color: white;"><i>Updated: Realtime</i></p>
+<!--        <div id="arrow">-->
+<!--            <p style="font-weight: bold; font-size: 50px; color: white; z-index: 99;">&#8595;</p>-->
+<!--        </div>-->
+        <div class="statistics">
+            <h1 style="font-size: 20px; margin-left: 1em; font-weight: normal; background-size: cover; margin-right: 1em;"> <b style="color: white;">Coronavirus Case Real Time Map</b></h1>
+            <h2 style="font-size: 15px; margin-left: 1.3em; margin-right: 1em; font-weight: normal; margin-top: 1em;"> Worldwide Coronavirus Case Locations Map </h2>
+            <a href="/home" style="margin-left: 1.4em; font-size: 12px; margin-right: 1.6em;" class="btn btn-danger viewmore">View More Maps</a><br>
             <div class="statistics2">
-            <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="Check out this real time coronavirus map that lets you view COVID-19 cases, deaths &amp; recoveries in your area! " data-url="https://asteroidcollision.herokuapp.com/coronavirus-location-map" data-hashtags="#Coronavirus #COVID19" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><br><div style="margin-bottom: 0.5em; margin-top: 0.5em;" class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
-                        <a href="/home" style="margin-left: 1.4em; font-size: 12px; margin-right: 1.6em;" class="btn btn-danger viewmore">View More Maps</a><br>
-
+            <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" style="margin-left: 1em; margin-right: 1em;" class="twitter-share-button" data-text="Check out this real time coronavirus map that lets you view COVID-19 cases, deaths &amp; recoveries in your area! " data-url="https://asteroidcollision.herokuapp.com/coronavirus-location-map" data-hashtags="#Coronavirus #COVID19" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
-            <p style="font-size: 12px; margin-left: 0.5em; margin-right: 0.5em; color: white; margin-top: 1em;"><span style="font-weight: bold;">Realtime Update:<br></span> - Added Map<br> - Embed this map into your own website <br> - Added button to <b>expand map</b></p>
+            </div>
+        <div>
+            <p style="margin-left: 1em; margin-right: 1em; font-size: 15px; margin-top: 16px;"> <span id="plzfindme">Welcome</span> to the interactive <b>Real Time Coronavirus Case Location Map.</b> View Real Time cases of coronavirus and their locations.</p>
+<div style="margin-left: 1em; margin-right: 1em; height: 50%;">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-2104426707154383"
+     data-ad-slot="5630779945"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    </div>
+        <hr>
+
+            <div class="makesmall">
+        <p style="">Worldwide: <b style="color: red;">1,518,448</b></p>
+        <p style="">Recovered: <b style="color: limegreen;">330392</b></p>
+        <p style="">Active: <b style="color: red;">1099599</b></p>
+        <p>Deaths: <b style="color: red;">88457</b></p>
         </div>
-        <div class="bg-dark" style="color: white; border-radius: 15px; padding-top: 0.5em; padding-bottom: 0.5em; margin-top: 1em; margin-left: 0.5em; margin-right: 0.5em;">
-        <h3 style="font-size: 25px; margin-bottom: 0.2em; font-weight: bold;">Coronavirus Statistics:</h3>
-            <p style="font-size: 13px; color: white; margin-bottom: 1em;"><i>Updated: Realtime</i></p>
-        <p style="font-size: 18px; font-weight: bold;">Confirmed: <span style="color: #33cc33; font-size: 30px; font-weight: bold;">1571247</span></p>
-        <p style="font-size: 18px; font-weight: bold;">Ventilator: <span style="color: #ffff66; font-size: 30px; font-weight: bold;">39432</span></p>
-        <p style="font-size: 18px; font-weight: bold;">Deaths: <span style="color: #ff5555; font-size: 30px; font-weight: bold;">92996</span></p>
-        <p style="font-size: 18px; font-weight: bold;">Recoveries: <span style="color: #3399ff; font-size: 30px; font-weight: bold;">355503</span></p>
-</div>
 
-    <div class="bg-dark" style="color: white; border-radius: 15px; padding-top: 0.5em; padding-bottom: 0.5em; margin-top: 1em; margin-left: 0.5em; margin-right: 0.5em;">
-        <h2 class="maintagforcovid" id="findme"><b style="color: white; font-size: 18px;">COVID-19 Cases:</b></h2>
+                        <div class="makesmall2" style="">
 
-                                <p style="">USA: <b style="color: red;">457101	</b></p>
-                                <p style="">Spain: <b style="color: red;">152446</b></p>
-                                <p style="">Italy: <b style="color: red;">143626</b></p>
-                                <p style="">Germany: <b style="color: red;">115297</b></p>
-                                <p style="">France: <b style="color: red;">117951</b></p>
+<hr>
+
+
+                            <h2 class="maintagforcovid" id="findme"><b style="color: white;">Coronavirus Cases:</b></h2>
+
+                                <p style="">USA: <b style="color: red;">434928</b></p>
+                                <p style="">Spain: <b style="color: red;">148221</b></p>
+                                <p style="">Italy: <b style="color: red;">139423</b></p>
+                                <p style="">Germany: <b style="color: red;">113297</b></p>
+                                <p style="">France: <b style="color: red;">112951</b></p>
                                 <p style="">China: <b style="color: red;">81866</b></p>
                                 <p style="">Iran: <b style="color: red;">64587</b></p>
                                 <p style="">United Kingdom: <b style="color: red;">60735</b></p>
-    </div>
-        <div class="bg-dark" style="color: white; border-radius: 15px; padding-top: 0.5em; padding-bottom: 0.5em; margin-top: 1em; margin-left: 0.5em; margin-right: 0.5em;">
-                    <h3 style="font-size: 25px; margin-bottom: 0.2em; font-weight: bold;">How COVID-19 spread:</h3>
+                            <hr>
 
-            <iframe width="93%" height="300" src="https://www.youtube.com/embed/_Z0lrBKzL2E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div class="bg-dark" style="color: white; border-radius: 15px; padding-top: 0.5em; padding-bottom: 0.5em; margin-top: 1em; margin-left: 0.5em; margin-right: 0.5em;">
-        <p style=""><b style="color: white;">Most Deaths:</b></p>
+                            <p style=""><b style="color: white;">Most Deaths:</b></p>
                             <p style="font-size: 11px; color: white;">(By Country)</p>
                                 <p style="">Italy: <b style="color: red;">17670</b></p>
                                 <p style="">Spain: <b style="color: red;">14793</b></p>
@@ -209,10 +280,8 @@
                                 <p style="">UK: <b style="color: red;">7099</b></p>
                                 <p style="">Iran: <b style="color: red;">3995</b></p>
                                 <p style="">China: <b style="color: red;">3336</b></p>
-        </div>
-                <div class="bg-dark" style="color: white; border-radius: 15px; padding-top: 0.5em; padding-bottom: 0.5em; margin-top: 1em; margin-left: 0.5em; margin-right: 0.5em;">
-
-                            <p class="maintagforcovid"><b style="color: white; font-size: 18px;">Coronavirus Recovery:</b></p>
+                            <hr>
+                            <p class=""maintagforcovid><b style="color: white;">Coronavirus Recovery:</b></p>
                             <p style="font-size: 11px; color: white;">(By Country)</p>
                             <div class="greenbold">
                                 <p style="">China: <b style="color: limegreen;">77370</b></p>
@@ -228,44 +297,99 @@
                                 <p style="">Belgium: <b style="color: limegreen;">3990</b></p>
 
                             </div>
-                </div>
-                </div>
+                            <hr>
+                            <p style="color: white; margin-left: 10px; margin-right: 10px;"><b>Corona Progression</b></p>
+                                        <img src="static/CaseInc.png" style="width: 80%;" alt="Coronavirus Map/Graph That Shows Cases Increase In Real Time">
+                            <hr>
+
+                        </div>
+
+            </div>
+
+<p class="maintag"><b>Steps: </b>Follow the directions below to understand the Coronavirus Visualization Location Map!</p>
+        <hr>
+        <p class="maintag"> <b> 1.</b> View the coronavirus location map. Red circle sizes are marked with the severity of the location based upon the number of cases of coronavirus.</p>
+        <p class="maintag"> <b> 2.</b> Hover over the location of the Coronavirus. When you hover over this location, a box will popup giving information about the certain Coronavirus. For example, the number of cases in the location/area, province/state, and country are included in these statistics.</p>
+        <hr>
+        <p style="margin-left: 1em; margin-right: 1em;"><b style="color: red;">Warning: </b> Please consult a local health professional about Coronavirus Information. Do not take seriously any data provided on this map as data could be incorrect. Contact the <a href="https://www.cdc.gov/coronavirus/2019-ncov/index.html" style="color: red;">CDC</a> for more information.</p>
+        <hr>
+        <p style="font-size: 12px; margin-left: 1em;"> Worldwide Coronavirus Location Map <b>&copy;</b></p>
+        <p style="font-size: 11px; margin-left: 1em;"> By: <b>Paul McBurney</b> | March 28th 2020</p>
+
+<div style="position: absolute; bottom: 5px; left: 5px;">
+
     </div>
-            <div id="first">
-            <iframe src="/corona" style="position:fixed; width:100%; height:100%; border:none; margin: 1em 1em 1em 1em; padding:0; overflow:hidden; border-radius: 15px;"> </iframe>
-                <form>
+    </div>
+
+    <div id="first" style="">
+        {% include 'corona.html' %}
+<!--        <div class="progress" style="bottom: 50%; left: 50%; z-index: 5000; position: fixed;">-->
+<!--  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>-->
+<!--</div>-->
+        <form>
             <button onclick="fullscreen()" class="btn cancel" type="button">
-            <div id="sliderbutton" class="bg-dark">
+            <div id="sliderbutton">
                 <p style="margin-top: 2px;" onclick="fullscreen()">&lArr;</p>
             </div>
             </button>
 
             <button onclick="closescreen()" class="btn cancel" type="button">
-            <div id="sliderbutton2" class="bg-dark">
+            <div id="sliderbutton2">
                 <p style="margin-top: 2px;" onclick="fullscreen()">&rArr;</p>
             </div>
             </button>
         </form>
+            <div id="NearEarthAsteroidForm" class="whyhellothere">
+  <form class="form-container">
+
+    <div style="background-color: #1a1a1a; border-radius: 10px; color: cccccc;">
+        <p style="margin-left: 1em; margin-right: 1em; font-weight: bold; padding-top: 1em; color: white;">Popup:</p>
+
+        <p style="margin-left: 1em; margin-right: 1em;">Control Asteroids! See how <b style="color: white;">your city</b> would be <b style="color: white;">destroyed</b> if an asteroid hit earth!</p>
+
+        <p style="margin-left: 1em; margin-right: 1em;">Click the <b style="color: white;">"Open"</b> button to <b>Get Started!</b></p>
+
+        <br>
+        <a href="/" style="color: limegreen; font-size: 15px;" class="btn open">Open</a>
+            <button type="button" class="btn cancel" onclick="begoneee()" style="color: red;">Close</button>
+    </div>
+
+  </form>
 </div>
+    </div>
+</div>
+
 <script>
+
+
+    document.getElementById("NearEarthAsteroidForm").style.display = "block";
+
+    function begoneee() {
+         document.getElementById("NearEarthAsteroidForm").style.display = "none";
+    }
     function fullscreen() {
         document.getElementById("first").style.width = "100%";
         document.getElementById("second").style.width = "0%";
         document.getElementById("sliderbutton").style.display = "none";
         document.getElementById("sliderbutton2").style.display = "block";
-        map_643f8bb2250a45c08623cb47639c9fc5.invalidateSize();
+        document.getElementById("arrow").style.display = "none";
+        document.getElementById("NearEarthAsteroidForm").style.display = "none";
+        map_eb920fa2732045c3b41adbd21b917bee.invalidateSize();
     }
     function closescreen() {
         document.getElementById("first").style.width = "50%";
         document.getElementById("second").style.width = "50%";
         document.getElementById("sliderbutton").style.display = "block";
         document.getElementById("sliderbutton2").style.display = "none";
-        map_643f8bb2250a45c08623cb47639c9fc5.invalidateSize();
+        document.getElementById("NearEarthAsteroidForm").style.display = "none";
+        map_eb920fa2732045c3b41adbd21b917bee.invalidateSize();
     }
+
+    var myElement = document.getElementById('second');
+    myElement.scrollBy(0, 320);
 
 </script>
 </body>
-
 </html>
 
 
