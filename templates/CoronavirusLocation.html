@@ -82,16 +82,16 @@
             font-size: 14px;
         }
         #second {
-        scroll-behavior: smooth;
-        width: 50%;
-        float: left;
-        height: 100%;
-        background-color: #1a1a1a;
-        color: #cccccc;
+            scroll-behavior: smooth;
+            width: 100%;
+<!--            float: left;-->
+            height: 100%;
+            background-color: #1a1a1a;
+            color: #cccccc;
         }
         #first {
-            width: 50%;
-            float: left;
+            width: 100%;
+<!--            float: left;-->
             height: 100%;
             background-color: #1a1a1a;
             color: #cccccc;
@@ -101,7 +101,11 @@
             margin-top: 1em;
             margin-bottom: 1em;
         }
+        .removeme {
+            display: none;
+        }
         #sliderbutton {
+            display: none;
             position: fixed;
             bottom: 46%;
             color: white;
@@ -119,6 +123,7 @@
 
         }
         #sliderbutton2 {
+            display: none;
             position: fixed;
             display: none;
             bottom: 46%;
@@ -134,9 +139,6 @@
             animation-name: leftright;
             animation-duration: 1.3s;
             animation-iteration-count: infinite;
-        }
-        .removeme {
-            display: none;
         }
     }
 
@@ -177,7 +179,7 @@
                 <div class="statistics2">
                 <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="Check out this real time coronavirus map that lets you view COVID-19 cases, deaths &amp; recoveries in your area! " data-url="https://asteroidcollision.herokuapp.com/coronavirus-location-map" data-hashtags="#Coronavirus #COVID19" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><br>
                     <div style="margin-bottom" class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
-                            <a href="/home" style="margin-left: 1.4em; margin-top: 1em; font-size: 12px; margin-right: 1.6em;" class="btn btn-danger viewmore">View More Maps</a><br>
+                            <a href="/coronavirus-tracker" style="margin-left: 1.4em; margin-top: 1em; font-size: 12px; margin-right: 1.6em;" class="btn btn-danger viewmore" class="mobile">View Map(s)</a><br>
 
                 </div>
                 <p style="font-size: 12px; margin-left: 0.5em; margin-right: 0.5em; color: white; margin-top: 1em;"><span style="font-weight: bold;">Realtime Update:<br></span> - Added Map<br> - Embed this map into your own website <br> - Added button to <b>expand map</b></p>
