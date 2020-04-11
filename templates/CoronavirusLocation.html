@@ -1,332 +1,333 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name=”viewport” content=”width=device-width, initial-scale=1″>
-    <title>Coronavirus Map Real Time - Case Locations</title>
-    <meta name="description" content="This coronavirus real time map shows coronavirus case locations across the world in real-time.">
-    <meta name="google-site-verification" content="ENQ9n1V4rvA6leMytUmttgBGMMBaH5NBZXMNwnWZDg0" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
-<!--    <script data-ad-client="ca-pub-2104426707154383" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153516768-2"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name=”viewport” content=”width=device-width, initial-scale=1″>
+        <title>Coronavirus Map Real Time - Case Locations</title>
+        <meta name="description" content="This coronavirus real time map shows coronavirus case locations across the world in real-time.">
+        <meta name="google-site-verification" content="ENQ9n1V4rvA6leMytUmttgBGMMBaH5NBZXMNwnWZDg0" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+    <!--    <script data-ad-client="ca-pub-2104426707154383" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153516768-2"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-        gtag('config', 'UA-153516768-2');
-    </script>
-</head>
-<style>
-    html {
-      scroll-behavior: smooth;
+            gtag('config', 'UA-153516768-2');
+        </script>
+    </head>
+    <style>
+        html {
+          scroll-behavior: smooth;
+        }
+
+        #header {
+        width: 100%;
+        background-color: #f2f2f2;
+        height: 30px;
     }
 
-    #header {
-    width: 100%;
-    background-color: #f2f2f2;
-    height: 30px;
-}
-
-#container {
-    width: 100%;
-    height: 100%;
-    background-color: #f2f2f2;
-}
-#second {
-	scroll-behavior: smooth;
-    width: 25%;
-    float: left;
-    height: 100%;
-    background-color: #1a1a1a;
-    color: #cccccc;
-}
-#first {
-    width: 75%;
-    float: left;
-    height: 100%;
-    background-color: #1a1a1a;
-    color: #cccccc;
-}
-
-
-.maintagforcovid {
-    color: white;
-    font-size: 22px;
-}
-.makesmall {
-    font-size: 20px;
-    margin-top: 16px;
-    text-align: center;
-}
-.makesmall2 {
-    font-size: 20px;
-    margin-top: 14.5px;
-    text-align: center;
-}
-
-
-@media (max-width: 760px) {
-    .maintagforcovid {
-        color: white;
-        font-size: 14px;
-    }
-    .makesmall {
-        font-size: 17px;
-    }
-    .makesmall2 {
-        font-size: 14px;
+    #container {
+        width: 100%;
+        height: 100%;
+        background-color: #f2f2f2;
     }
     #second {
-	scroll-behavior: smooth;
-    width: 50%;
-    float: left;
-    height: 100%;
-    background-color: #1a1a1a;
-    color: #cccccc;
-    }
-    #first {
-        width: 50%;
+        scroll-behavior: smooth;
+        width: 25%;
         float: left;
         height: 100%;
         background-color: #1a1a1a;
         color: #cccccc;
     }
-    .statistics2 {
-        margin-left: 0.5em;
-        margin-top: 1em;
-        margin-bottom: 1em;
+    #first {
+        width: 75%;
+        float: left;
+        height: 100%;
+        background-color: #1a1a1a;
+        color: #cccccc;
     }
-    #sliderbutton {
-        position: fixed;
-        bottom: 46%;
+
+
+    .maintagforcovid {
         color: white;
-        border-radius: 5px;
-        text-align: center;
-        vertical-align: middle;
+        font-size: 22px;
+    }
+    .makesmall {
         font-size: 20px;
-        left: 51.5%;
-        z-index: 100000;
-        width: 32px;
-        height: 32px;
-        animation-name: leftright;
-        animation-duration: 1.3s;
-        animation-iteration-count: infinite;
-
-    }
-    #sliderbutton2 {
-        position: fixed;
-        display: none;
-        bottom: 46%;
-        color: white;
-        border-radius: 5px;
+        margin-top: 16px;
         text-align: center;
-        vertical-align: middle;
+    }
+    .makesmall2 {
         font-size: 20px;
-        left: 1.5%;
-        z-index: 100000;
-        width: 32px;
-        height: 32px;
-        animation-name: leftright;
-        animation-duration: 1.3s;
-        animation-iteration-count: infinite;
+        margin-top: 14.5px;
+        text-align: center;
     }
-    .removeme {
-        display: none;
+
+
+    @media (max-width: 760px) {
+        .maintagforcovid {
+            color: white;
+            font-size: 14px;
+        }
+        .makesmall {
+            font-size: 17px;
+        }
+        .makesmall2 {
+            font-size: 14px;
+        }
+        #second {
+        scroll-behavior: smooth;
+        width: 50%;
+        float: left;
+        height: 100%;
+        background-color: #1a1a1a;
+        color: #cccccc;
+        }
+        #first {
+            width: 50%;
+            float: left;
+            height: 100%;
+            background-color: #1a1a1a;
+            color: #cccccc;
+        }
+        .statistics2 {
+            margin-left: 0.5em;
+            margin-top: 1em;
+            margin-bottom: 1em;
+        }
+        #sliderbutton {
+            position: fixed;
+            bottom: 46%;
+            color: white;
+            border-radius: 5px;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 20px;
+            left: 51.5%;
+            z-index: 100000;
+            width: 32px;
+            height: 32px;
+            animation-name: leftright;
+            animation-duration: 1.3s;
+            animation-iteration-count: infinite;
+
+        }
+        #sliderbutton2 {
+            position: fixed;
+            display: none;
+            bottom: 46%;
+            color: white;
+            border-radius: 5px;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 20px;
+            left: 1.5%;
+            z-index: 100000;
+            width: 32px;
+            height: 32px;
+            animation-name: leftright;
+            animation-duration: 1.3s;
+            animation-iteration-count: infinite;
+        }
+        .removeme {
+            display: none;
+        }
     }
-}
 
-@keyframes leftright {
-    0% {margin-left: 0px;}
-    50% {margin-left: 10px;}
-    100% {margin-left: 0px}
-}
+    @keyframes leftright {
+        0% {margin-left: 0px;}
+        50% {margin-left: 10px;}
+        100% {margin-left: 0px}
+    }
 
-</style>
-<body style="color: #cccccc; background-color: #1a1a1a;" class="turn#1a1a1a">
+    </style>
+    <body style="color: #cccccc; background-color: #1a1a1a;" class="turn#1a1a1a">
 
-<!--Facebook SDK | Required-->
+    <!--Facebook SDK | Required-->
 
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0"></script>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0"></script>
 
-<!--Facebook SDK-->
+    <!--Facebook SDK-->
 
-<div id="container" style="">
-    <nav class="navbar navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="/"><b>🦠 Coronavirus Real Time Tracker</b></a>
-
-
-  <a class="nav-link btn btn-danger removeme" onclick="" href="https://codepen.io/Rapidtransit22/pen/JjYjBqJ" rel="nofollow">Embed This Website</a>
-
-</nav>
+    <div id="container" style="">
+        <nav class="navbar navbar-dark bg-dark fixed-top">
+            <a class="navbar-brand" href="/"><b>🦠 Coronavirus Real Time Tracker</b></a>
 
 
+      <a class="nav-link btn btn-danger removeme" onclick="" href="https://codepen.io/Rapidtransit22/pen/JjYjBqJ" rel="nofollow">Embed This Website</a>
 
-    <div id="second" style="text-align: center; overflow: auto; margin-top: 4em;">
-        <div class="bg-dark" style="border-radius: 15px; padding-top: 0.5em; padding-bottom: 0.5em; margin-top: 1em; margin-left: 0.5em; margin-right: 0.5em;">
-        <h1 style="font-size: 27px; margin-top: 1em; color: white;">Coronavirus Real Time Map</h1>
-        <p style="font-size: 13px; color: white;"><i>Map: John Hopkins Uni</i></p>
-            <div class="statistics2">
-            <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="Check out this real time coronavirus map that lets you view COVID-19 cases, deaths &amp; recoveries in your area! " data-url="https://asteroidcollision.herokuapp.com/coronavirus-location-map" data-hashtags="#Coronavirus #COVID19" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><br>
-                <div style="margin-bottom" class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
-                        <a href="/home" style="margin-left: 1.4em; margin-top: 1em; font-size: 12px; margin-right: 1.6em;" class="btn btn-danger viewmore">View More Maps</a><br>
+    </nav>
 
-            </div>
-            <p style="font-size: 12px; margin-left: 0.5em; margin-right: 0.5em; color: white; margin-top: 1em;"><span style="font-weight: bold;">Realtime Update:<br></span> - Added Map<br> - Embed this map into your own website <br> - Added button to <b>expand map</b></p>
-        </div>
-        <div class="bg-dark" style="color: white; border-radius: 15px; padding-top: 0.5em; padding-bottom: 0.5em; margin-top: 1em; margin-left: 0.5em; margin-right: 0.5em;">
-        <h3 style="font-size: 25px; margin-bottom: 0.2em; font-weight: bold;">Coronavirus Statistics:</h3>
-            <p style="font-size: 13px; color: white; margin-bottom: 1em;"><i>Updated: Realtime</i></p>
-        <p style="font-size: 18px; font-weight: bold;">Confirmed: <span style="color: #33cc33; font-size: 30px; font-weight: bold;">1701849</span></p>
-        <p style="font-size: 18px; font-weight: bold;">Ventilator: <span style="color: #ffff66; font-size: 30px; font-weight: bold;">40623</span></p>
-        <p style="font-size: 18px; font-weight: bold;">Casualties: <span style="color: #ff5555; font-size: 30px; font-weight: bold;">102906</span></p>
-        <p style="font-size: 18px; font-weight: bold;">Recoveries: <span style="color: #3399ff; font-size: 30px; font-weight: bold;">382185</span></p>
-</div>
-        <div class="bg-dark" style="color: white; border-radius: 15px; padding-top: 0.5em; padding-bottom: 0.5em; padding-left: 0.5em; padding-right: 0.5em; margin-top: 1em; margin-left: 0.5em; margin-right: 0.5em;">
-        <a href="/coronavirus-tracker" class="btn btn-danger">Open Large Map</a>
-            <p style="font-size: 13px; margin-top: 1em;"><i>Sponsored Ad:</i></p>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-2104426707154383"
-     data-ad-slot="9208493499"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-<!--            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
-<!--<ins class="adsbygoogle"-->
-<!--     style="display:block"-->
-<!--     data-ad-format="fluid"-->
-<!--     data-ad-layout-key="-fb+5w+4e-db+86"-->
-<!--     data-ad-client="ca-pub-2104426707154383"-->
-<!--     data-ad-slot="6365093336"></ins>-->
-<!--<script>-->
-<!--     (adsbygoogle = window.adsbygoogle || []).push({});-->
-<!--</script>-->
-<!--        </div>-->
-<!--            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
-<!--&lt;!&ndash; adunit3 &ndash;&gt;-->
-<!--<ins class="adsbygoogle"-->
-<!--     style="display:block"-->
-<!--     data-ad-client="ca-pub-2104426707154383"-->
-<!--     data-ad-slot="2836077714"-->
-<!--     data-ad-format="auto"-->
-<!--     data-full-width-responsive="true"></ins>-->
-<!--<script>-->
-<!--     (adsbygoogle = window.adsbygoogle || []).push({});-->
-<!--</script>-->
-<!--        </div>-->
-    <div class="bg-dark" style="color: white; border-radius: 15px; padding-top: 0.5em; padding-bottom: 0.5em; margin-top: 1em; margin-left: 0.5em; margin-right: 0.5em;">
-        <h2 class="maintagforcovid" id="findme"><b style="color: white; font-size: 18px;">COVID-19 Cases:</b></h2>
 
-                                <p style="">USA: <b style="color: red;">502876</b></p>
-                                <p style="">Spain: <b style="color: red;">158273</b></p>
-                                <p style="">Italy: <b style="color: red;">147577</b></p>
-                                <p style="">Germany: <b style="color: red;">122474</b></p>
-                                <p style="">France: <b style="color: red;">124869</b></p>
-                                <p style="">China: <b style="color: red;">83962</b></p>
-                                <p style="">Iran: <b style="color: red;">68192</b></p>
-                                <p style="">United Kingdom: <b style="color: red;">73758</b></p>
-    </div>
 
-        <div class="bg-dark" style="color: white; border-radius: 15px; padding-top: 0.5em; padding-bottom: 0.5em; margin-top: 1em; margin-left: 0.5em; margin-right: 0.5em;">
-        <p style=""><b style="color: white;">Most Deaths:</b></p>
-                            <p style="font-size: 11px; color: white;">(By Country)</p>
-                                <p style="">Italy: <b style="color: red;">18849</b></p>
-                                <p style="">Spain: <b style="color: red;">16081</b></p>
-                                <p style="">USA: <b style="color: red;">18747</b></p>
-                                <p style="">France: <b style="color: red;">13197</b></p>
-                                <p style="">UK: <b style="color: red;">8958</b></p>
-                                <p style="">Iran: <b style="color: red;">4232</b></p>
-                                <p style="">China: <b style="color: red;">3339</b></p>
-        </div>
-                <div class="bg-dark" style="color: white; border-radius: 15px; padding-top: 0.5em; padding-bottom: 0.5em; margin-top: 1em; margin-left: 0.5em; margin-right: 0.5em;">
+        <div id="second" style="text-align: center; overflow: auto; margin-top: 4em;">
+            <div class="bg-dark" style="border-radius: 15px; padding-top: 0.5em; padding-bottom: 0.5em; margin-top: 1em; margin-left: 0.5em; margin-right: 0.5em;">
+            <h1 style="font-size: 27px; margin-top: 1em; color: white;">Coronavirus Real Time Map</h1>
+            <p style="font-size: 13px; color: white;"><i>Map: John Hopkins Uni</i></p>
+                <div class="statistics2">
+                <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="Check out this real time coronavirus map that lets you view COVID-19 cases, deaths &amp; recoveries in your area! " data-url="https://asteroidcollision.herokuapp.com/coronavirus-location-map" data-hashtags="#Coronavirus #COVID19" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><br>
+                    <div style="margin-bottom" class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+                            <a href="/home" style="margin-left: 1.4em; margin-top: 1em; font-size: 12px; margin-right: 1.6em;" class="btn btn-danger viewmore">View More Maps</a><br>
 
-                            <p class="maintagforcovid"><b style="color: white; font-size: 18px;">Coronavirus Recovery:</b></p>
-                            <p style="font-size: 11px; color: white;">(By Country)</p>
-                            <div class="greenbold">
-                                <p style="">China: <b style="color: limegreen;">77905</b></p>
-                                <p style="">USA: <b style="color: limegreen;">28511</b></p>
-                                <p style="">Spain: <b style="color: limegreen;">55668</b></p>
-                                <p style="">Italy: <b style="color: limegreen;">28470</b></p>
-                                <p style="">Iran: <b style="color: limegreen;">35465</b></p>
-                                <p style="">South Korea: <b style="color: limegreen;">7118</b></p>
-                                <p style="">Canada: <b style="color: limegreen;">5312</b></p>
-                                <p style="">Germany: <b style="color: limegreen;">61252</b></p>
-                                <p style="">France: <b style="color: limegreen;">24932</b></p>
-                                <p style="">Switzerland: <b style="color: limegreen;">10601</b></p>
-                                <p style="">Belgium: <b style="color: limegreen;">5165</b></p>
-
-                            </div>
                 </div>
-<!--        <div class="bg-dark" style="color: white; border-radius: 15px; padding-top: 0.5em; padding-bottom: 0.5em; margin-top: 1em; margin-left: 0.5em; margin-right: 0.5em;">-->
-<!--<div>-->
-<!--            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
-<!--&lt;!&ndash; Horizontal Unit &ndash;&gt;-->
-<!--                <div style="margin-left: 1em; margin-top: 1em; margin-right: 1em; margin-bottom: 1em; background-color; blue;">-->
-<!--<ins class="adsbygoogle"-->
-<!--     style="display:block"-->
-<!--     data-ad-client="ca-pub-2104426707154383"-->
-<!--     data-ad-slot="8237103894"-->
-<!--     data-ad-format="auto"-->
-<!--     data-full-width-responsive="true"></ins>-->
-<!--<script>-->
-<!--     (adsbygoogle = window.adsbygoogle || []).push({});-->
-<!--</script>-->
-<!--                    </div>-->
-<!--            </div>-->
-<!--                </div>-->
-        <div class="bg-dark" style="color: white; border-radius: 15px; padding-top: 0.5em; padding-bottom: 0.5em; margin-top: 1em; margin-left: 0.5em; margin-right: 0.5em;">
-                    <h3 style="font-size: 25px; margin-bottom: 0.2em; font-weight: bold;">How COVID-19 spread:</h3>
-
-            <iframe width="93%" height="300" src="https://www.youtube.com/embed/_Z0lrBKzL2E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
+                <p style="font-size: 12px; margin-left: 0.5em; margin-right: 0.5em; color: white; margin-top: 1em;"><span style="font-weight: bold;">Realtime Update:<br></span> - Added Map<br> - Embed this map into your own website <br> - Added button to <b>expand map</b></p>
+            </div>
+            <div class="bg-dark" style="color: white; border-radius: 15px; padding-top: 0.5em; padding-bottom: 0.5em; margin-top: 1em; margin-left: 0.5em; margin-right: 0.5em;">
+            <h3 style="font-size: 25px; margin-bottom: 0.2em; font-weight: bold;">Coronavirus Statistics:</h3>
+                <p style="font-size: 13px; color: white; margin-bottom: 1em;"><i>Updated: Realtime</i></p>
+            <p style="font-size: 18px; font-weight: bold;">Confirmed: <span style="color: #33cc33; font-size: 30px; font-weight: bold;">1701849</span></p>
+            <p style="font-size: 18px; font-weight: bold;">Ventilator: <span style="color: #ffff66; font-size: 30px; font-weight: bold;">40623</span></p>
+            <p style="font-size: 18px; font-weight: bold;">Casualties: <span style="color: #ff5555; font-size: 30px; font-weight: bold;">102906</span></p>
+            <p style="font-size: 18px; font-weight: bold;">Recoveries: <span style="color: #3399ff; font-size: 30px; font-weight: bold;">382185</span></p>
     </div>
+            <div class="bg-dark" style="color: white; border-radius: 15px; padding-top: 0.5em; padding-bottom: 0.5em; padding-left: 0.5em; padding-right: 0.5em; margin-top: 1em; margin-left: 0.5em; margin-right: 0.5em;">
+            <a href="/coronavirus-tracker" class="btn btn-danger">Open Large Map</a>
+                <p style="font-size: 13px; margin-top: 1em;"><i>Sponsored Ad:</i></p>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle"
+         style="display:block; text-align:center;"
+         data-ad-layout="in-article"
+         data-ad-format="fluid"
+         data-ad-client="ca-pub-2104426707154383"
+         data-ad-slot="9208493499"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+            </div>
+    <!--            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
+    <!--<ins class="adsbygoogle"-->
+    <!--     style="display:block"-->
+    <!--     data-ad-format="fluid"-->
+    <!--     data-ad-layout-key="-fb+5w+4e-db+86"-->
+    <!--     data-ad-client="ca-pub-2104426707154383"-->
+    <!--     data-ad-slot="6365093336"></ins>-->
+    <!--<script>-->
+    <!--     (adsbygoogle = window.adsbygoogle || []).push({});-->
+    <!--</script>-->
+    <!--        </div>-->
+    <!--            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
+    <!--&lt;!&ndash; adunit3 &ndash;&gt;-->
+    <!--<ins class="adsbygoogle"-->
+    <!--     style="display:block"-->
+    <!--     data-ad-client="ca-pub-2104426707154383"-->
+    <!--     data-ad-slot="2836077714"-->
+    <!--     data-ad-format="auto"-->
+    <!--     data-full-width-responsive="true"></ins>-->
+    <!--<script>-->
+    <!--     (adsbygoogle = window.adsbygoogle || []).push({});-->
+    <!--</script>-->
+    <!--        </div>-->
+        <div class="bg-dark" style="color: white; border-radius: 15px; padding-top: 0.5em; padding-bottom: 0.5em; margin-top: 1em; margin-left: 0.5em; margin-right: 0.5em;">
+            <h2 class="maintagforcovid" id="findme"><b style="color: white; font-size: 18px;">COVID-19 Cases:</b></h2>
+
+                                    <p style="">USA: <b style="color: red;">502876</b></p>
+                                    <p style="">Spain: <b style="color: red;">158273</b></p>
+                                    <p style="">Italy: <b style="color: red;">147577</b></p>
+                                    <p style="">Germany: <b style="color: red;">122474</b></p>
+                                    <p style="">France: <b style="color: red;">124869</b></p>
+                                    <p style="">China: <b style="color: red;">83962</b></p>
+                                    <p style="">Iran: <b style="color: red;">68192</b></p>
+                                    <p style="">United Kingdom: <b style="color: red;">73758</b></p>
+        </div>
+
+            <div class="bg-dark" style="color: white; border-radius: 15px; padding-top: 0.5em; padding-bottom: 0.5em; margin-top: 1em; margin-left: 0.5em; margin-right: 0.5em;">
+            <p style=""><b style="color: white;">Most Deaths:</b></p>
+                                <p style="font-size: 11px; color: white;">(By Country)</p>
+                                    <p style="">Italy: <b style="color: red;">18849</b></p>
+                                    <p style="">Spain: <b style="color: red;">16081</b></p>
+                                    <p style="">USA: <b style="color: red;">18747</b></p>
+                                    <p style="">France: <b style="color: red;">13197</b></p>
+                                    <p style="">UK: <b style="color: red;">8958</b></p>
+                                    <p style="">Iran: <b style="color: red;">4232</b></p>
+                                    <p style="">China: <b style="color: red;">3339</b></p>
+            </div>
+                    <div class="bg-dark" style="color: white; border-radius: 15px; padding-top: 0.5em; padding-bottom: 0.5em; margin-top: 1em; margin-left: 0.5em; margin-right: 0.5em;">
+
+                                <p class="maintagforcovid"><b style="color: white; font-size: 18px;">Coronavirus Recovery:</b></p>
+                                <p style="font-size: 11px; color: white;">(By Country)</p>
+                                <div class="greenbold">
+                                    <p style="">China: <b style="color: limegreen;">77905</b></p>
+                                    <p style="">USA: <b style="color: limegreen;">28511</b></p>
+                                    <p style="">Spain: <b style="color: limegreen;">55668</b></p>
+                                    <p style="">Italy: <b style="color: limegreen;">28470</b></p>
+                                    <p style="">Iran: <b style="color: limegreen;">35465</b></p>
+                                    <p style="">South Korea: <b style="color: limegreen;">7118</b></p>
+                                    <p style="">Canada: <b style="color: limegreen;">5312</b></p>
+                                    <p style="">Germany: <b style="color: limegreen;">61252</b></p>
+                                    <p style="">France: <b style="color: limegreen;">24932</b></p>
+                                    <p style="">Switzerland: <b style="color: limegreen;">10601</b></p>
+                                    <p style="">Belgium: <b style="color: limegreen;">5165</b></p>
+
+                                </div>
+                    </div>
+    <!--        <div class="bg-dark" style="color: white; border-radius: 15px; padding-top: 0.5em; padding-bottom: 0.5em; margin-top: 1em; margin-left: 0.5em; margin-right: 0.5em;">-->
+    <!--<div>-->
+    <!--            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
+    <!--&lt;!&ndash; Horizontal Unit &ndash;&gt;-->
+    <!--                <div style="margin-left: 1em; margin-top: 1em; margin-right: 1em; margin-bottom: 1em; background-color; blue;">-->
+    <!--<ins class="adsbygoogle"-->
+    <!--     style="display:block"-->
+    <!--     data-ad-client="ca-pub-2104426707154383"-->
+    <!--     data-ad-slot="8237103894"-->
+    <!--     data-ad-format="auto"-->
+    <!--     data-full-width-responsive="true"></ins>-->
+    <!--<script>-->
+    <!--     (adsbygoogle = window.adsbygoogle || []).push({});-->
+    <!--</script>-->
+    <!--                    </div>-->
+    <!--            </div>-->
+    <!--                </div>-->
+            <div class="bg-dark" style="color: white; border-radius: 15px; padding-top: 0.5em; padding-bottom: 0.5em; margin-top: 1em; margin-left: 0.5em; margin-right: 0.5em;">
+                        <h3 style="font-size: 25px; margin-bottom: 0.2em; font-weight: bold;">How COVID-19 spread:</h3>
+
+                <iframe width="93%" height="300" src="https://www.youtube.com/embed/_Z0lrBKzL2E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+                    </div>
+
+                <div id="first">
+                            <div style="border-radius: 15px;"><iframe style="border-top-left-radius: 15px; border-top-right-radius: 15px; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; position:fixed; width:100%; height:100%; border:none; margin-top: 5em; margin-left: 1em; margin-right: 1em; padding:0; overflow:hidden; -khtml-border-top-left-radius: 5%; -khtml-border-top-right-radius: 5%; -khtml-border-bottom-left-radius: 5%; -khtml-border-bottom-right-radius: 5%%;" title="Realtime COVID-19 map" alt="Coronavirus Map Real Time" src="//arcgis.com/apps/Embed/index.html?webmap=14aa9e5660cf42b5b4b546dec6ceec7c&extent=77.3846,11.535,163.5174,52.8632&zoom=true&previewImage=false&scale=true&disable_scroll=true&theme=light"></iframe></div>
+    <!--            <iframe src="/corona" style="position:fixed; width:100%; height:100%; border:none; margin-top: 5em; margin-left: 1em; margin-right: 1em;padding:0; overflow:hidden; border-radius: 15px;"> </iframe>-->
+                    <p></p>
+                    <form>
+                <button onclick="fullscreen()" class="btn cancel" type="button">
+                <div id="sliderbutton" class="bg-dark">
+                    <p style="margin-top: 2px;" onclick="fullscreen()">&lArr;</p>
                 </div>
+                </button>
 
-            <div id="first">
-                        <div style="border-radius: 15px;"><iframe style="border-top-left-radius: 15px; border-top-right-radius: 15px; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; position:fixed; width:100%; height:100%; border:none; margin-top: 5em; margin-left: 1em; margin-right: 1em; padding:0; overflow:hidden; -khtml-border-top-left-radius: 5%; -khtml-border-top-right-radius: 5%; -khtml-border-bottom-left-radius: 5%; -khtml-border-bottom-right-radius: 5%%;" title="Realtime COVID-19 map" alt="Coronavirus Map Real Time" src="//arcgis.com/apps/Embed/index.html?webmap=14aa9e5660cf42b5b4b546dec6ceec7c&extent=77.3846,11.535,163.5174,52.8632&zoom=true&previewImage=false&scale=true&disable_scroll=true&theme=light"></iframe></div>
-<!--            <iframe src="/corona" style="position:fixed; width:100%; height:100%; border:none; margin-top: 5em; margin-left: 1em; margin-right: 1em;padding:0; overflow:hidden; border-radius: 15px;"> </iframe>-->
-                <p></p>
-                <form>
-            <button onclick="fullscreen()" class="btn cancel" type="button">
-            <div id="sliderbutton" class="bg-dark">
-                <p style="margin-top: 2px;" onclick="fullscreen()">&lArr;</p>
-            </div>
-            </button>
+                <button onclick="closescreen()" class="btn cancel" type="button">
+                <div id="sliderbutton2" class="bg-dark">
+                    <p style="margin-top: 2px;" onclick="fullscreen()">&rArr;</p>
+                </div>
+                </button>
+            </form>
+    </div>
+    <script>
 
-            <button onclick="closescreen()" class="btn cancel" type="button">
-            <div id="sliderbutton2" class="bg-dark">
-                <p style="margin-top: 2px;" onclick="fullscreen()">&rArr;</p>
-            </div>
-            </button>
-        </form>
-</div>
-<script>
+        function fullscreen() {
+            document.getElementById("first").style.width = "100%";
+            document.getElementById("second").style.width = "0%";
+            document.getElementById("sliderbutton").style.display = "none";
+            document.getElementById("sliderbutton2").style.display = "block";
+            map_10a300b547174dfeaeffaa1a2c2b6ddd.invalidateSize();
+        }
+        function closescreen() {
+            document.getElementById("first").style.width = "50%";
+            document.getElementById("second").style.width = "50%";
+            document.getElementById("sliderbutton").style.display = "block";
+            document.getElementById("sliderbutton2").style.display = "none";
+            map_10a300b547174dfeaeffaa1a2c2b6ddd.invalidateSize();
+        }
 
-    function fullscreen() {
-        document.getElementById("first").style.width = "100%";
-        document.getElementById("second").style.width = "0%";
-        document.getElementById("sliderbutton").style.display = "none";
-        document.getElementById("sliderbutton2").style.display = "block";
-        map_10a300b547174dfeaeffaa1a2c2b6ddd.invalidateSize();
-    }
-    function closescreen() {
-        document.getElementById("first").style.width = "50%";
-        document.getElementById("second").style.width = "50%";
-        document.getElementById("sliderbutton").style.display = "block";
-        document.getElementById("sliderbutton2").style.display = "none";
-        map_10a300b547174dfeaeffaa1a2c2b6ddd.invalidateSize();
-    }
+    </script>
+    </body>
 
-</script>
-</body>
-
-</html>
+    </html>
