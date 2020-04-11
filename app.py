@@ -401,6 +401,9 @@ def testing():
 @app.route('/corona')
 def coronatracking():
     return render_template('corona.html')
+@app.route('/coronavirus-tracker')
+def coronavirustracker():
+    return render_template("JohnHopkinsMap.html")
 if __name__ == "__main__":
     of_diameter = 22
     app.run(debug=False)
