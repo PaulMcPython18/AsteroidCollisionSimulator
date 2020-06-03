@@ -404,9 +404,9 @@ def coronatracking():
 @app.route('/coronavirus-tracker')
 def coronavirustracker():
     return render_template("JohnHopkinsMap.html")
-# @app.route('/ad-test')
-# def adtesting():
-#     return render_template("adtest.html")
+@app.route('/telescope-review-celeston-powerseeker-127eq')
+def celestonpowerseeker127eq():
+    return render_template('1ARTICLE.html')
 if __name__ == "__main__":
     of_diameter = 22
     app.run(debug=False)
