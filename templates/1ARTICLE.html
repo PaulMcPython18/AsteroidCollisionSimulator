@@ -20,6 +20,9 @@
 
   <body>
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
 	@media screen and (max-width: 600px) {
 	  #onmobile {
 	    visibility: hidden;
@@ -72,7 +75,7 @@
         <div class="col-md-6 px-0">
           <h1 class="display-4 font-italic font-weight-bold" style="font-size: 30px;">Celestron PowerSeeker 127EQ Telescope Review</h1>
           <p class="lead my-3">After reading this review you'll be able to determine whether not the Celestron Powerseeker 127EQ is the right telescope for you!</p>
-          <p class="lead mb-0"><a href="#" class="font-weight-bold">Scroll to continue...</a></p>
+          <p class="lead mb-0"><a href="#" class="font-weight-bold" type="button" onclick="onclickfunccelestron()">Scroll to continue...</a></p>
         </div>
       </div>
 
@@ -273,5 +276,10 @@
         text: 'Thumbnail'
       });
     </script>
+  <script>
+    function onclickfunccelestron() {
+      window.scrollBy(0, 700);
+    }
+  </script>
   </body>
 </html>
