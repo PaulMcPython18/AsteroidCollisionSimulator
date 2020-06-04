@@ -407,6 +407,9 @@ def coronavirustracker():
 @app.route('/telescope-review-celeston-powerseeker-127eq')
 def celestonpowerseeker127eq():
     return render_template('1ARTICLE.html')
+@app.route('/review-celestron-gc-4-german-equatorial-mount-and-tripod-telescope')
+def gemeranequatorial():
+    return render_template('2ARTICLEEquatorialMount.html')
 if __name__ == "__main__":
     of_diameter = 22
     app.run(debug=False)
