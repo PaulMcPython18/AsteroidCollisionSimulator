@@ -410,6 +410,9 @@ def celestonpowerseeker127eq():
 @app.route('/review-celestron-gc-4-german-equatorial-mount-and-tripod-telescope')
 def gemeranequatorial():
     return render_template('2ARTICLEEquatorialMount.html')
+@app.route('/maxusee-70mm-refractor-telescope-review')
+def maxtelescope():
+    return render_template('3ARTICLEMAXUSEE.html')
 if __name__ == "__main__":
     of_diameter = 22
     app.run(debug=False)
