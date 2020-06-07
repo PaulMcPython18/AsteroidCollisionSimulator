@@ -1,261 +1,223 @@
 <!DOCTYPE html>
-<html>
-<title>Asteroid Collision Blog</title>
-<meta name="description" content="An asteroid collision blog primarly based upon asteroids, astronomy, space, science and natural disasters.">
-<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Random Simulations Visualizations, and Generators on random topics like natural disasters, asteroids and names.">
+    <meta name=”viewport” content=”width=device-width, initial-scale=1″>
+    <title>Random Simulations And Visualizations</title>
+    <meta name="google-site-verification" content="ENQ9n1V4rvA6leMytUmttgBGMMBaH5NBZXMNwnWZDg0" />
+<!--    <script data-ad-client="ca-pub-2104426707154383" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
+</head>
 <style>
-body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+    #header {
+    width: 100%;
+    background-color: #f2f2f2;
+    height: 30px;
+}
+
+#container {
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f2;
+}
+#first {
+    width: 0%;
+    float: left;
+    height: 100%;
+    background-color: #f2f2f2;
+}
+#second {
+    width: 100%;
+    float: left;
+    height: 100%;
+    background-color: #f2f2f2;
+}
+@media (max-width: 760px) {
+    #second {
+        width: 100%;
+        float: left;
+        height: 100%;
+        background-color: #f2f2f2;
+    }
+    #first {
+        width: 0%;
+        float: left;
+        height: 100%;
+        background-color: #f2f2f2;
+    }
+}
+
 </style>
-<body class="w3-light-grey">
-        {% include '_navbar2.html' %}
+<body>
 
-<!-- w3-content defines a container for fixed size centered content,
-and is wrapped around the whole page content, except for the footer in this example -->
-<div class="w3-content" style="max-width:1400px">
+<div id="container">
+    <div id="second" style="margin-top: -1.75em; overflow-y: auto; overflow-x: hidden;"><br>
+        {% include '_navbar.html' %}
+        <h1 style="text-align: center; font-size: 23px; font-weight: normal; margin-left: 1em; margin-right: 1em;"> Random Simulations And Visualizations</h1>
+        <p style="text-align: center; margin-left: 1em; font-size: 14px; margin-right: 1em;">Use the <b>simulations</b> below to <b>empower</b> and <b>educate</b> yourself about natural occurrences around the world. Some of the topics we simulate are astrononmy, asterodis, natural disasters and more! Be sure to check out <b><a href="/blog">the blog</a></b> too! &darr;</p>
+        <br>
+<!--        <p style="text-align: center; margin-left: 1em; font-size: 14px;">Don't want to learn with simulations and maps? Try out some of our generators in the subsection of our websites. Click the button below to be taken to the generator part of Asteroid Collision!</p>-->
+<!--        <center>-->
+<!--        <a href="/generators" class="btn btn-danger" style="text-align: center;">Go View Generators</a>-->
+<!--            </center>-->
+<!--        <br>-->
+        <p style="text-align: center; margin-left: 1em; font-size: 14px;">Continue scrolling for more simulations and maps! &darr;</p>
 
-<!-- Header -->
-<header class="w3-container w3-center w3-padding-32">
-  <h1><b>Asteroid Collision Blog &trade;</b></h1>
-  <p>A blog based upon <span class="w3-tag">space</span>, <span class="w3-tag">astronomy</span>, <span class="w3-tag">telescopes</span> and <span class="w3-tag">asteroids.</span></p>
-</header>
-
-<!-- Grid -->
-<div class="w3-row">
-
-<!-- Blog entries -->
-<div class="w3-col l8 s12">
-    <div class="w3-card-4 w3-margin w3-white">
-<!--    <img src="static/asteroidhittingearth.jpeg" alt="asteroid space" style="width: 100%; height: 5%;">-->
-    <div class="w3-container">
-      <h3 style="margin-top: 1%;"><b>MaxUSee 70mm Refractor Telescope Review 🔭</b></h3>
-              <h5><span class="w3-opacity">June 4th, 2020</span></h5>
-
-<!--      <h5>Asteroid 99942 Apophis could hit earth in 2029. What would happen if it did hit earth? Read more to find out... <span class="w3-opacity">May 31st, 2020</span></h5>-->
-    </div>
-
-    <div class="w3-container">
-      <p>An in depth review for the MaxUSee 70mm Refractor Telescope. Read more to see whether not its the right fit for you.</p>
-      <div class="w3-row">
-        <div class="w3-col m8 s12">
-            <p><button class="w3-button w3-padding-large w3-red w3-border"><b><a href="/maxusee-70mm-refractor-telescope-review" style="color: white;">READ MORE »</a></b></button></p>
+        <hr>
+        <div class="container">
+            <p style="font-size: 16px; font-weight: bold;">Asteroid Collision Simulator Map:</p>
+        <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" alt="Asteroid Collision Simulator" src="{{ url_for('static', filename='AsteroidPreview.png') }}">
+                <div class="card-body">
+                    <p class="card-text"><b>Asteroid Simulation</b> where you can view the damages that a devestating asteroid collision would cause.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <a href="/" type="button" class="btn btn-sm btn-outline-secondary">Open Simulation</a>
+                    </div>
+                    <small class="text-muted">Last Edit:  3/6/2020</small>
+                  </div>
+                </div>
+              </div>
+            </div>
         </div>
-        <div class="w3-col m4 w3-hide-small">
-          <p><span class="w3-padding-large w3-right"><b>Views  </b> <span class="w3-tag">1.1K</span></span></p>
+                        <p style="font-size: 16px; font-weight: bold;">Asteroid Collision Location Map:</p>
+<div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" alt="Asteroid Collision Location Map" src="{{ url_for('static', filename='antartica.png') }}">
+                <div class="card-body">
+                    <p class="card-text"><b>Asteroid Collision Location Map</b> - Locate the Locations of all major known asteroid collisions</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <a href="/asteroid-collision-location-map" type="button" class="btn btn-sm btn-outline-secondary">Open Map Simulation</a>
+                    </div>
+                    <small class="text-muted">Last Edit:  3/6/2020</small>
+                  </div>
+                </div>
+              </div>
         </div>
-      </div>
-    </div>
-  </div>
-  <hr>
-  <!-- Blog entry -->
 
-<div class="w3-card-4 w3-margin w3-white">
-<!--    <img src="static/asteroidhittingearth.jpeg" alt="asteroid space" style="width: 100%; height: 5%;">-->
-    <div class="w3-container">
-      <h3 style="margin-top: 1%;"><b>Celestron PowerSeeker 127EQ Telescope Review (AN HONEST REVIEW) 🔭</b></h3>
-              <h5><span class="w3-opacity">June 2nd, 2020</span></h5>
+    </div>
+            <p style="font-size: 16px; font-weight: bold;">Spend Jeff Bezos Riches (External)</p>
+<div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" alt="Asteroid Collision Location Map" src="{{ url_for('static', filename='jeffbezos.jpeg') }}">
+                <div class="card-body">
+                    <p class="card-text"><b>Spend Jeff Bezos Riches</b> - This website shows how rich Bezos truly is by letting you decide what to do with his money!</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <a href="https://3pic.github.io/money" type="button" class="btn btn-sm btn-outline-secondary">Open Game</a>
+                    </div>
+                    <small class="text-muted">Last Edit:  5/6/2020</small>
+                  </div>
+                </div>
+              </div>
+        </div>
 
-<!--      <h5>Asteroid 99942 Apophis could hit earth in 2029. What would happen if it did hit earth? Read more to find out... <span class="w3-opacity">May 31st, 2020</span></h5>-->
     </div>
-
-    <div class="w3-container">
-      <p>An honest review for the Celestron PowerSeeker Telescope. Is it really worth $150? Read more...</p>
-      <div class="w3-row">
-        <div class="w3-col m8 s12">
-            <p><button class="w3-button w3-padding-large w3-red w3-border"><b><a href="/telescope-review-celeston-powerseeker-127eq" style="color: white;" alt="A link pointing towards a review of the celeston powerseeker 127eq.">READ MORE »</a></b></button></p>
+            <p style="font-size: 16px; font-weight: bold;">Coronavirus Case Location Map:</p>
+<div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" alt="Coronavirus Case Location Map" src="{{ url_for('static', filename='CoronavirusCase.png') }}">
+                <div class="card-body">
+                    <p class="card-text"><b>Coronavirus Case Location Map</b> - Locations of all known cases of Coronavirus on an interactive map..</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <a href="/coronavirus-location-map" type="button" class="btn btn-sm btn-outline-secondary">Open Map</a>
+                    </div>
+                    <small class="text-muted">Last Edit:  3/6/2020</small>
+                  </div>
+                </div>
+              </div>
         </div>
-        <div class="w3-col m4 w3-hide-small">
-          <p><span class="w3-padding-large w3-right"><b>Views  </b> <span class="w3-tag">5.0K</span></span></p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <hr>
-    <div class="w3-card-4 w3-margin w3-white">
-<!--    <img src="static/asteroidhittingearth.jpeg" alt="asteroid space" style="width: 100%; height: 5%;">-->
-    <div class="w3-container">
-      <h3 style="margin-top: 1%;"><b>REVIEW: Celestron CG-4 German Equatorial Mount/Tripod 🔭</b></h3>
-              <h5><span class="w3-opacity">June 2nd, 2020</span></h5>
-
-<!--      <h5>Asteroid 99942 Apophis could hit earth in 2029. What would happen if it did hit earth? Read more to find out... <span class="w3-opacity">May 31st, 2020</span></h5>-->
-    </div>
-
-    <div class="w3-container">
-      <p>An honest review for the Celestron GC-4 Equatorial Mount. Read more...</p>
-      <div class="w3-row">
-        <div class="w3-col m8 s12">
-            <p><button class="w3-button w3-padding-large w3-red w3-border"><b><a href="/review-celestron-gc-4-german-equatorial-mount-and-tripod-telescope" style="color: white;" alt="A link pointing towards a review of the celeston powerseeker 127eq.">READ MORE »</a></b></button></p>
-        </div>
-        <div class="w3-col m4 w3-hide-small">
-          <p><span class="w3-padding-large w3-right"><b>Views  </b> <span class="w3-tag">1.2K</span></span></p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <hr>
-<div class="w3-card-4 w3-margin w3-white">
-<!--    <img src="static/asteroidhittingearth.jpeg" alt="asteroid space" style="width: 100%; height: 5%;">-->
-    <div class="w3-container">
-      <h3 style="margin-top: 1%;"><b>This massive asteroid could hit earth in 2029</b></h3>
-              <h5><span class="w3-opacity">May 31st, 2020</span></h5>
-
-<!--      <h5>Asteroid 99942 Apophis could hit earth in 2029. What would happen if it did hit earth? Read more to find out... <span class="w3-opacity">May 31st, 2020</span></h5>-->
-    </div>
-
-    <div class="w3-container">
-      <p>Asteroid 99942 Apophis could hit earth in 2029. What would happen if it did hit earth? Read more to find out...</p>
-      <div class="w3-row">
-        <div class="w3-col m8 s12">
-            <p><button class="w3-button w3-padding-large w3-red w3-border"><b><a href="/asteroid-hit-earth" style="color: white;">READ MORE »</a></b></button></p>
-        </div>
-        <div class="w3-col m4 w3-hide-small">
-          <p><span class="w3-padding-large w3-right"><b>Views  </b> <span class="w3-tag">51.3K</span></span></p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <hr>
-  <!-- Blog entry -->
-  <div class="w3-card-4 w3-margin w3-white">
-<!--  <img src="/w3images/bridge.jpg" alt="Norway" style="width:100%">-->
-    <div class="w3-container">
-      <h3 style="margin-top: 1%;"><b>One of these asteroids has a <span style="color: black;">96%</span> chance of hitting earth</b></h3>
-      <h5><span class="w3-opacity">May 31st, 2020</span></h5>
-    </div>
-
-    <div class="w3-container">
-      <p>These 7 asteroids could hit earth in the near future.</p>
-      <div class="w3-row">
-        <div class="w3-col m8 s12">
-            <p><a href="/near-asteroids" class="w3-button w3-padding-large w3-red w3-border"><b>READ MORE »</b></a></p>
-        </div>
-        <div class="w3-col m4 w3-hide-small">
-          <p><span class="w3-padding-large w3-right"><b>Views  </b> <span class="w3-tag">9.3K</span></span></p>
-        </div>
-      </div>
-    </div>
-  </div>
-    <div class="w3-card-4 w3-margin w3-white">
-<!--  <img src="/w3images/bridge.jpg" alt="Norway" style="width:100%">-->
-    <div class="w3-container">
-      <h3 style="margin-top: 1%;">Which asteroid will hit earth next? - This one has a <span style="color: black;">96%</span> chance of hitting</h3>
-      <h5><span class="w3-opacity">May 31st, 2020</span></h5>
-    </div>
-
-    <div class="w3-container">
-      <p>In 2027, asteroid 2017 PDC will most likely collide with earth with a whopping <span style="color: black;">96%</span> chance of collision. What could hapepn?</p>
-      <div class="w3-row">
-        <div class="w3-col m8 s12">
-            <p><button class="w3-button w3-padding-large w3-red w3-border"><b><a href="/asteroid-hit" style="color: white;">READ MORE »</a></b></button></p>
-        </div>
-        <div class="w3-col m4 w3-hide-small">
-          <p><span class="w3-padding-large w3-right"><b>Views  </b> <span class="w3-tag">30.1K</span></span></p>
-        </div>
-      </div>
-    </div>
-  </div>
-    <div class="w3-card-4 w3-margin w3-white">
-<!--  <img src="/w3images/bridge.jpg" alt="Norway" style="width:100%">-->
-    <div class="w3-container">
-      <h3 style="margin-top: 1%;">This asteroid could hit earth in 2024, what will it cause?</h3>
-      <h5><span class="w3-opacity">May 31st, 2020</span></h5>
-    </div>
-
-    <div class="w3-container">
-      <p>This asteroid could hit earth in 2024. What would happen if it hits earth? Read more to find out...</p>
-      <div class="w3-row">
-        <div class="w3-col m8 s12">
-            <p><button class="w3-button w3-padding-large w3-red w3-border"><b><a href="/asteroid-earth" style="color: white;">READ MORE »</a></b></button></p>
-        </div>
-        <div class="w3-col m4 w3-hide-small">
-          <p><span class="w3-padding-large w3-right"><b>Views  </b> <span class="w3-tag">1.12K</span></span></p>
-        </div>
-      </div>
-    </div>
-  </div>
-<!-- END BLOG ENTRIES -->
 </div>
 
-<!-- Introduction menu -->
-<div class="w3-col l4">
-  <!-- About Card -->
+            <hr>
+            <p style="font-size: 16px;"><span style="font-weight: bold;">New Article: </span>This asteroid has a <span style="font-weight: bold; color: red;">96%</span> chance of hitting earth in <b>2027</b>.</p>
+            <p style="font-size: 15px;">Check out our new article called: <a href="https://asteroidcollision.herokuapp.com/asteroid-hit">Which asteroid will hit earth? This one has a 96% chance of hitting.</a></p>
+            <a href="/asteroid-hit" class="btn btn-danger">&rarr; Lets go!</a>
+            <p style="font-size: 15px; margin-top: 1em;"><b>Summary: </b>In <b>2027</b>, asteroid 2017 PDC will accelerate near earth with a <b>whopping <span style="color: red;">96%</span> chance of collision</b>. Learn about the <b>devastating effects</b> it could cause by reading more.</p>
+            <hr>
+            <p style="font-size: 16px; font-weight: bold;">Earthquake Location Map:</p>
 
-
-  <!-- Posts -->
-  <div class="w3-card w3-margin">
-    <div class="w3-container w3-padding">
-      <h4>Popular Pages</h4>
-    </div>
-    <ul class="w3-ul w3-hoverable w3-white">
-       <li class="w3-padding-16"><a href="https://asteroidcollision.herokuapp.com/" style="text-decoration: none;">
-<!--        <img src="/w3images/workshop.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">-->
-        <span class="w3-large" style="color: red;">Asteroid Collision Simulator</span><br>
-        <span style="color: black;">An interactive simulation that lets you destroy your city with asteroids. What will you destroy?</span>
-      </a></li>
-        <li class="w3-padding-16"><a href="https://asteroidcollision.herokuapp.com/asteroid-collision-location-map" style="text-decoration: none;">
-<!--        <img src="/w3images/workshop.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">-->
-        <span class="w3-large" style="color: red;">Asteroid Location Map</span><br>
-        <span style="color: black;">Interactive map that shows all locations of asteroids that hit earth. (With rock evidence stored in labratories)</span>
-      </a></li>
-        <li class="w3-padding-16"><a href="https://asteroidcollision.herokuapp.com/nuke-detonation-location-map" style="text-decoration: none;">
-<!--        <img src="/w3images/workshop.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">-->
-        <span class="w3-large" style="color: red;">Nuke Detonation Locations Map</span><br>
-        <span style="color: black;">A map that shows all confirmed nuclear bomb detonations in the world.</span>
-      </a></li>
-        <li class="w3-padding-16"><a href="https://asteroidcollision.herokuapp.com/nuke-detonation-location-map" style="text-decoration: none;">
-<!--        <img src="/w3images/workshop.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">-->
-        <span class="w3-large" style="color: red;">Simulator Homepage</span><br>
-        <span style="color: black;">A homepage showcasing several simulators built by our development team in Corona, CA</span>
-      </a></li>
-<!--      <li class="w3-padding-16">-->
-<!--&lt;!&ndash;        <img src="/w3images/gondol.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">&ndash;&gt;-->
-<!--        <span class="w3-large">Ipsum</span><br>-->
-<!--        <span>Praes tinci sed</span>-->
-<!--      </li>-->
-<!--      <li class="w3-padding-16">-->
-<!--&lt;!&ndash;        <img src="/w3images/skies.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">&ndash;&gt;-->
-<!--        <span class="w3-large">Dorum</span><br>-->
-<!--        <span>Ultricies congue</span>-->
-<!--      </li>-->
-<!--      <li class="w3-padding-16 w3-hide-medium w3-hide-small">-->
-<!--        <img src="/w3images/rock.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">-->
-<!--        <span class="w3-large">Mingsum</span><br>-->
-<!--        <span>Lorem ipsum dipsum</span>-->
-<!--      </li>-->
-    </ul>
-  </div>
-  <hr>
-
-  <!-- Labels / tags -->
-  <div class="w3-card w3-margin">
-    <div class="w3-container w3-padding">
-      <h4>Tags</h4>
-    </div>
-    <div class="w3-container w3-white">
-    <p><span class="w3-tag w3-black w3-margin-bottom">Asteroid</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Telescopes</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Space</span>
-      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Astronomy</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Asteroids</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Telescope</span>
-    </p>
-    </div>
-  </div>
-
-<!-- END Introduction Menu -->
+            <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" alt="Earthquake Location Map" src="{{ url_for('static', filename='earthquakesimulator.png') }}">
+                <div class="card-body">
+                    <p class="card-text"><b>Earthquake Location Map</b> - Locate the Locations of all major known earthquakes. Magnitudes and depth are also included.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <a href="/earthquake-location-map" type="button" class="btn btn-sm btn-outline-secondary">Open Map Simulation</a>
+                    </div>
+                    <small class="text-muted">Last Edit:  3/6/2020</small>
+                  </div>
+                </div>
+              </div>
+        </div>
 </div>
+                                    <hr>
+            <p style="font-size: 16px; font-weight: bold;">Featured Blog:</p>
+            <p style="font-size: 15px;">Check out our new article called: <a href="https://asteroidcollision.herokuapp.com/near-asteroids">Near Earth Asteroids List</a></p>
+            <a href="/near-asteroids" class="btn btn-danger">&rarr; Lets go!</a>
+            <p style="font-size: 15px; margin-top: 1em;"><b>Summary: </b>This near earth asteroids list showcases <b>7 asteroids that could hit earth in the coming decade.</b> You'll be shocked to know that one of them has <b>a <b style="color: red;">96%</b> chance of impact.</b></p>
+            <hr>
+            <p style="font-size: 16px; font-weight: bold;">Nuke Detonation Map:</p>
 
-<!-- END GRID -->
-</div><br>
+    <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" alt="Nuke Location Map" src="{{ url_for('static', filename='nukeimg.png') }}">
+                <div class="card-body">
+                    <p class="card-text"><b>Nuke Detonation Location Map</b> - Locate the detonation location of all major known nuke detonatinos. Yield, country and date are also included when hovering over the detonation location..</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <a href="/nuke-detonation-location-map" type="button" class="btn btn-sm btn-outline-secondary">Open Nuke Simulation</a>
+                    </div>
+                    <small class="text-muted">Last Edit:  3/6/2020</small>
+                  </div>
+                </div>
+              </div>
+        </div>
 
-<!-- END w3-content -->
+<!--    <div id="first">-->
+<!--            {% include 'map.html' %}-->
+<!--    </div>-->
 </div>
+                                                <p style="font-size: 16px; font-weight: bold;">Interactive Volcano Location Map:</p>
+            <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" alt="Volcano Eruption Map" src="{{ url_for('static', filename='volcano.png') }}">
+                <div class="card-body">
+                    <p class="card-text"><b>Volcano Location Map</b> - Locate the volcano locations of all major known volcano eruptions. The interactive map includes casualties, location and date when hovering over markers on the map.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <a href="/volcano-location-map" type="button" class="btn btn-sm btn-outline-secondary">Open Volcano Map</a>
+                    </div>
+                    <small class="text-muted">Last Edit: 3/6/2020</small>
+                  </div>
+                </div>
+              </div>
+        </div>
 
-<!-- Footer -->
-<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
-    <a href="/" class="w3-button w3-black w3-padding-large w3-margin-bottom">Open Asteroid Simulation »</a>
-      <p>Asteroid Map LLC &copy; 2010-2020</a></p>
-  <p>Huge Thanks To <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-</footer>
+</div>
+<!--            <hr>-->
+<!--            <p style="font-size: 16px; font-weight: bold;">Featured Blog:</p>-->
+<!--            <p style="font-size: 15px;">Check out our new article called: <a href="https://asteroidcollision.herokuapp.com/near-asteroids">Near Earth Asteroids List</a></p>-->
+<!--            <a href="/near-asteroids" class="btn btn-danger">&rarr; Lets go!</a>-->
+<!--            <p style="font-size: 15px; margin-top: 1em;"><b>Summary: </b>This near earth asteroids list showcases <b>7 asteroids that could hit earth in the coming decade.</b> You'll be shocked to know that one of them has <b>a <b style="color: red;">96%</b> chance of impact.</b></p>-->
+
+</div>
+            <hr>
+<p style="margin-left: 1em; text-align: center;">Asteroid Collision Map &copy;</p>
 
 </body>
 </html>
