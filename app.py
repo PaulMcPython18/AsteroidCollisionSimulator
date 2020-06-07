@@ -33,7 +33,7 @@ def calculate():
             return render_template('index.html', message='* You have not inputted an area or diameter *')
         try:
             if int(of_diameter) > 20000:
-                return render_template('index.html', message='* Please input a diameter of less than 50000 meters and make sure your input is a number *')
+                return render_template('index.html', message='* Please input a diameter of less than 20000 meters and make sure your input is a number *')
             checkvar = int(diameter)
         except:
             return render_template('index.html', message='* Diameter input cannot contain letters or decimals *')
