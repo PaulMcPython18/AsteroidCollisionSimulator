@@ -35,9 +35,7 @@
     height: 100%;
     background-color: #f2f2f2;
 }
-body {
-    justify-content-center: row;
-}
+
 @media (max-width: 900px) {
     #second {
         width: 100%;
@@ -55,14 +53,16 @@ body {
 
 </style>
 <body>
-
+<div class="mx-auto">
 <div id="container">
     <div id="second" style="margin-top: -1.75em; overflow-y: auto; overflow-x: hidden;"><br>
         {% include '_navbar.html' %}
         <section class="jumbotron text-center">
         <div class="container">
-          <h1 class="jumbotron-heading">View our Simulations</h1>
-          <p class="lead text-muted">Empowering the worlds curious minds. We strive to help individuals across the world to understand the natural occurrences that happen on earth.</p>
+          <h1 class="jumbotron-heading">Simulations and Visualizations</h1>
+            <p>Asteroid Collision &trade;</p>
+            <hr>
+          <p class="lead text-muted">Empowering the worlds curious minds. We strive to help individuals across the world to understand the natural occurrences that happen on earth. You can scroll down and view some of our featured simulations, or click on the two colored buttons below!</p>
           <p>
             <a href="https://asteroidcollision.herokuapp.com/blog" class="btn btn-primary my-2">View Blog Home</a>
             <a href="https://asteroidcollision.herokuapp.com/" class="btn btn-danger my-2">View Simulation</a>
@@ -228,8 +228,9 @@ body {
 <!--            <p style="font-size: 15px; margin-top: 1em;"><b>Summary: </b>This near earth asteroids list showcases <b>7 asteroids that could hit earth in the coming decade.</b> You'll be shocked to know that one of them has <b>a <b style="color: red;">96%</b> chance of impact.</b></p>-->
 
 </div>
+
             <hr>
 <p style="margin-left: 1em; text-align: center;">Asteroid Collision Map &copy;</p>
-
+</div>
 </body>
 </html>
