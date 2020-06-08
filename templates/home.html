@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Random Simulations Visualizations, and Generators on random topics like natural disasters, asteroids and names.">
+    <meta name="description" content="Website featuring several simulations, visualizations and cool generators for the public to use.">
     <meta name=”viewport” content=”width=device-width, initial-scale=1″>
     <title>Random Simulations And Visualizations</title>
     <meta name="google-site-verification" content="ENQ9n1V4rvA6leMytUmttgBGMMBaH5NBZXMNwnWZDg0" />
@@ -35,7 +35,10 @@
     height: 100%;
     background-color: #f2f2f2;
 }
-@media (max-width: 760px) {
+body {
+    justify-content-center: row;
+}
+@media (max-width: 900px) {
     #second {
         width: 100%;
         float: left;
@@ -56,17 +59,18 @@
 <div id="container">
     <div id="second" style="margin-top: -1.75em; overflow-y: auto; overflow-x: hidden;"><br>
         {% include '_navbar.html' %}
-        <h1 style="text-align: center; font-size: 23px; font-weight: normal; margin-left: 1em; margin-right: 1em;"> Random Simulations And Visualizations</h1>
-        <p style="text-align: center; margin-left: 1em; font-size: 14px; margin-right: 1em;">Use the <b>simulations</b> below to <b>empower</b> and <b>educate</b> yourself about natural occurrences around the world. Some of the topics we simulate are astrononmy, asterodis, natural disasters and more! Be sure to check out <b><a href="/blog">the blog</a></b> too! &darr;</p>
-        <br>
-<!--        <p style="text-align: center; margin-left: 1em; font-size: 14px;">Don't want to learn with simulations and maps? Try out some of our generators in the subsection of our websites. Click the button below to be taken to the generator part of Asteroid Collision!</p>-->
-<!--        <center>-->
-<!--        <a href="/generators" class="btn btn-danger" style="text-align: center;">Go View Generators</a>-->
-<!--            </center>-->
-<!--        <br>-->
-        <p style="text-align: center; margin-left: 1em; font-size: 14px;">Continue scrolling for more simulations and maps! &darr;</p>
+        <section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">View our Simulations</h1>
+          <p class="lead text-muted">Empowering the worlds curious minds. We strive to help individuals across the world to understand the natural occurrences that happen on earth.</p>
+          <p>
+            <a href="https://asteroidcollision.herokuapp.com/blog" class="btn btn-primary my-2">View Blog Home</a>
+            <a href="https://asteroidcollision.herokuapp.com/" class="btn btn-danger my-2">View Simulation</a>
+          </p>
+        </div>
+      </section>
 
-        <hr>
+
         <div class="container">
             <p style="font-size: 16px; font-weight: bold;">Asteroid Collision Simulator Map:</p>
         <div class="row">
@@ -112,7 +116,7 @@
                     <p class="card-text"><b>Spend Jeff Bezos Riches</b> - This website shows how rich Bezos truly is by letting you decide what to do with his money!</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <a href="/asteroid-collision-location-map" type="button" class="btn btn-sm btn-outline-secondary">Open Game</a>
+                      <a href="https://3pic.github.io/money" type="button" class="btn btn-sm btn-outline-secondary">Open Game</a>
                     </div>
                     <small class="text-muted">Last Edit:  5/6/2020</small>
                   </div>
@@ -139,12 +143,7 @@
         </div>
 </div>
 
-            <hr>
-            <p style="font-size: 16px;"><span style="font-weight: bold;">New Article: </span>This asteroid has a <span style="font-weight: bold; color: red;">96%</span> chance of hitting earth in <b>2027</b>.</p>
-            <p style="font-size: 15px;">Check out our new article called: <a href="https://asteroidcollision.herokuapp.com/asteroid-hit">Which asteroid will hit earth? This one has a 96% chance of hitting.</a></p>
-            <a href="/asteroid-hit" class="btn btn-danger">&rarr; Lets go!</a>
-            <p style="font-size: 15px; margin-top: 1em;"><b>Summary: </b>In <b>2027</b>, asteroid 2017 PDC will accelerate near earth with a <b>whopping <span style="color: red;">96%</span> chance of collision</b>. Learn about the <b>devastating effects</b> it could cause by reading more.</p>
-            <hr>
+
             <p style="font-size: 16px; font-weight: bold;">Earthquake Location Map:</p>
 
             <div class="row">
@@ -163,12 +162,6 @@
               </div>
         </div>
 </div>
-                                    <hr>
-            <p style="font-size: 16px; font-weight: bold;">Featured Blog:</p>
-            <p style="font-size: 15px;">Check out our new article called: <a href="https://asteroidcollision.herokuapp.com/near-asteroids">Near Earth Asteroids List</a></p>
-            <a href="/near-asteroids" class="btn btn-danger">&rarr; Lets go!</a>
-            <p style="font-size: 15px; margin-top: 1em;"><b>Summary: </b>This near earth asteroids list showcases <b>7 asteroids that could hit earth in the coming decade.</b> You'll be shocked to know that one of them has <b>a <b style="color: red;">96%</b> chance of impact.</b></p>
-            <hr>
             <p style="font-size: 16px; font-weight: bold;">Nuke Detonation Map:</p>
 
     <div class="row">
@@ -209,6 +202,25 @@
         </div>
 
 </div>
+            <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <div style="padding: 1em 1em 1em 1em;">
+            <p style="font-size: 16px;"><span style="font-weight: bold;">New Article: </span>This asteroid has a <span style="font-weight: bold; color: red;">96%</span> chance of hitting earth in <b>2027</b>.</p>
+            <p style="font-size: 15px;">Check out our new article called: <a href="https://asteroidcollision.herokuapp.com/asteroid-hit">Which asteroid will hit earth? This one has a 96% chance of hitting.</a></p>
+            <a href="/asteroid-hit" class="btn btn-danger">&rarr; Lets go!</a>
+            <p style="font-size: 15px; margin-top: 1em;"><b>Summary: </b>In <b>2027</b>, asteroid 2017 PDC will accelerate near earth with a <b>whopping <span style="color: red;">96%</span> chance of collision</b>. Learn about the <b>devastating effects</b> it could cause by reading more.</p>
+            <hr>
+            <p style="font-size: 16px; font-weight: bold;">Featured Blog:</p>
+            <p style="font-size: 15px;">Check out our new article called: <a href="https://asteroidcollision.herokuapp.com/near-asteroids">Near Earth Asteroids List</a></p>
+            <a href="/near-asteroids" class="btn btn-danger">&rarr; Lets go!</a>
+            <p style="font-size: 15px; margin-top: 1em;"><b>Summary: </b>This near earth asteroids list showcases <b>7 asteroids that could hit earth in the coming decade.</b> You'll be shocked to know that one of them has <b>a <b style="color: red;">96%</b> chance of impact.</b></p>
+            </div>
+              </div>
+        </div>
+
+</div>
+
 <!--            <hr>-->
 <!--            <p style="font-size: 16px; font-weight: bold;">Featured Blog:</p>-->
 <!--            <p style="font-size: 15px;">Check out our new article called: <a href="https://asteroidcollision.herokuapp.com/near-asteroids">Near Earth Asteroids List</a></p>-->
