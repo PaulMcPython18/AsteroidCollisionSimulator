@@ -413,6 +413,9 @@ def gemeranequatorial():
 @app.route('/maxusee-70mm-refractor-telescope-review')
 def maxtelescope():
     return render_template('3ARTICLEMAXUSEE.html')
+@app.route('/szyt-telescope-refractor-review')
+def szyt():
+    return render_template('4ARTICLESZYTRefractorTelescopeReview.html')
 if __name__ == "__main__":
     of_diameter = 22
     app.run(debug=False)
