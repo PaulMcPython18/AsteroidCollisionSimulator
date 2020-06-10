@@ -1,0 +1,288 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>NASA Could Unintentionally Create a Man Made Meteor Shower</title>
+  	<meta name="description" content="NASA's Dart Mission, created to prevent asteroid collisions, could unintentionally create a meteor shower.">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153516768-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-153516768-2');
+    </script>
+
+  </head>
+  <body>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+	@media screen and (max-width: 600px) {
+	  #onmobile {
+	    visibility: hidden;
+	    clear: both;
+	    float: left;
+	    margin: 10px auto 5px 20px;
+	    width: 28%;
+	    display: none;
+	  }
+	}
+
+
+ 	</style>
+    <div class="container">
+      <header class="blog-header py-3">
+        <div class="row flex-nowrap justify-content-between align-items-center">
+          <div class="col-4 pt-1">
+            <a class="text-muted" href="/blog" style="color: red;">Back</a>
+          </div>
+          <div class="col-4 text-center">
+            <a class="blog-header-logo text-dark" href="/blog" style="font-weight: bold;">Asteroid Collision Blog</a>
+          </div>
+          <div class="col-4 d-flex justify-content-end align-items-center">
+            <a class="text-muted" href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-3"><circle cx="10.5" cy="10.5" r="7.5"></circle><line x1="21" y1="21" x2="15.8" y2="15.8"></line></svg>
+            </a>
+            <a class="btn btn-sm btn-outline-secondary" href="/blog">Home</a>
+          </div>
+        </div>
+      </header>
+
+<!--      <div class="nav-scroller py-1 mb-2">-->
+<!--        <nav class="nav d-flex justify-content-between">-->
+<!--          <a class="p-2 text-muted" href="#">World</a>-->
+<!--          <a class="p-2 text-muted" href="#">U.S.</a>-->
+<!--          <a class="p-2 text-muted" href="#">Technology</a>-->
+<!--          <a class="p-2 text-muted" href="#">Design</a>-->
+<!--          <a class="p-2 text-muted" href="#">Culture</a>-->
+<!--          <a class="p-2 text-muted" href="#">Business</a>-->
+<!--          <a class="p-2 text-muted" href="#">Politics</a>-->
+<!--          <a class="p-2 text-muted" href="#">Opinion</a>-->
+<!--          <a class="p-2 text-muted" href="#">Science</a>-->
+<!--          <a class="p-2 text-muted" href="#">Health</a>-->
+<!--          <a class="p-2 text-muted" href="#">Style</a>-->
+<!--          <a class="p-2 text-muted" href="#">Travel</a>-->
+<!--        </nav>-->
+<!--      </div>-->
+
+      <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
+        <div class="col-md-6 px-0">
+              <h1 class="display-4 font-italic font-weight-bold" style="font-size: 30px;">NASA Could Unintentionally Create a Man Made Meteor Shower</h1>
+          <p class="lead my-3">NASA's Dart Mission, created to deter asteroid collisions could unintentionally create a meteor shower./p>
+          <p class="lead mb-0"><a href="#" class="font-weight-bold" onclick="onclickfunccelestron()">Scroll down...</a></p>
+        </div>
+      </div>
+
+      <div class="row mb-2" id="onmobile">
+        <div class="col-md-6">
+          <div class="card flex-md-row mb-4 box-shadow h-md-250">
+            <div class="card-body d-flex flex-column align-items-start">
+              <strong class="d-inline-block mb-2 text-primary">Astronomy</strong>
+              <h3 class="mb-0">
+                <a class="text-dark" href="https://asteroidcollision.herokuapp.com/telescope-review-celeston-powerseeker-127eq">Celestron Powerseeker 127EQ Telescope Review</a>
+              </h3>
+              <div class="mb-1 text-muted">1 Day Ago</div>
+              <p class="card-text mb-auto">In depth review the Celestron PowerSeeker Telescope. Is it the right one for you?</p>
+              <a href="https://asteroidcollision.herokuapp.com/telescope-review-celeston-powerseeker-127eq">Continue Reading</a>
+            </div>
+<!--            <img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb" alt="Card image cap">-->
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card flex-md-row mb-4 box-shadow h-md-250">
+            <div class="card-body d-flex flex-column align-items-start">
+              <strong class="d-inline-block mb-2 text-success">Space</strong>
+              <h3 class="mb-0">
+                <a class="text-dark" href="https://asteroidcollision.herokuapp.com/near-asteroids">These asteroids might hit earth soon. Should you be scared?</a>
+              </h3>
+              <div class="mb-1 text-muted">1 Day Ago</div>
+              <p class="card-text mb-auto">An insightful list containing 7 near earth asteroids that could hit earth!</p>
+              <a href="/near-asteroids">Continue reading</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main role="main" class="container">
+      <div class="row">
+        <div class="col-md-8 blog-main">
+          <h3 class="pb-3 mb-4 font-italic border-bottom">
+            An Honest Review:
+          </h3>
+
+          <div class="blog-post">
+            <h2 class="blog-post-title">NASA could unintentionally create a man made meteor shower</h2>
+            <p class="blog-post-meta">June 4th by <a href="/blog">Paul McBurney Jr</a></p>
+
+            <p>The <b>NASA Dart program</b> was founded to locate and destroy asteroids that could threaten the existance of humanity.</p>
+            <p>After years of development, the <b>"asteroid redirection system"</b> also known as <b>DART</b> is planned to be used to reflect asteroids away from earth.</p>
+            <p>The DART Mission will test whether not it is possible to <b>redirect</b> an asteroid away from earth.</p>
+            <p>However, the debris it would create could cause a medium sized <b>meteor shower</b> that can be seen from earth.</p>
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-2104426707154383"
+     data-ad-slot="7915911327"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+              <hr>
+            <img src="static/meteorshower.jpg" style="width: 100%;">
+            <hr>
+            <h3>How Does DART Work?</h3>
+            <p>NASA's DART mission aims to alter an asteroids course by using a spacecraft with a high velocity to crash into the space rock. </p>
+              <p>Even a minor alteration to the asteroids course can mean the difference between collision and no collision.</p>
+            <br>
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-2104426707154383"
+     data-ad-slot="7915911327"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+            <hr>
+              <h3>Back to Meteor Shower</h3>
+              <p>According to studies done by NASA scientists, it is possible that a test DART collision with an asteroid could eject pieces of tiny space-rock.</p>
+              <p>The majority of rock ejected by the spacecraft will go unnoticed. However, a select few might near earth.</p>
+              <p>Fortunatley, we won't need to worry because most of the ejected rock that reaches earth will burn up in the atmosphere.</p>
+              <p>Also, because of gravity, most of the space debris will be pulled back into the asteroid.</p>
+              <p>It'll be cool to see that space debris light up the pitch black sky!</p>
+            <br>
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-2104426707154383"
+     data-ad-slot="7915911327"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+            <hr>
+              <h3>Conclusion</h3>
+              <p>Even though most of us will go unaffected, it's still pretty interesting to know that we might be seeing some man made meteor showers soon.</p>
+              <p>Hopefully NASA can perfect their DART program to the point where we won't have to worry about any meteor showers or potential asteroid collisions.</p>
+              <p>It's good to know that NASA is developing asteroid defense systems before it's too late.</p>
+              <p>Overall, it would be a shame if a system meant to keep asteroids away from us, unintentionally causes a meter shower.</p>
+<!--            <hr>-->
+<!--            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
+<!--<ins class="adsbygoogle"-->
+<!--     style="display:block; text-align:center;"-->
+<!--     data-ad-layout="in-article"-->
+<!--     data-ad-format="fluid"-->
+<!--     data-ad-client="ca-pub-2104426707154383"-->
+<!--     data-ad-slot="7915911327"></ins>-->
+<!--<script>-->
+<!--     (adsbygoogle = window.adsbygoogle || []).push({});-->
+<!--</script>-->
+            <hr>
+          </div>
+
+
+
+          <nav class="blog-pagination" style="margin-bottom: 1em; margin-top: 1em;">
+            <a class="btn btn-outline-primary" href="/blog">Home</a>
+            <a class="btn btn-outline-secondary" href="/near-asteroids">Next</a>
+          </nav>
+
+        </div>
+
+        <aside class="col-md-4 blog-sidebar">
+
+          <div class="p-3 mb-3 bg-light rounded">
+            <h4 class="font-italic">About Asteroid Collision</h4>
+            <p class="mb-0">The Asteroid Collision blog is a website built and maintained by astronomers and space enthusiasts from around the world. We write about current events, space news and even provide our readers with reviews on new products.</p>
+          </div>
+          	<div class="p-3 mb-3 bg-light rounded">
+            <div>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-fb+5w+4e-db+86"
+     data-ad-client="ca-pub-2104426707154383"
+     data-ad-slot="4606307034"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    </div>
+          </div>
+          <div class="p-3">
+            <h4 class="font-italic">Archives</h4>
+            <ol class="list-unstyled mb-0">
+               <li><a href="/blog">May 2020</a></li>
+              <li><a href="/blog">April 2020</a></li>
+              <li><a href="/blog">March 2020</a></li>
+              <li><a href="/blog">February 2020</a></li>
+              <li><a href="/blog">January 2020</a></li>
+              <li><a href="/blog">December 2019</a></li>
+              <li><a href="/blog">November 2019</a></li>
+              <li><a href="/blog">October 2019</a></li>
+              <li><a href="/blog">September 2019</a></li>
+              <li><a href="/blog">August 2019</a></li>
+              <li><a href="/blog">July 2019</a></li>
+              <li><a href="/blog">June 2019</a></li>
+              <li><a href="/blog">May 2019</a></li>
+              <li><a href="/blog">April 2019</a></li>
+            </ol>
+          </div>
+
+<!--          <div class="p-3">-->
+<!--            <h4 class="font-italic">Elsewhere</h4>-->
+<!--            <ol class="list-unstyled">-->
+<!--              <li><a href="/blog">GitHub</a></li>-->
+<!--              <li><a href="/blog">Twitter</a></li>-->
+<!--              <li><a href="/blog">Facebook</a></li>-->
+<!--            </ol>-->
+<!--          </div>-->
+        </aside><!-- /.blog-sidebar -->
+
+      </div><!-- /.row -->
+    <footer class="blog-footer" style="margin-top: 1em;">
+    	<hr>
+      <p><a href="https://asteroidcollision.herokuapp.com/blog"> Asteroid Collision Blog</a> &copy; 2019-2020</p>
+      <p><a href="https://asteroidcollision.herokuapp.com/"> Asteroid Collision Simulation</a> Game</p>
+      <p><a href="https://asteroidcollision.herokuapp.com/blog"> Astronomy/Space Blog</a> Homepage</p>
+      <p><a href="https://getbootstrap.com/docs/4.0/examples/blog/"> Bootstrap Blog</a> Template Used</p>
+
+    </footer>
+    </main><!-- /.container -->
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/vendor/holder.min.js"></script>
+    <script>
+      Holder.addTheme('thumb', {
+        bg: '#55595c',
+        fg: '#eceeef',
+        text: 'Thumbnail'
+      });
+    </script>
+  <script>
+    function onclickfunccelestron() {
+      window.scrollBy(0, 700);
+    }
+  </script>
+  </body>
+</html>
