@@ -416,6 +416,9 @@ def maxtelescope():
 @app.route('/szyt-telescope-refractor-review')
 def szyt():
     return render_template('4ARTICLESZYTRefractorTelescopeReview.html')
+@app.route('/nasa-could-unintentionally-cause-a-meteor-shower')
+def nasacouldcauseameteorshower():
+    return render_template("5ARTICLENASADart.html")
 if __name__ == "__main__":
     of_diameter = 22
     app.run(debug=False)
