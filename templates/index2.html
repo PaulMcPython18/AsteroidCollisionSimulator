@@ -86,7 +86,6 @@
         background-color: #f2f2f2;
         color: black;
         border-radius: 5px;
-        border: thick solid black
         text-align: center;
         vertical-align: middle;
         font-size: 20px;
@@ -112,9 +111,9 @@
         z-index: 2000;
         width: 32px;
         height: 32px;
-        animation-name: leftright;
-        animation-duration: 1.3s;
-        animation-iteration-count: infinite;
+<!--        animation-name: leftright;-->
+<!--        animation-duration: 1.3s;-->
+<!--        animation-iteration-count: infinite;-->
     }
 }
 
@@ -256,18 +255,8 @@
 </div>
 </div>
 <script>
-    window.scrollBy(0, 382);
-    var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-    if (isMobile) {
-        document.getElementById("NearEarthAsteroidForm").style.display = "block";
-        document.getElementById("first").style.width = "100%";
-        document.getElementById("second").style.width = "0%";
-        document.getElementById("sliderbutton").style.display = "none";
-        document.getElementById("sliderbutton2").style.display = "block";
-        document.getElementById("arrow").style.display = "none";
-        document.getElementById("NearEarthAsteroidForm").style.display = "none";
-        map_0d2afc44120f416887520ad473307e09.invalidateSize();
-    }
+    document.getElementById("NearEarthAsteroidForm").style.display = "block";
+
     function begoneee() {
          document.getElementById("NearEarthAsteroidForm").style.display = "none";
     }
@@ -289,6 +278,7 @@
         document.getElementById("NearEarthAsteroidForm").style.display = "block";
         map_0d2afc44120f416887520ad473307e09.invalidateSize();
     }
+    window.scrollBy(0, 382);
 </script>
 </body>
 </html>
