@@ -86,6 +86,7 @@
         background-color: #f2f2f2;
         color: black;
         border-radius: 5px;
+        border: thick solid black
         text-align: center;
         vertical-align: middle;
         font-size: 20px;
@@ -111,9 +112,9 @@
         z-index: 2000;
         width: 32px;
         height: 32px;
-<!--        animation-name: leftright;-->
-<!--        animation-duration: 1.3s;-->
-<!--        animation-iteration-count: infinite;-->
+        animation-name: leftright;
+        animation-duration: 1.3s;
+        animation-iteration-count: infinite;
     }
 }
 
@@ -213,7 +214,7 @@
                 <hr> <p style="font-size: 12px;"> Hover over the colored circles to view the effects of the collision. Fallout and possible Extinction usually occurs from <b>asteroids with a diameter over 1000-2000 meters.</b></p>
                 <p style="font-size: 8px; margin-left: 1.2px;"> Disclaimer: Information and map portrayal of destruction may be exagerated to improve user experience. </p>
                 <hr>
-                <p style="font-size: 12px;"> View all <b>verified asteroid collisions</b> on a beautiful interactive map: <a href="https://asteroidcollision.herokuapp.com/asteroid-collision-location-map">Asteroid Collision Location Map</a> <b style="font-size: 20px; margin-left: 5px;">&larr;</b> <br> Commonly asked Questions (Q&A): <a href="/questions">Learn More</a>  <b style="font-size: 20px; margin-left: 5px; color: black;"> &larr;</b> <br>Asteroid Impact Location Latitude and Longitude Provided By: <a rel="nofollow", href="https://simplemaps.com/data/world-cities">Here</a> <b style="font-size: 20px; margin-left: 5px; color: black;">&larr;</b><br><b> By: </b>Paul McBurney | Updated: March 16th, 2020</p>
+                <p style="font-size: 12px;"> View all <b>verified asteroid collisions</b> on a beautiful interactive map: <a href="https://asteroidcollision.herokuapp.com/asteroid-collision-location-map">Asteroid Collision Location Map</a> <b style="font-size: 20px; margin-left: 5px;">&larr;</b> <br> Commonly asked Questions (Q&A): <a href="/questions">Learn More</a>  <b style="font-size: 20px; margin-left: 5px; color: black;"> &larr;</b> <br>Asteroid Impact Location Latitude and Longitude Provided By: <a rel="nofollow", href="https://simplemaps.com/data/world-cities">Here</a> <b style="font-size: 20px; margin-left: 5px; color: black;">&larr;</b><br><b> By: </b>Paul McBurney | Updated: June 11th, 2020</p>
   </div>
 <hr>
         </form>
@@ -255,8 +256,18 @@
 </div>
 </div>
 <script>
-    document.getElementById("NearEarthAsteroidForm").style.display = "block";
-
+    window.scrollBy(0, 382);
+    var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    if (isMobile) {
+        document.getElementById("NearEarthAsteroidForm").style.display = "block";
+        document.getElementById("first").style.width = "100%";
+        document.getElementById("second").style.width = "0%";
+        document.getElementById("sliderbutton").style.display = "none";
+        document.getElementById("sliderbutton2").style.display = "block";
+        document.getElementById("arrow").style.display = "none";
+        document.getElementById("NearEarthAsteroidForm").style.display = "none";
+        map_0d2afc44120f416887520ad473307e09.invalidateSize();
+    }
     function begoneee() {
          document.getElementById("NearEarthAsteroidForm").style.display = "none";
     }
@@ -278,7 +289,6 @@
         document.getElementById("NearEarthAsteroidForm").style.display = "block";
         map_0d2afc44120f416887520ad473307e09.invalidateSize();
     }
-    window.scrollBy(0, 382);
 </script>
 </body>
 </html>
